@@ -1,49 +1,81 @@
 # ASIR-14 · Inglés Profesional IT
 
+**Estado:** especificación curricular completada  
+**UDs:** 8
+
 ## Finalidad
 
-Comprender documentación técnica y comunicarse con precisión en soporte, administración y trabajo internacional.
+Comprender y producir comunicación técnica profesional en inglés para sistemas, redes, cloud, DevOps, soporte, documentación, entrevistas y defensa de proyectos.
 
-## Prerrequisitos
-
-Nivel básico de inglés; ASIR-00 UD09 recomendado.
-
-## Resultado esperado de la asignatura
-
-Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
-
-## Secuencia de unidades
+## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | Terminología de sistemas, redes y hardware | Planificada |
-| UD02 | Lectura de documentación, RFC, manuales y changelogs | Planificada |
-| UD03 | Tickets, incidencias y comunicación de soporte | Planificada |
-| UD04 | Correo, informes y documentación técnica | Planificada |
-| UD05 | Reuniones, handover y comunicación oral | Planificada |
-| UD06 | CV, perfil profesional y entrevista técnica | Planificada |
-| UD07 | Cloud, DevOps y seguridad en documentación inglesa | Planificada |
-| UD08 | Presentación técnica final en inglés | Planificada |
+| UD01 | Terminología de sistemas, redes y hardware | Especificada |
+| UD02 | Lectura de documentación, RFC, manuales y changelogs | Especificada |
+| UD03 | Tickets, incidencias y comunicación de soporte | Especificada |
+| UD04 | Correo, informes y documentación técnica | Especificada |
+| UD05 | Reuniones, handover y comunicación oral | Especificada |
+| UD06 | CV, perfil profesional y entrevista técnica | Especificada |
+| UD07 | Cloud, DevOps y seguridad en documentación inglesa | Especificada |
+| UD08 | Presentación técnica final en inglés | Especificada |
 
-## Metodología
+## Arquitectura pedagógica
 
-Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+```text
+vocabulario técnico
+       ↓
+lectura de documentación
+       ↓
+tickets / soporte
+       ↓
+correo / informes
+       ↓
+reuniones / handover
+       ↓
+CV / entrevista
+       ↓
+cloud / DevOps / security English
+       ↓
+presentación técnica final
+```
+
+## Principios
+
+- aprender inglés en contexto técnico real;
+- priorizar comprensión y precisión frente a traducción literal;
+- usar documentación oficial como material habitual;
+- comunicar hechos, impacto, evidencia y siguiente paso;
+- escribir de forma concisa y profesional;
+- utilizar ejemplos reales del resto de ASIR-AI;
+- construir vocabulario acumulativo;
+- presentar experiencia y competencias sin exagerarlas.
+
+## Papel dentro de ASIR-AI
+
+ASIR-14 se alimentará de los laboratorios y proyectos técnicos ya realizados. No será una asignatura de inglés general aislada.
+
+Se utilizarán ejemplos reales de:
+
+- sistemas;
+- redes;
+- bases de datos;
+- servicios;
+- seguridad;
+- cloud;
+- Git;
+- DevOps.
+
+Prepara especialmente:
+
+- ASIR-15 IPE II;
+- ASIR-16 DevOps/Cloud;
+- ASIR-17 defensa del proyecto.
 
 ## Evaluación
 
-- Los ejercicios y laboratorios son formativos.
-- La calificación se obtiene mediante exámenes.
-- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
-- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+Las prácticas de conversación, documentación, tickets, CV y presentaciones son formativas. La calificación se obtiene mediante exámenes.
 
-## Evidencias y documentación
+## Estado de cierre
 
-Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
-
-## Dependencias transversales
-
-Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
-
-## Desarrollo pendiente
-
-La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
+La asignatura queda curricularmente especificada. En fases posteriores se crearán bancos de vocabulario, lecturas técnicas, role-plays, ejercicios de tickets, entrevistas simuladas, blueprints de examen y desarrollo completo de las 8 UDs.
