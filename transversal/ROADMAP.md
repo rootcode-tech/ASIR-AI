@@ -16,7 +16,7 @@ Las competencias transversales no son asignaturas aisladas: aparecen en el momen
 | Linux | ASIR-01 UD05 | ASIR-01/02 | ASIR-09 | ASIR-16/17 |
 | Bash | ASIR-01 | ASIR-09 UD06 | ASIR-09 UD07 | ASIR-16/17 |
 | PowerShell | ASIR-01 UD08 | ASIR-09 UD02 | ASIR-09 UD06 | ASIR-17 |
-| Python | después de ASIR-01/05 | utilidades pequeñas | automatización y APIs | ASIR-16/17 |
+| Python | ASIR-05 UD09 (contextual) | utilidades pequeñas | ASIR-16 UD02/UD10: automatización y APIs | ASIR-17 cuando aporte valor |
 | SQL | ASIR-04 | ASIR-04 | ASIR-12 | ASIR-11/17 |
 | IA aplicada | ASIR-07 UD06 | uso con validación | troubleshooting/documentación | ASIR-16/17 |
 | Docker | ASIR-09 UD08 | ASIR-11 UD05 | ASIR-16 UD03-04 | ASIR-17 |
