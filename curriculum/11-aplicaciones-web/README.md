@@ -1,51 +1,83 @@
 # ASIR-11 · Web e Infraestructura — Implantación de Aplicaciones Web
 
+**Estado:** especificación curricular completada  
+**UDs:** 10
+
 ## Finalidad
 
-Desplegar aplicaciones web sobre una infraestructura reproducible, segura y mantenible.
+Desplegar, publicar, mantener, proteger, automatizar y observar aplicaciones web modernas entendiendo todas sus dependencias de infraestructura.
 
-## Prerrequisitos
-
-ASIR-01, ASIR-04, ASIR-05 y fundamentos de ASIR-10.
-
-## Resultado esperado de la asignatura
-
-Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
-
-## Secuencia de unidades
+## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | Arquitectura web, HTTP y componentes de una aplicación | Planificada |
-| UD02 | Servidores web, virtual hosts y runtime de aplicaciones | Planificada |
-| UD03 | Despliegue de aplicaciones con base de datos | Planificada |
-| UD04 | CMS y plataformas web: instalación, actualización y operación | Planificada |
-| UD05 | Contenedores para aplicaciones web | Planificada |
-| UD06 | Reverse proxy, TLS, dominios y publicación segura | Planificada |
-| UD07 | Configuración, secretos y entornos de despliegue | Planificada |
-| UD08 | CI/CD introductorio para despliegues | Planificada |
-| UD09 | Seguridad, backups y mantenimiento de aplicaciones | Planificada |
-| UD10 | Observabilidad, pruebas y proyecto de despliegue completo | Planificada |
+| UD01 | Arquitectura web, HTTP y componentes de una aplicación | Especificada |
+| UD02 | Servidores web, virtual hosts y runtime de aplicaciones | Especificada |
+| UD03 | Despliegue de aplicaciones con base de datos | Especificada |
+| UD04 | CMS y plataformas web: instalación, actualización y operación | Especificada |
+| UD05 | Contenedores para aplicaciones web | Especificada |
+| UD06 | Reverse proxy, TLS, dominios y publicación segura | Especificada |
+| UD07 | Configuración, secretos y entornos de despliegue | Especificada |
+| UD08 | CI/CD introductorio para despliegues | Especificada |
+| UD09 | Seguridad, backups y mantenimiento de aplicaciones | Especificada |
+| UD10 | Observabilidad, pruebas y proyecto de despliegue completo | Especificada |
 
-## Metodología
+## Arquitectura pedagógica
 
-Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+```text
+arquitectura web / HTTP
+        ↓
+web server / runtime
+        ↓
+aplicación + base de datos
+        ↓
+CMS / plataformas
+        ↓
+contenedores
+        ↓
+reverse proxy / TLS / DNS
+        ↓
+configuración / secretos / entornos
+        ↓
+CI/CD
+        ↓
+seguridad / backups / mantenimiento
+        ↓
+observabilidad + despliegue integral
+```
+
+## Principios
+
+- comprender la arquitectura antes de automatizar;
+- separar servidor web, runtime, aplicación y base de datos;
+- aplicar mínimo privilegio;
+- no versionar secretos;
+- usar staging antes de producción;
+- desplegar con rollback;
+- integrar backup y restore en el ciclo de vida;
+- observar logs, métricas y health checks;
+- validar mediante pruebas de aceptación;
+- considerar un despliegue completo solo si es reproducible, seguro, observable y recuperable.
+
+## Papel dentro de ASIR-AI
+
+ASIR-11 conecta directamente:
+
+- ASIR-04 Bases de Datos I;
+- ASIR-05 Lenguajes y Datos;
+- ASIR-09 Sistemas II;
+- ASIR-10 Servicios de Red;
+- ASIR-12 Administración de SGBD;
+- ASIR-13 Seguridad y Alta Disponibilidad;
+- ASIR-16 DevOps/Cloud;
+- ASIR-17 Proyecto.
+
+Los contenedores y CI/CD se introducen aquí de forma aplicada al despliegue web; su tratamiento profesional y transversal se profundizará en ASIR-16.
 
 ## Evaluación
 
-- Los ejercicios y laboratorios son formativos.
-- La calificación se obtiene mediante exámenes.
-- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
-- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+Los ejercicios, despliegues, pipelines, backups, incidentes y documentación son formativos. La calificación se obtiene mediante exámenes.
 
-## Evidencias y documentación
+## Estado de cierre
 
-Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
-
-## Dependencias transversales
-
-Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
-
-## Desarrollo pendiente
-
-La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
+La asignatura queda curricularmente especificada. En fases posteriores se crearán laboratorios completos, aplicaciones de práctica, pipelines, escenarios de fallo, blueprints de examen y las lecciones completas de las 10 UDs.
