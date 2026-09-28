@@ -2,8 +2,8 @@ course:
   id: ASIR-AI
   name: ASIR-AI
   brand: RootCode Technologies
-  version: 0.2.0-draft
-  status: unit-map-complete
+  version: 0.3.0-draft
+  status: specification-complete-audited
   language: es
 
 assessment:
@@ -35,34 +35,34 @@ subjects:
     units:
       - id: UD01
         title: "Diagnóstico, método de estudio y razonamiento técnico"
-        status: planned
+        status: specified
       - id: UD02
         title: "Aritmética, proporcionalidad, porcentajes y notación científica"
-        status: planned
+        status: specified
       - id: UD03
         title: "Álgebra: expresiones, ecuaciones, sistemas e inecuaciones"
-        status: planned
+        status: specified
       - id: UD04
         title: "Funciones, gráficas y modelización"
-        status: planned
+        status: specified
       - id: UD05
         title: "Geometría, trigonometría y medida"
-        status: planned
+        status: specified
       - id: UD06
         title: "Estadística, probabilidad e interpretación de datos"
-        status: planned
+        status: specified
       - id: UD07
         title: "Fundamentos científico-tecnológicos aplicados"
-        status: planned
+        status: specified
       - id: UD08
         title: "Lengua: comprensión, síntesis y expresión escrita"
-        status: planned
+        status: specified
       - id: UD09
         title: "Inglés funcional y competencia digital"
-        status: planned
+        status: specified
       - id: UD10
         title: "Estrategia de examen y simulacros integrales"
-        status: planned
+        status: specified
   - id: ASIR-01
     slug: 01-sistemas-i
     name: "Sistemas I — Implantación de Sistemas Operativos"
@@ -72,34 +72,34 @@ subjects:
     units:
       - id: UD01
         title: "Arquitectura de computadores y fundamentos de sistemas operativos"
-        status: planned
+        status: specified
       - id: UD02
         title: "Virtualización de laboratorio y gestión de máquinas virtuales"
-        status: planned
+        status: specified
       - id: UD03
         title: "Instalación, arranque, particionado y despliegue de sistemas"
-        status: planned
+        status: specified
       - id: UD04
         title: "Sistemas de archivos, montaje y jerarquía del sistema"
-        status: planned
+        status: specified
       - id: UD05
         title: "Terminal GNU/Linux y administración básica"
-        status: planned
+        status: specified
       - id: UD06
         title: "Usuarios, grupos, permisos, ACL y privilegios"
-        status: planned
+        status: specified
       - id: UD07
         title: "Procesos, servicios, arranque, paquetes y registros"
-        status: planned
+        status: specified
       - id: UD08
         title: "Administración básica de Windows y PowerShell"
-        status: planned
+        status: specified
       - id: UD09
         title: "Almacenamiento, copias de seguridad y recuperación básica"
-        status: planned
+        status: specified
       - id: UD10
         title: "Mantenimiento, diagnóstico y resolución estructurada de incidencias"
-        status: planned
+        status: specified
   - id: ASIR-02
     slug: 02-redes-i
     name: "Redes I — Planificación y Administración de Redes"
@@ -109,34 +109,34 @@ subjects:
     units:
       - id: UD01
         title: "Modelos OSI/TCP-IP, encapsulación y herramientas de red"
-        status: planned
+        status: specified
       - id: UD02
         title: "Ethernet, direccionamiento MAC, medios y topologías"
-        status: planned
+        status: specified
       - id: UD03
         title: "IPv4, subnetting, VLSM y planificación de direccionamiento"
-        status: planned
+        status: specified
       - id: UD04
         title: "IPv6: direccionamiento, autoconfiguración y coexistencia"
-        status: planned
+        status: specified
       - id: UD05
         title: "Conmutación, STP y fundamentos de switching"
-        status: planned
+        status: specified
       - id: UD06
         title: "VLAN, trunking y segmentación lógica"
-        status: planned
+        status: specified
       - id: UD07
         title: "Routing estático y fundamentos de routing dinámico"
-        status: planned
+        status: specified
       - id: UD08
         title: "DHCP, DNS, NAT/PAT y servicios de apoyo"
-        status: planned
+        status: specified
       - id: UD09
         title: "Redes inalámbricas, seguridad Wi-Fi y movilidad"
-        status: planned
+        status: specified
       - id: UD10
         title: "Captura, diagnóstico, documentación y diseño de una red completa"
-        status: planned
+        status: specified
   - id: ASIR-03
     slug: 03-hardware-cpd
     name: "Hardware y CPD — Fundamentos de Hardware"
@@ -146,31 +146,31 @@ subjects:
     units:
       - id: UD01
         title: "Arquitectura de hardware: CPU, memoria, buses y placas"
-        status: planned
+        status: specified
       - id: UD02
         title: "UEFI/BIOS, POST, arranque y configuración de firmware"
-        status: planned
+        status: specified
       - id: UD03
         title: "Almacenamiento: HDD, SSD, NVMe e interfaces"
-        status: planned
+        status: specified
       - id: UD04
         title: "RAID, redundancia y rendimiento de almacenamiento"
-        status: planned
+        status: specified
       - id: UD05
         title: "Hardware de servidor, gestión remota y componentes empresariales"
-        status: planned
+        status: specified
       - id: UD06
         title: "Energía, fuentes, UPS, protección y continuidad"
-        status: planned
+        status: specified
       - id: UD07
         title: "Racks, cableado, refrigeración y fundamentos de CPD"
-        status: planned
+        status: specified
       - id: UD08
         title: "Dispositivos de red, periféricos y compatibilidad"
-        status: planned
+        status: specified
       - id: UD09
         title: "Diagnóstico, mantenimiento, inventario y ciclo de vida"
-        status: planned
+        status: specified
   - id: ASIR-04
     slug: 04-bases-datos-i
     name: "Bases de Datos I — Gestión de Bases de Datos"
@@ -180,34 +180,34 @@ subjects:
     units:
       - id: UD01
         title: "Sistemas de información y modelos de datos"
-        status: planned
+        status: specified
       - id: UD02
         title: "Modelo entidad-relación y diseño conceptual"
-        status: planned
+        status: specified
       - id: UD03
         title: "Modelo relacional, claves y restricciones"
-        status: planned
+        status: specified
       - id: UD04
         title: "Normalización y calidad del diseño"
-        status: planned
+        status: specified
       - id: UD05
         title: "SQL DDL: esquemas, tablas, tipos y restricciones"
-        status: planned
+        status: specified
       - id: UD06
         title: "SQL DML: inserción, actualización y borrado"
-        status: planned
+        status: specified
       - id: UD07
         title: "Consultas SELECT, funciones, agregación y ordenación"
-        status: planned
+        status: specified
       - id: UD08
         title: "JOIN, subconsultas, vistas y consultas avanzadas"
-        status: planned
+        status: specified
       - id: UD09
         title: "Transacciones, concurrencia e integridad"
-        status: planned
+        status: specified
       - id: UD10
         title: "Usuarios, privilegios, copias y operación básica del SGBD"
-        status: planned
+        status: specified
   - id: ASIR-05
     slug: 05-lenguajes-datos
     name: "Lenguajes y Datos — Lenguajes de Marcas y SGI"
@@ -217,31 +217,31 @@ subjects:
     units:
       - id: UD01
         title: "HTML semántico y estructura de documentos"
-        status: planned
+        status: specified
       - id: UD02
         title: "CSS esencial y presentación accesible"
-        status: planned
+        status: specified
       - id: UD03
         title: "XML bien formado, namespaces y modelos de documento"
-        status: planned
+        status: specified
       - id: UD04
         title: "DTD, XML Schema y validación"
-        status: planned
+        status: specified
       - id: UD05
         title: "XPath y transformación con XSLT"
-        status: planned
+        status: specified
       - id: UD06
         title: "JSON, YAML, TOML y formatos de configuración"
-        status: planned
+        status: specified
       - id: UD07
         title: "APIs, HTTP y representación de datos"
-        status: planned
+        status: specified
       - id: UD08
         title: "Sindicación, intercambio e integración de información"
-        status: planned
+        status: specified
       - id: UD09
         title: "Documentación técnica con Markdown y automatización de datos"
-        status: planned
+        status: specified
   - id: ASIR-06
     slug: 06-ipe-i
     name: "Carrera Profesional I — IPE I"
@@ -251,28 +251,28 @@ subjects:
     units:
       - id: UD01
         title: "Sector IT, perfiles profesionales y competencias"
-        status: planned
+        status: specified
       - id: UD02
         title: "Relaciones laborales, derechos y deberes"
-        status: planned
+        status: specified
       - id: UD03
         title: "Contratación, nómina y Seguridad Social"
-        status: planned
+        status: specified
       - id: UD04
         title: "Prevención de riesgos laborales y cultura preventiva"
-        status: planned
+        status: specified
       - id: UD05
         title: "Emergencias, primeros auxilios y actuación segura"
-        status: planned
+        status: specified
       - id: UD06
         title: "Comunicación profesional, equipo y resolución de conflictos"
-        status: planned
+        status: specified
       - id: UD07
         title: "Empleabilidad, aprendizaje continuo e identidad digital"
-        status: planned
+        status: specified
       - id: UD08
         title: "Plan profesional personal y evidencias de competencia"
-        status: planned
+        status: specified
   - id: ASIR-07
     slug: 07-digitalizacion
     name: "Transformación Digital — Digitalización"
@@ -282,28 +282,28 @@ subjects:
     units:
       - id: UD01
         title: "Transformación digital, procesos y madurez tecnológica"
-        status: planned
+        status: specified
       - id: UD02
         title: "Sistemas IT/OT, conectividad y plataformas"
-        status: planned
+        status: specified
       - id: UD03
         title: "Datos, analítica y gobierno de la información"
-        status: planned
+        status: specified
       - id: UD04
         title: "Cloud, edge y modelos de servicio"
-        status: planned
+        status: specified
       - id: UD05
         title: "Automatización, integración y APIs"
-        status: planned
+        status: specified
       - id: UD06
         title: "IA, modelos generativos y uso profesional responsable"
-        status: planned
+        status: specified
       - id: UD07
         title: "Ciberseguridad, privacidad, ética y riesgo digital"
-        status: planned
+        status: specified
       - id: UD08
         title: "Proyecto de digitalización de un proceso real"
-        status: planned
+        status: specified
   - id: ASIR-08
     slug: 08-sostenibilidad
     name: "Tecnología Sostenible — Sostenibilidad"
@@ -313,28 +313,28 @@ subjects:
     units:
       - id: UD01
         title: "Sostenibilidad, ODS, ESG y marco profesional"
-        status: planned
+        status: specified
       - id: UD02
         title: "Impacto ambiental del hardware y ciclo de vida"
-        status: planned
+        status: specified
       - id: UD03
         title: "Consumo energético, eficiencia y medición"
-        status: planned
+        status: specified
       - id: UD04
         title: "Residuos electrónicos, reutilización y economía circular"
-        status: planned
+        status: specified
       - id: UD05
         title: "Compra tecnológica responsable y cadena de suministro"
-        status: planned
+        status: specified
       - id: UD06
         title: "CPD, cloud y Green IT"
-        status: planned
+        status: specified
       - id: UD07
         title: "Indicadores, huella y mejora continua"
-        status: planned
+        status: specified
       - id: UD08
         title: "Plan de sostenibilidad para una infraestructura IT"
-        status: planned
+        status: specified
   - id: ASIR-09
     slug: 09-sistemas-ii
     name: "Sistemas II — Administración de Sistemas Operativos"
@@ -344,37 +344,37 @@ subjects:
     units:
       - id: UD01
         title: "Administración avanzada de GNU/Linux"
-        status: planned
+        status: specified
       - id: UD02
         title: "Windows Server y administración remota"
-        status: planned
+        status: specified
       - id: UD03
         title: "Active Directory, dominios y políticas de grupo"
-        status: planned
+        status: specified
       - id: UD04
         title: "Identidad, LDAP, Kerberos y servicios de directorio"
-        status: planned
+        status: specified
       - id: UD05
         title: "LVM, RAID software, cuotas y almacenamiento avanzado"
-        status: planned
+        status: specified
       - id: UD06
         title: "Automatización con Bash y PowerShell"
-        status: planned
+        status: specified
       - id: UD07
         title: "Tareas programadas, systemd timers y operación repetible"
-        status: planned
+        status: specified
       - id: UD08
         title: "Virtualización avanzada y fundamentos de contenedores"
-        status: planned
+        status: specified
       - id: UD09
         title: "Backups, restauración y recuperación ante fallos"
-        status: planned
+        status: specified
       - id: UD10
         title: "Logs, monitorización, auditoría y observabilidad básica"
-        status: planned
+        status: specified
       - id: UD11
         title: "Hardening, mantenimiento y troubleshooting avanzado"
-        status: planned
+        status: specified
   - id: ASIR-10
     slug: 10-servicios-red
     name: "Servicios de Red e Internet"
@@ -384,37 +384,37 @@ subjects:
     units:
       - id: UD01
         title: "Arquitectura de servicios, puertos, sockets y resolución de incidencias"
-        status: planned
+        status: specified
       - id: UD02
         title: "DNS autoritativo, recursivo y operación segura"
-        status: planned
+        status: specified
       - id: UD03
         title: "DHCP avanzado, relay y planificación"
-        status: planned
+        status: specified
       - id: UD04
         title: "Servicios web HTTP/HTTPS y servidores web"
-        status: planned
+        status: specified
       - id: UD05
         title: "TLS, certificados, reverse proxy y balanceo básico"
-        status: planned
+        status: specified
       - id: UD06
         title: "Correo electrónico: SMTP, IMAP, autenticación y antispam"
-        status: planned
+        status: specified
       - id: UD07
         title: "Transferencia y acceso: SSH, SFTP y servicios equivalentes"
-        status: planned
+        status: specified
       - id: UD08
         title: "Servicios de archivos: NFS y Samba"
-        status: planned
+        status: specified
       - id: UD09
         title: "VPN, acceso remoto y túneles"
-        status: planned
+        status: specified
       - id: UD10
         title: "Proxy, caché, NTP, syslog y servicios auxiliares"
-        status: planned
+        status: specified
       - id: UD11
         title: "Automatización, monitorización y documentación de servicios"
-        status: planned
+        status: specified
   - id: ASIR-11
     slug: 11-aplicaciones-web
     name: "Web e Infraestructura — Implantación de Aplicaciones Web"
@@ -424,34 +424,34 @@ subjects:
     units:
       - id: UD01
         title: "Arquitectura web, HTTP y componentes de una aplicación"
-        status: planned
+        status: specified
       - id: UD02
         title: "Servidores web, virtual hosts y runtime de aplicaciones"
-        status: planned
+        status: specified
       - id: UD03
         title: "Despliegue de aplicaciones con base de datos"
-        status: planned
+        status: specified
       - id: UD04
         title: "CMS y plataformas web: instalación, actualización y operación"
-        status: planned
+        status: specified
       - id: UD05
         title: "Contenedores para aplicaciones web"
-        status: planned
+        status: specified
       - id: UD06
         title: "Reverse proxy, TLS, dominios y publicación segura"
-        status: planned
+        status: specified
       - id: UD07
         title: "Configuración, secretos y entornos de despliegue"
-        status: planned
+        status: specified
       - id: UD08
         title: "CI/CD introductorio para despliegues"
-        status: planned
+        status: specified
       - id: UD09
         title: "Seguridad, backups y mantenimiento de aplicaciones"
-        status: planned
+        status: specified
       - id: UD10
         title: "Observabilidad, pruebas y proyecto de despliegue completo"
-        status: planned
+        status: specified
   - id: ASIR-12
     slug: 12-bases-datos-ii
     name: "Bases de Datos II — Administración de SGBD"
@@ -461,34 +461,34 @@ subjects:
     units:
       - id: UD01
         title: "Arquitectura interna y ciclo de vida de un SGBD"
-        status: planned
+        status: specified
       - id: UD02
         title: "Instalación, configuración y gestión de instancias"
-        status: planned
+        status: specified
       - id: UD03
         title: "Usuarios, roles, privilegios y separación de funciones"
-        status: planned
+        status: specified
       - id: UD04
         title: "Almacenamiento físico, índices y mantenimiento"
-        status: planned
+        status: specified
       - id: UD05
         title: "Transacciones, bloqueos, concurrencia y aislamiento"
-        status: planned
+        status: specified
       - id: UD06
         title: "Optimización de consultas y análisis de rendimiento"
-        status: planned
+        status: specified
       - id: UD07
         title: "Backup, restore y recuperación punto en el tiempo"
-        status: planned
+        status: specified
       - id: UD08
         title: "Replicación, alta disponibilidad y continuidad"
-        status: planned
+        status: specified
       - id: UD09
         title: "Auditoría, cifrado y hardening del SGBD"
-        status: planned
+        status: specified
       - id: UD10
         title: "Automatización, monitorización y troubleshooting"
-        status: planned
+        status: specified
   - id: ASIR-13
     slug: 13-seguridad-ha
     name: "Ciberseguridad y Alta Disponibilidad"
@@ -498,40 +498,40 @@ subjects:
     units:
       - id: UD01
         title: "Riesgo, amenazas, vulnerabilidades y modelo de defensa"
-        status: planned
+        status: specified
       - id: UD02
         title: "Hardening de sistemas y gestión de configuración segura"
-        status: planned
+        status: specified
       - id: UD03
         title: "Identidad, MFA, PKI, certificados y gestión de secretos"
-        status: planned
+        status: specified
       - id: UD04
         title: "Firewalls, segmentación, ACL y Zero Trust introductorio"
-        status: planned
+        status: specified
       - id: UD05
         title: "IDS/IPS, EDR y fundamentos de SIEM"
-        status: planned
+        status: specified
       - id: UD06
         title: "Gestión de vulnerabilidades y parcheado"
-        status: planned
+        status: specified
       - id: UD07
         title: "Seguridad de servicios web, red y aplicaciones"
-        status: planned
+        status: specified
       - id: UD08
         title: "Copias, recuperación y continuidad de negocio"
-        status: planned
+        status: specified
       - id: UD09
         title: "Alta disponibilidad, clustering y balanceo"
-        status: planned
+        status: specified
       - id: UD10
         title: "Respuesta a incidentes, evidencias y forense básico"
-        status: planned
+        status: specified
       - id: UD11
         title: "Cumplimiento, privacidad, políticas y auditoría"
-        status: planned
+        status: specified
       - id: UD12
         title: "Laboratorio integral de seguridad y resiliencia"
-        status: planned
+        status: specified
   - id: ASIR-14
     slug: 14-ingles-it
     name: "Inglés Profesional IT"
@@ -541,28 +541,28 @@ subjects:
     units:
       - id: UD01
         title: "Terminología de sistemas, redes y hardware"
-        status: planned
+        status: specified
       - id: UD02
         title: "Lectura de documentación, RFC, manuales y changelogs"
-        status: planned
+        status: specified
       - id: UD03
         title: "Tickets, incidencias y comunicación de soporte"
-        status: planned
+        status: specified
       - id: UD04
         title: "Correo, informes y documentación técnica"
-        status: planned
+        status: specified
       - id: UD05
         title: "Reuniones, handover y comunicación oral"
-        status: planned
+        status: specified
       - id: UD06
         title: "CV, perfil profesional y entrevista técnica"
-        status: planned
+        status: specified
       - id: UD07
         title: "Cloud, DevOps y seguridad en documentación inglesa"
-        status: planned
+        status: specified
       - id: UD08
         title: "Presentación técnica final en inglés"
-        status: planned
+        status: specified
   - id: ASIR-15
     slug: 15-ipe-ii
     name: "Carrera Profesional II — IPE II"
@@ -572,28 +572,28 @@ subjects:
     units:
       - id: UD01
         title: "Mapa profesional, especialización y estrategia de carrera"
-        status: planned
+        status: specified
       - id: UD02
         title: "Búsqueda de empleo, networking y canales profesionales"
-        status: planned
+        status: specified
       - id: UD03
         title: "Portfolio técnico, GitHub y evidencias verificables"
-        status: planned
+        status: specified
       - id: UD04
         title: "CV, carta, entrevista y prueba técnica"
-        status: planned
+        status: specified
       - id: UD05
         title: "Emprendimiento, propuesta de valor y modelo de negocio"
-        status: planned
+        status: specified
       - id: UD06
         title: "Costes, precios, viabilidad y finanzas básicas"
-        status: planned
+        status: specified
       - id: UD07
         title: "Gestión de proyectos, Agile/Kanban y trabajo profesional"
-        status: planned
+        status: specified
       - id: UD08
         title: "Plan de inserción profesional y defensa del perfil"
-        status: planned
+        status: specified
   - id: ASIR-16
     slug: 16-especializacion
     name: "Especialización — DevOps, Cloud e IA para Sistemas"
@@ -603,34 +603,34 @@ subjects:
     units:
       - id: UD01
         title: "Flujo profesional con Git, ramas, PR, releases y SemVer"
-        status: planned
+        status: specified
       - id: UD02
         title: "Linux para DevOps y automatización reproducible"
-        status: planned
+        status: specified
       - id: UD03
         title: "Docker: imágenes, contenedores, redes y volúmenes"
-        status: planned
+        status: specified
       - id: UD04
         title: "Docker Compose y stacks multi-servicio"
-        status: planned
+        status: specified
       - id: UD05
         title: "CI/CD con pipelines y quality gates"
-        status: planned
+        status: specified
       - id: UD06
         title: "Ansible: inventarios, playbooks, roles e idempotencia"
-        status: planned
+        status: specified
       - id: UD07
         title: "Terraform e Infrastructure as Code"
-        status: planned
+        status: specified
       - id: UD08
         title: "Cloud: IAM, redes, compute, storage y costes"
-        status: planned
+        status: specified
       - id: UD09
         title: "Kubernetes: arquitectura y operación introductoria"
-        status: planned
+        status: specified
       - id: UD10
         title: "Observabilidad, SRE, IA asistida y proyecto DevOps"
-        status: planned
+        status: specified
   - id: ASIR-17
     slug: 17-proyecto-asir-ai
     name: "Proyecto ASIR-AI"
@@ -640,31 +640,31 @@ subjects:
     units:
       - id: UD01
         title: "Problema, requisitos, alcance y criterios de aceptación"
-        status: planned
+        status: specified
       - id: UD02
         title: "Arquitectura, ADR y diseño de red/servicios"
-        status: planned
+        status: specified
       - id: UD03
         title: "Repositorio, Git, documentación e Infrastructure as Code"
-        status: planned
+        status: specified
       - id: UD04
         title: "Plataforma base: red, sistemas, identidad y almacenamiento"
-        status: planned
+        status: specified
       - id: UD05
         title: "Servicios de infraestructura y publicación"
-        status: planned
+        status: specified
       - id: UD06
         title: "Datos, aplicaciones y persistencia"
-        status: planned
+        status: specified
       - id: UD07
         title: "Seguridad, alta disponibilidad y continuidad"
-        status: planned
+        status: specified
       - id: UD08
         title: "Automatización, CI/CD y despliegue reproducible"
-        status: planned
+        status: specified
       - id: UD09
         title: "Observabilidad, backups, pruebas y recuperación"
-        status: planned
+        status: specified
       - id: UD10
         title: "Validación final, memoria, portfolio y defensa"
-        status: planned
+        status: specified
