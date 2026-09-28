@@ -1,12 +1,12 @@
 # Currículo Maestro ASIR-AI
 
-**Versión:** 0.2.0-draft  
-**Estado:** mapa completo de unidades didácticas  
+**Versión:** 0.3.0-draft  
+**Estado:** 172 UDs especificadas; auditoría estructural y pedagógica v0.3 completada  
 **Marca:** RootCode Technologies
 
 ## Propósito
 
-Definir el recorrido completo antes de impartir ninguna clase. Este documento fija la secuencia de las 18 asignaturas, sus unidades didácticas y las dependencias pedagógicas. El desarrollo detallado de cada UD se realizará después de revisar este mapa global.
+Definir el recorrido completo antes de impartir ninguna clase. Este documento fija la secuencia de las 18 asignaturas, sus 172 unidades didácticas y las dependencias pedagógicas. Las 172 UDs ya cuentan con especificación curricular; el currículo permanece en borrador hasta completar evaluación, carga, laboratorios, proyecto y auditoría final v1.0.
 
 ## Contrato pedagógico de cada UD
 
@@ -323,8 +323,24 @@ Cada unidad se desarrollará con: **objetivos → conocimientos previos → cont
 
 ## Puertas de control
 
-Antes de congelar la versión 1.0 se realizará una revisión de: cobertura oficial, orden de prerrequisitos, duplicidades, carga estimada, progresión transversal y coherencia de exámenes/laboratorios.
+Estado tras auditoría v0.3:
+
+- estructura: ✅ 18 asignaturas / 172 UDs;
+- especificación de UDs: ✅;
+- dependencias y progresión transversal: ✅ auditadas;
+- solapamientos principales: ✅ clasificados como progresión deliberada;
+- alineación oficial a nivel de módulos: ✅ documentada en `docs/OFFICIAL_ALIGNMENT.md`;
+- matriz oficial RA/CE → UDs: ⏳;
+- carga y temporalización: ⏳;
+- diseño completo de evaluación: ⏳;
+- laboratorios y ejercicios reproducibles: ⏳;
+- proyecto integrador detallado por hitos: ⏳;
+- auditoría final Curriculum Master v1.0: ⏳.
+
+La auditoría global se documenta en `docs/CURRICULUM_AUDIT_v0.3.md`.
 
 ## Siguiente fase
 
-Crear la ficha completa de cada asignatura, el mapa transversal y la matriz de dependencias. Después se desarrollarán las UDs una a una.
+**Fase 4 — Diseño de evaluación.**
+
+Se definirán blueprints de examen, cobertura, dificultad, tipos de ítems, bancos de preguntas y exámenes finales por asignatura. Después se abordarán carga/temporalización, laboratorios y ejercicios, proyecto integrador y auditoría v1.0.
