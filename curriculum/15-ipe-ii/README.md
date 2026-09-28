@@ -1,49 +1,81 @@
 # ASIR-15 · Carrera Profesional II — IPE II
 
+**Estado:** especificación curricular completada  
+**UDs:** 8
+
 ## Finalidad
 
-Convertir las competencias técnicas en una estrategia profesional: empleo, portfolio, proyectos, emprendimiento y presentación de valor.
+Convertir las competencias técnicas adquiridas durante ASIR-AI en un perfil profesional demostrable, empleable y capaz de evolucionar mediante portfolio, estrategia de búsqueda, entrevistas, gestión de proyectos y planificación de carrera.
 
-## Prerrequisitos
-
-ASIR-06.
-
-## Resultado esperado de la asignatura
-
-Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
-
-## Secuencia de unidades
+## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | Mapa profesional, especialización y estrategia de carrera | Planificada |
-| UD02 | Búsqueda de empleo, networking y canales profesionales | Planificada |
-| UD03 | Portfolio técnico, GitHub y evidencias verificables | Planificada |
-| UD04 | CV, carta, entrevista y prueba técnica | Planificada |
-| UD05 | Emprendimiento, propuesta de valor y modelo de negocio | Planificada |
-| UD06 | Costes, precios, viabilidad y finanzas básicas | Planificada |
-| UD07 | Gestión de proyectos, Agile/Kanban y trabajo profesional | Planificada |
-| UD08 | Plan de inserción profesional y defensa del perfil | Planificada |
+| UD01 | Mapa profesional, especialización y estrategia de carrera | Especificada |
+| UD02 | Búsqueda de empleo, networking y canales profesionales | Especificada |
+| UD03 | Portfolio técnico, GitHub y evidencias verificables | Especificada |
+| UD04 | CV, carta, entrevista y prueba técnica | Especificada |
+| UD05 | Emprendimiento, propuesta de valor y modelo de negocio | Especificada |
+| UD06 | Costes, precios, viabilidad y finanzas básicas | Especificada |
+| UD07 | Gestión de proyectos, Agile/Kanban y trabajo profesional | Especificada |
+| UD08 | Plan de inserción profesional y defensa del perfil | Especificada |
 
-## Metodología
+## Arquitectura pedagógica
 
-Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+```text
+estrategia de carrera
+       ↓
+búsqueda / networking
+       ↓
+portfolio / GitHub
+       ↓
+CV / entrevista / prueba
+       ↓
+emprendimiento
+       ↓
+costes / viabilidad
+       ↓
+gestión de proyectos
+       ↓
+plan de inserción + defensa del perfil
+```
+
+## Principios
+
+- construir una carrera sobre competencias demostrables;
+- diferenciar rol, herramienta y especialización;
+- usar GitHub como evidencia, no como almacén de repositorios sin contexto;
+- adaptar cada candidatura;
+- explicar decisiones técnicas con claridad;
+- no exagerar experiencia ni competencias;
+- gestionar la búsqueda de empleo como un proceso medible;
+- comprender el impacto económico de decisiones técnicas;
+- usar Agile/Kanban con propósito, no como ritual;
+- revisar periódicamente el plan profesional.
+
+## Papel dentro de ASIR-AI
+
+IPE II reutilizará evidencias reales producidas en los módulos técnicos:
+
+- sistemas;
+- redes;
+- bases de datos;
+- servicios;
+- aplicaciones web;
+- seguridad;
+- automatización;
+- cloud y DevOps.
+
+Se conecta especialmente con:
+
+- ASIR-14 Inglés Profesional IT;
+- ASIR-16 Especialización DevOps/Cloud/IA;
+- ASIR-17 Proyecto ASIR-AI.
 
 ## Evaluación
 
-- Los ejercicios y laboratorios son formativos.
-- La calificación se obtiene mediante exámenes.
-- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
-- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+Portfolio, CV, simulaciones de entrevista, pipelines de candidaturas, presupuestos y proyectos son evidencias formativas. La calificación se obtiene mediante exámenes.
 
-## Evidencias y documentación
+## Estado de cierre
 
-Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
-
-## Dependencias transversales
-
-Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
-
-## Desarrollo pendiente
-
-La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
+La asignatura queda curricularmente especificada. En fases posteriores se crearán ofertas simuladas, casos de selección, ejercicios de portfolio, entrevistas, problemas de costes, actividades de gestión de proyectos, blueprints de examen y desarrollo completo de las 8 UDs.
