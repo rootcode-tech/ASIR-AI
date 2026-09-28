@@ -1,52 +1,82 @@
 # ASIR-09 · Sistemas II — Administración de Sistemas Operativos
 
+**Estado:** especificación curricular completada  
+**UDs:** 11
+
 ## Finalidad
 
-Administrar de forma avanzada Linux y Windows, identidades, almacenamiento, automatización, copias, monitorización y hardening.
+Administrar sistemas GNU/Linux y Windows con un enfoque profesional: identidad, almacenamiento, automatización, virtualización, copias, observabilidad, hardening y troubleshooting avanzado.
 
-## Prerrequisitos
-
-ASIR-01, ASIR-02 y ASIR-03.
-
-## Resultado esperado de la asignatura
-
-Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
-
-## Secuencia de unidades
+## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | Administración avanzada de GNU/Linux | Planificada |
-| UD02 | Windows Server y administración remota | Planificada |
-| UD03 | Active Directory, dominios y políticas de grupo | Planificada |
-| UD04 | Identidad, LDAP, Kerberos y servicios de directorio | Planificada |
-| UD05 | LVM, RAID software, cuotas y almacenamiento avanzado | Planificada |
-| UD06 | Automatización con Bash y PowerShell | Planificada |
-| UD07 | Tareas programadas, systemd timers y operación repetible | Planificada |
-| UD08 | Virtualización avanzada y fundamentos de contenedores | Planificada |
-| UD09 | Backups, restauración y recuperación ante fallos | Planificada |
-| UD10 | Logs, monitorización, auditoría y observabilidad básica | Planificada |
-| UD11 | Hardening, mantenimiento y troubleshooting avanzado | Planificada |
+| UD01 | Administración avanzada de GNU/Linux | Especificada |
+| UD02 | Windows Server y administración remota | Especificada |
+| UD03 | Active Directory, dominios y políticas de grupo | Especificada |
+| UD04 | Identidad, LDAP, Kerberos y servicios de directorio | Especificada |
+| UD05 | LVM, RAID software, cuotas y almacenamiento avanzado | Especificada |
+| UD06 | Automatización con Bash y PowerShell | Especificada |
+| UD07 | Tareas programadas, systemd timers y operación repetible | Especificada |
+| UD08 | Virtualización avanzada y fundamentos de contenedores | Especificada |
+| UD09 | Backups, restauración y recuperación ante fallos | Especificada |
+| UD10 | Logs, monitorización, auditoría y observabilidad básica | Especificada |
+| UD11 | Hardening, mantenimiento y troubleshooting avanzado | Especificada |
 
-## Metodología
+## Arquitectura pedagógica
 
-Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+```text
+Linux avanzado ───────┐
+Windows Server ───────┤
+          ↓           │
+AD / GPO              │
+          ↓           │
+LDAP / Kerberos       │
+          ↓           │
+almacenamiento        │
+          ↓           │
+Bash / PowerShell     │
+          ↓           │
+scheduling            │
+          ↓           │
+virtualización / contenedores
+          ↓
+backup / recovery
+          ↓
+logs / observabilidad
+          ↓
+hardening + troubleshooting
+```
+
+## Principios
+
+- operar por CLI y administración remota;
+- entender identidad antes de automatizarla;
+- separar capas de almacenamiento;
+- escribir scripts robustos, no macros frágiles;
+- programar tareas con logs y control de errores;
+- distinguir VM, contenedor, snapshot, réplica y backup;
+- probar restauraciones;
+- observar antes de diagnosticar;
+- aplicar hardening sin sacrificar operabilidad;
+- documentar cambios y causa raíz.
+
+## Papel dentro de ASIR-AI
+
+ASIR-09 es uno de los módulos técnicos centrales del segundo curso. Prepara directamente para:
+
+- ASIR-10 Servicios de Red;
+- ASIR-11 Aplicaciones Web;
+- ASIR-13 Seguridad y Alta Disponibilidad;
+- ASIR-16 DevOps, Cloud e IaC;
+- ASIR-17 Proyecto.
+
+Docker aparece aquí solo en fundamentos. Su administración y diseño se desarrollarán en ASIR-16 para evitar duplicación.
 
 ## Evaluación
 
-- Los ejercicios y laboratorios son formativos.
-- La calificación se obtiene mediante exámenes.
-- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
-- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+Los ejercicios, scripts, laboratorios, incidentes y documentación son formativos. La calificación se obtiene mediante exámenes.
 
-## Evidencias y documentación
+## Estado de cierre
 
-Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
-
-## Dependencias transversales
-
-Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
-
-## Desarrollo pendiente
-
-La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
+La asignatura queda curricularmente especificada. En fases posteriores se desarrollarán laboratorios de dominio, scripting, almacenamiento, recuperación, observabilidad, hardening, blueprints de examen y las lecciones completas de las 11 UDs.
