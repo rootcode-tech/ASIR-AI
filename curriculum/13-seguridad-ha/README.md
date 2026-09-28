@@ -1,53 +1,89 @@
 # ASIR-13 · Ciberseguridad y Alta Disponibilidad
 
+**Estado:** especificación curricular completada  
+**UDs:** 12
+
 ## Finalidad
 
-Diseñar y operar infraestructura segura y resiliente mediante prevención, detección, respuesta, continuidad y alta disponibilidad.
+Diseñar, operar y auditar infraestructuras seguras y resilientes integrando gestión de riesgos, hardening, identidad, segmentación, detección, gestión de vulnerabilidades, continuidad, alta disponibilidad y respuesta a incidentes.
 
-## Prerrequisitos
-
-ASIR-02, ASIR-09, ASIR-10 y ASIR-12 en paralelo.
-
-## Resultado esperado de la asignatura
-
-Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
-
-## Secuencia de unidades
+## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | Riesgo, amenazas, vulnerabilidades y modelo de defensa | Planificada |
-| UD02 | Hardening de sistemas y gestión de configuración segura | Planificada |
-| UD03 | Identidad, MFA, PKI, certificados y gestión de secretos | Planificada |
-| UD04 | Firewalls, segmentación, ACL y Zero Trust introductorio | Planificada |
-| UD05 | IDS/IPS, EDR y fundamentos de SIEM | Planificada |
-| UD06 | Gestión de vulnerabilidades y parcheado | Planificada |
-| UD07 | Seguridad de servicios web, red y aplicaciones | Planificada |
-| UD08 | Copias, recuperación y continuidad de negocio | Planificada |
-| UD09 | Alta disponibilidad, clustering y balanceo | Planificada |
-| UD10 | Respuesta a incidentes, evidencias y forense básico | Planificada |
-| UD11 | Cumplimiento, privacidad, políticas y auditoría | Planificada |
-| UD12 | Laboratorio integral de seguridad y resiliencia | Planificada |
+| UD01 | Riesgo, amenazas, vulnerabilidades y modelo de defensa | Especificada |
+| UD02 | Hardening de sistemas y gestión de configuración segura | Especificada |
+| UD03 | Identidad, MFA, PKI, certificados y gestión de secretos | Especificada |
+| UD04 | Firewalls, segmentación, ACL y Zero Trust introductorio | Especificada |
+| UD05 | IDS/IPS, EDR y fundamentos de SIEM | Especificada |
+| UD06 | Gestión de vulnerabilidades y parcheado | Especificada |
+| UD07 | Seguridad de servicios web, red y aplicaciones | Especificada |
+| UD08 | Copias, recuperación y continuidad de negocio | Especificada |
+| UD09 | Alta disponibilidad, clustering y balanceo | Especificada |
+| UD10 | Respuesta a incidentes, evidencias y forense básico | Especificada |
+| UD11 | Cumplimiento, privacidad, políticas y auditoría | Especificada |
+| UD12 | Laboratorio integral de seguridad y resiliencia | Especificada |
 
-## Metodología
+## Arquitectura pedagógica
 
-Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+```text
+riesgo
+  ↓
+hardening
+  ↓
+identidad / MFA / PKI
+  ↓
+segmentación / firewall
+  ↓
+detección / SIEM
+  ↓
+vulnerabilidades / parcheado
+  ↓
+seguridad de servicios
+  ↓
+backup / continuidad
+  ↓
+HA / clustering / balanceo
+  ↓
+incident response / forense
+  ↓
+auditoría / cumplimiento
+  ↓
+laboratorio integral de resiliencia
+```
+
+## Principios
+
+- gestionar riesgo, no perseguir seguridad absoluta;
+- aplicar mínimo privilegio y mínima conectividad;
+- diseñar seguridad desde la arquitectura;
+- separar prevención, detección, respuesta y recuperación;
+- priorizar vulnerabilidades por contexto, no solo por puntuación;
+- no confundir alta disponibilidad con backup;
+- preservar evidencias antes de alterar sistemas durante un incidente;
+- construir controles medibles y auditables;
+- practicar únicamente en entornos autorizados y de laboratorio;
+- cerrar incidentes con RCA y acciones preventivas.
+
+## Papel dentro de ASIR-AI
+
+ASIR-13 integra conocimientos de:
+
+- ASIR-02 Redes;
+- ASIR-09 Sistemas II;
+- ASIR-10 Servicios de Red;
+- ASIR-11 Aplicaciones Web;
+- ASIR-12 Administración de SGBD.
+
+Y prepara directamente:
+
+- ASIR-16 DevOps/Cloud con seguridad integrada;
+- ASIR-17 Proyecto ASIR-AI.
 
 ## Evaluación
 
-- Los ejercicios y laboratorios son formativos.
-- La calificación se obtiene mediante exámenes.
-- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
-- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+Los laboratorios, hardening, análisis de riesgos, detecciones, simulaciones de incidentes y auditorías son formativos. La calificación se obtiene mediante exámenes.
 
-## Evidencias y documentación
+## Estado de cierre
 
-Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
-
-## Dependencias transversales
-
-Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
-
-## Desarrollo pendiente
-
-La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
+La asignatura queda curricularmente especificada. En fases posteriores se crearán laboratorios defensivos, escenarios de incidentes, datasets de logs, ejercicios de auditoría, blueprints de examen y el desarrollo completo de las 12 UDs.
