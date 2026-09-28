@@ -1,50 +1,87 @@
 # ASIR-05 · Lenguajes y Datos — Lenguajes de Marcas y SGI
 
+**Estado:** especificación curricular completada  
+**UDs:** 9
+
 ## Finalidad
 
-Representar, validar, transformar e intercambiar información estructurada en formatos usados por sistemas, aplicaciones y automatización.
+Representar, validar, transformar, intercambiar y documentar información estructurada mediante formatos y protocolos utilizados en sistemas, aplicaciones y automatización.
 
-## Prerrequisitos
-
-Competencia digital básica.
-
-## Resultado esperado de la asignatura
-
-Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
-
-## Secuencia de unidades
+## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | HTML semántico y estructura de documentos | Planificada |
-| UD02 | CSS esencial y presentación accesible | Planificada |
-| UD03 | XML bien formado, namespaces y modelos de documento | Planificada |
-| UD04 | DTD, XML Schema y validación | Planificada |
-| UD05 | XPath y transformación con XSLT | Planificada |
-| UD06 | JSON, YAML, TOML y formatos de configuración | Planificada |
-| UD07 | APIs, HTTP y representación de datos | Planificada |
-| UD08 | Sindicación, intercambio e integración de información | Planificada |
-| UD09 | Documentación técnica con Markdown y automatización de datos | Planificada |
+| UD01 | HTML semántico y estructura de documentos | Especificada |
+| UD02 | CSS esencial y presentación accesible | Especificada |
+| UD03 | XML bien formado, namespaces y modelos de documento | Especificada |
+| UD04 | DTD, XML Schema y validación | Especificada |
+| UD05 | XPath y transformación con XSLT | Especificada |
+| UD06 | JSON, YAML, TOML y formatos de configuración | Especificada |
+| UD07 | APIs, HTTP y representación de datos | Especificada |
+| UD08 | Sindicación, intercambio e integración de información | Especificada |
+| UD09 | Documentación técnica con Markdown y automatización de datos | Especificada |
 
-## Metodología
+## Arquitectura pedagógica
 
-Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+```text
+HTML
+ ↓
+CSS
+ ↓
+XML
+ ↓
+DTD / XSD
+ ↓
+XPath / XSLT
+ ↓
+JSON / YAML / TOML
+ ↓
+HTTP / APIs
+ ↓
+integración
+ ↓
+Markdown + Git + automatización
+```
+
+## Principios
+
+- separar estructura, presentación y significado;
+- validar datos cuando exista contrato;
+- entender formatos antes de automatizarlos;
+- tratar APIs como contratos entre sistemas;
+- versionar documentación y configuraciones;
+- no guardar secretos en repositorios;
+- usar Git y Markdown como herramientas permanentes a partir de esta asignatura;
+- priorizar formatos y conceptos transferibles frente a herramientas concretas.
+
+## Papel transversal
+
+ASIR-05 es el punto donde Git, GitHub y Markdown pasan de ser una introducción a formar parte del flujo habitual de ASIR-AI.
+
+También prepara directamente para:
+
+- configuración YAML/TOML de herramientas;
+- consumo de APIs;
+- automatización con scripts;
+- Docker/Compose;
+- Ansible;
+- Terraform;
+- CI/CD;
+- documentación del proyecto final.
+
+## Relación con módulos posteriores
+
+ASIR-05 alimenta directamente:
+
+- ASIR-10 Servicios de Red;
+- ASIR-11 Aplicaciones Web;
+- ASIR-16 DevOps, Cloud e IA;
+- ASIR-17 Proyecto.
 
 ## Evaluación
 
-- Los ejercicios y laboratorios son formativos.
-- La calificación se obtiene mediante exámenes.
-- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
-- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+Los ejercicios y laboratorios son formativos. La calificación se obtiene mediante exámenes.
 
-## Evidencias y documentación
+## Estado de cierre
 
-Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
-
-## Dependencias transversales
-
-Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
-
-## Desarrollo pendiente
-
-La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
+La asignatura queda curricularmente especificada. En fases posteriores se desarrollarán ejercicios, laboratorios, datasets, prácticas de API, blueprints de evaluación y las lecciones completas de cada UD.
