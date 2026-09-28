@@ -8,8 +8,15 @@ course:
 
 assessment:
   graded_component: exams
+  scale: "0.0-10.0"
+  pass_mark: 5.0
+  ud_exams_weight: 0.60
+  final_exam_weight: 0.40
+  final_exam_minimum: 5.0
+  recovery_replaces_subject_grade: true
   exercises_graded: false
   labs_graded: false
+  framework: "docs/EVALUATION_FRAMEWORK.md"
 
 unit_contract:
   - objetivos
