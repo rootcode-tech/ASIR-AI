@@ -1,51 +1,110 @@
 # ASIR-16 · Especialización — DevOps, Cloud e IA para Sistemas
 
+**Estado:** especificación curricular completada  
+**UDs:** 10
+
 ## Finalidad
 
-Integrar herramientas modernas de automatización e infraestructura como código sobre una base sólida de sistemas y redes.
+Integrar prácticas modernas de administración de sistemas con Git profesional, contenedores, CI/CD, automatización de configuración, Infrastructure as Code, cloud, Kubernetes, observabilidad, SRE e IA aplicada de forma verificable.
 
-## Prerrequisitos
-
-ASIR-01, ASIR-02, ASIR-05, ASIR-09 y fundamentos de ASIR-10/11.
-
-## Resultado esperado de la asignatura
-
-Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
-
-## Secuencia de unidades
+## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | Flujo profesional con Git, ramas, PR, releases y SemVer | Planificada |
-| UD02 | Linux para DevOps y automatización reproducible | Planificada |
-| UD03 | Docker: imágenes, contenedores, redes y volúmenes | Planificada |
-| UD04 | Docker Compose y stacks multi-servicio | Planificada |
-| UD05 | CI/CD con pipelines y quality gates | Planificada |
-| UD06 | Ansible: inventarios, playbooks, roles e idempotencia | Planificada |
-| UD07 | Terraform e Infrastructure as Code | Planificada |
-| UD08 | Cloud: IAM, redes, compute, storage y costes | Planificada |
-| UD09 | Kubernetes: arquitectura y operación introductoria | Planificada |
-| UD10 | Observabilidad, SRE, IA asistida y proyecto DevOps | Planificada |
+| UD01 | Flujo profesional con Git, ramas, PR, releases y SemVer | Especificada |
+| UD02 | Linux para DevOps y automatización reproducible | Especificada |
+| UD03 | Docker: imágenes, contenedores, redes y volúmenes | Especificada |
+| UD04 | Docker Compose y stacks multi-servicio | Especificada |
+| UD05 | CI/CD con pipelines y quality gates | Especificada |
+| UD06 | Ansible: inventarios, playbooks, roles e idempotencia | Especificada |
+| UD07 | Terraform e Infrastructure as Code | Especificada |
+| UD08 | Cloud: IAM, redes, compute, storage y costes | Especificada |
+| UD09 | Kubernetes: arquitectura y operación introductoria | Especificada |
+| UD10 | Observabilidad, SRE, IA asistida y proyecto DevOps | Especificada |
 
-## Metodología
+## Arquitectura pedagógica
 
-Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+```text
+Git profesional
+      ↓
+Linux reproducible
+      ↓
+Docker
+      ↓
+Docker Compose
+      ↓
+CI/CD
+      ↓
+Ansible
+      ↓
+Terraform / IaC
+      ↓
+Cloud
+      ↓
+Kubernetes
+      ↓
+Observabilidad / SRE / IA
+      ↓
+Proyecto DevOps integrador
+```
+
+## Principios
+
+- comprender antes de automatizar;
+- infraestructura y configuración como código;
+- cambios revisables y trazables mediante Git;
+- imágenes sin secretos y con versiones explícitas;
+- pipelines con quality gates;
+- automatización idempotente;
+- Terraform state tratado como activo sensible;
+- mínimo privilegio en cloud;
+- costes como requisito técnico;
+- Kubernetes a nivel de fundamentos operativos, no como especialización aislada;
+- observabilidad antes de reaccionar;
+- SLO y alertas accionables;
+- IA como copiloto verificable, nunca como autoridad técnica.
+
+## Regla de automatización
+
+Cada tecnología seguirá la secuencia:
+
+```text
+comprender
+   ↓
+hacer manualmente
+   ↓
+verificar
+   ↓
+provocar y diagnosticar fallos
+   ↓
+documentar
+   ↓
+automatizar
+   ↓
+observar y mantener
+```
+
+Esto se aplicará especialmente a Ansible, Terraform, CI/CD e IA asistida.
+
+## Papel dentro de ASIR-AI
+
+ASIR-16 es la capa de especialización moderna que conecta todo lo aprendido previamente:
+
+- Linux y Windows;
+- redes;
+- bases de datos;
+- servicios;
+- aplicaciones web;
+- seguridad;
+- documentación;
+- Git/GitHub.
+
+Prepara directamente el **ASIR-17 Proyecto ASIR-AI**, donde estas tecnologías se integrarán solo cuando aporten valor arquitectónico real.
 
 ## Evaluación
 
-- Los ejercicios y laboratorios son formativos.
-- La calificación se obtiene mediante exámenes.
-- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
-- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+Los repositorios, pipelines, playbooks, IaC, despliegues cloud, manifests, dashboards y proyecto DevOps son formativos. La calificación se obtiene mediante exámenes.
 
-## Evidencias y documentación
+## Estado de cierre
 
-Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
-
-## Dependencias transversales
-
-Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
-
-## Desarrollo pendiente
-
-La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
+La asignatura queda curricularmente especificada. En fases posteriores se crearán laboratorios reproducibles, repositorios de práctica, escenarios CI/CD, ejercicios de Ansible/Terraform, labs cloud/Kubernetes, blueprints de examen y el desarrollo completo de las 10 UDs.
