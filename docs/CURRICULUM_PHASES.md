@@ -20,9 +20,9 @@ Las 172 UDs ya contienen el contrato curricular completo:
 
 Auditoría v0.3 completada sobre estructura, dependencias, progresión transversal y solapamientos.
 
-## Fase 4 — Diseño de evaluación
+## Fase 4 — Diseño de evaluación ⏳
 
-Banco de preguntas, blueprint de exámenes, dificultad, cobertura y exámenes finales de asignatura.
+Marco común de evaluación ✅. Pendiente: blueprints de las 18 asignaturas, bancos de preguntas, cobertura, dificultad y exámenes finales.
 
 ## Fase 5 — Laboratorios y ejercicios
 
