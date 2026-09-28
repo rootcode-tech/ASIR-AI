@@ -1,49 +1,86 @@
 # ASIR-06 · Carrera Profesional I — IPE I
 
+**Estado:** especificación curricular completada  
+**UDs:** 8
+
 ## Finalidad
 
-Comprender el entorno laboral, los derechos y obligaciones profesionales, la prevención y las competencias personales necesarias para incorporarse al sector.
+Comprender el entorno laboral, los derechos y obligaciones profesionales, la prevención de riesgos y las competencias personales necesarias para incorporarse al sector IT con criterio.
 
-## Prerrequisitos
-
-Ninguno.
-
-## Resultado esperado de la asignatura
-
-Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
-
-## Secuencia de unidades
+## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | Sector IT, perfiles profesionales y competencias | Planificada |
-| UD02 | Relaciones laborales, derechos y deberes | Planificada |
-| UD03 | Contratación, nómina y Seguridad Social | Planificada |
-| UD04 | Prevención de riesgos laborales y cultura preventiva | Planificada |
-| UD05 | Emergencias, primeros auxilios y actuación segura | Planificada |
-| UD06 | Comunicación profesional, equipo y resolución de conflictos | Planificada |
-| UD07 | Empleabilidad, aprendizaje continuo e identidad digital | Planificada |
-| UD08 | Plan profesional personal y evidencias de competencia | Planificada |
+| UD01 | Sector IT, perfiles profesionales y competencias | Especificada |
+| UD02 | Relaciones laborales, derechos y deberes | Especificada |
+| UD03 | Contratación, nómina y Seguridad Social | Especificada |
+| UD04 | Prevención de riesgos laborales y cultura preventiva | Especificada |
+| UD05 | Emergencias, primeros auxilios y actuación segura | Especificada |
+| UD06 | Comunicación profesional, equipo y resolución de conflictos | Especificada |
+| UD07 | Empleabilidad, aprendizaje continuo e identidad digital | Especificada |
+| UD08 | Plan profesional personal y evidencias de competencia | Especificada |
 
-## Metodología
+## Arquitectura pedagógica
 
-Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+```text
+sector IT y perfiles
+       ↓
+relaciones laborales
+       ↓
+contratación / nómina
+       ↓
+PRL
+       ↓
+emergencias
+       ↓
+comunicación / equipo
+       ↓
+empleabilidad / identidad digital
+       ↓
+plan profesional v1
+```
+
+## Principios
+
+- entender el trabajo real, no memorizar normativa aislada;
+- consultar siempre fuentes oficiales cuando una norma pueda haber cambiado;
+- relacionar cada módulo técnico con competencias profesionales;
+- tratar prevención y seguridad como parte de la calidad técnica;
+- separar hechos, hipótesis y opiniones en comunicación profesional;
+- construir evidencias de competencia, no solo títulos;
+- mantener una identidad digital profesional y prudente;
+- revisar el plan de carrera conforme evolucione la experiencia.
+
+## Papel dentro de ASIR-AI
+
+IPE I no queda aislada de la parte técnica. A lo largo del curso irá recogiendo evidencias reales producidas en:
+
+- sistemas;
+- redes;
+- hardware;
+- bases de datos;
+- documentación;
+- Git/GitHub;
+- laboratorios.
+
+Esto permitirá que el plan profesional se base en capacidades demostrables.
+
+## Relación con módulos posteriores
+
+ASIR-06 prepara directamente:
+
+- ASIR-15 IPE II;
+- ASIR-17 Proyecto y defensa;
+- portfolio profesional de ASIR-AI.
 
 ## Evaluación
 
-- Los ejercicios y laboratorios son formativos.
-- La calificación se obtiene mediante exámenes.
-- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
-- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+Los ejercicios, análisis de ofertas, prácticas, simulaciones y construcción del portfolio son formativos. La calificación se obtiene mediante exámenes.
 
-## Evidencias y documentación
+## Nota de actualización
 
-Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
+Los contenidos laborales, de Seguridad Social y prevención que dependan de normativa vigente deberán contrastarse con fuentes oficiales en el momento de impartir la unidad.
 
-## Dependencias transversales
+## Estado de cierre
 
-Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
-
-## Desarrollo pendiente
-
-La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
+La asignatura queda curricularmente especificada. En fases posteriores se crearán casos laborales, ejercicios de nómina, simulaciones, blueprints de examen y materiales completos de cada UD.
