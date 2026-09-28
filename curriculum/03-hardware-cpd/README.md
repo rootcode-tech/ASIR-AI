@@ -1,26 +1,50 @@
 # ASIR-03 · Hardware y CPD — Fundamentos de Hardware
 
-**Estado:** pendiente de desglose en unidades didácticas.
+## Finalidad
 
-## Objetivo de esta fase
+Seleccionar, montar, mantener y diagnosticar hardware de puesto, servidor y CPD entendiendo disponibilidad, energía y almacenamiento.
 
-Definir primero todas las UDs de la asignatura y sus dependencias. Después se desarrollará cada unidad con el contrato pedagógico estándar de ASIR-AI.
+## Prerrequisitos
 
-## Unidades didácticas
+ASIR-00 recomendado.
 
-> Pendiente de diseño en el Currículo Maestro v1.0.
+## Resultado esperado de la asignatura
 
-## Contrato de cada UD
+Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
 
-- Objetivos
-- Conocimientos previos
-- Contenidos
-- Teoría
-- Herramientas
-- Ejercicios
-- Laboratorio
-- Documentación / entregables
-- Competencias transversales
-- Criterios de dominio
-- Preparación del examen
-- Examen
+## Secuencia de unidades
+
+| UD | Título | Estado |
+|---|---|---|
+| UD01 | Arquitectura de hardware: CPU, memoria, buses y placas | Planificada |
+| UD02 | UEFI/BIOS, POST, arranque y configuración de firmware | Planificada |
+| UD03 | Almacenamiento: HDD, SSD, NVMe e interfaces | Planificada |
+| UD04 | RAID, redundancia y rendimiento de almacenamiento | Planificada |
+| UD05 | Hardware de servidor, gestión remota y componentes empresariales | Planificada |
+| UD06 | Energía, fuentes, UPS, protección y continuidad | Planificada |
+| UD07 | Racks, cableado, refrigeración y fundamentos de CPD | Planificada |
+| UD08 | Dispositivos de red, periféricos y compatibilidad | Planificada |
+| UD09 | Diagnóstico, mantenimiento, inventario y ciclo de vida | Planificada |
+
+## Metodología
+
+Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+
+## Evaluación
+
+- Los ejercicios y laboratorios son formativos.
+- La calificación se obtiene mediante exámenes.
+- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
+- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+
+## Evidencias y documentación
+
+Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
+
+## Dependencias transversales
+
+Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
+
+## Desarrollo pendiente
+
+La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
