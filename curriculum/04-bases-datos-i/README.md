@@ -1,51 +1,84 @@
 # ASIR-04 · Bases de Datos I — Gestión de Bases de Datos
 
+**Estado:** especificación curricular completada  
+**UDs:** 10
+
 ## Finalidad
 
-Diseñar bases de datos relacionales correctas y operar SQL con integridad, transacciones y seguridad básica.
+Diseñar bases de datos relacionales correctas y operar SQL con integridad, transacciones, seguridad básica y procedimientos de copia/restauración.
 
-## Prerrequisitos
-
-Competencia matemática y lógica básica.
-
-## Resultado esperado de la asignatura
-
-Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
-
-## Secuencia de unidades
+## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | Sistemas de información y modelos de datos | Planificada |
-| UD02 | Modelo entidad-relación y diseño conceptual | Planificada |
-| UD03 | Modelo relacional, claves y restricciones | Planificada |
-| UD04 | Normalización y calidad del diseño | Planificada |
-| UD05 | SQL DDL: esquemas, tablas, tipos y restricciones | Planificada |
-| UD06 | SQL DML: inserción, actualización y borrado | Planificada |
-| UD07 | Consultas SELECT, funciones, agregación y ordenación | Planificada |
-| UD08 | JOIN, subconsultas, vistas y consultas avanzadas | Planificada |
-| UD09 | Transacciones, concurrencia e integridad | Planificada |
-| UD10 | Usuarios, privilegios, copias y operación básica del SGBD | Planificada |
+| UD01 | Sistemas de información y modelos de datos | Especificada |
+| UD02 | Modelo entidad-relación y diseño conceptual | Especificada |
+| UD03 | Modelo relacional, claves y restricciones | Especificada |
+| UD04 | Normalización y calidad del diseño | Especificada |
+| UD05 | SQL DDL: esquemas, tablas, tipos y restricciones | Especificada |
+| UD06 | SQL DML: inserción, actualización y borrado | Especificada |
+| UD07 | Consultas SELECT, funciones, agregación y ordenación | Especificada |
+| UD08 | JOIN, subconsultas, vistas y consultas avanzadas | Especificada |
+| UD09 | Transacciones, concurrencia e integridad | Especificada |
+| UD10 | Usuarios, privilegios, copias y operación básica del SGBD | Especificada |
 
-## Metodología
+## Arquitectura pedagógica
 
-Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+```text
+sistemas de información
+        ↓
+modelo ER
+        ↓
+modelo relacional
+        ↓
+normalización
+        ↓
+DDL
+        ↓
+DML
+        ↓
+SELECT / agregación
+        ↓
+JOIN / subconsultas / vistas
+        ↓
+transacciones / concurrencia
+        ↓
+roles / backup / restore
+```
+
+## SGBD de referencia
+
+- PostgreSQL como plataforma principal.
+- MariaDB/MySQL como contraste cuando aporte valor.
+- SQL estándar como referencia conceptual siempre que sea posible.
+
+Las versiones concretas se fijarán al comenzar el curso.
+
+## Principios
+
+- diseñar antes de implementar;
+- imponer integridad en la base cuando corresponda;
+- normalizar con criterio, no mecánicamente;
+- verificar con SELECT antes de UPDATE/DELETE;
+- usar transacciones para cambios sensibles;
+- aplicar mínimo privilegio;
+- versionar scripts SQL;
+- probar la restauración de los backups.
+
+## Relación con módulos posteriores
+
+ASIR-04 es base directa de:
+
+- ASIR-11 Implantación de Aplicaciones Web;
+- ASIR-12 Administración de SGBD;
+- ASIR-13 Seguridad y Alta Disponibilidad;
+- ASIR-16 automatización y plataformas;
+- ASIR-17 Proyecto.
 
 ## Evaluación
 
-- Los ejercicios y laboratorios son formativos.
-- La calificación se obtiene mediante exámenes.
-- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
-- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+Los ejercicios y laboratorios son formativos. La calificación se obtiene mediante exámenes.
 
-## Evidencias y documentación
+## Estado de cierre
 
-Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
-
-## Dependencias transversales
-
-Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
-
-## Desarrollo pendiente
-
-La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
+La asignatura queda curricularmente especificada. En fases posteriores se desarrollarán bancos de ejercicios, datasets, laboratorios reproducibles, blueprints de examen y las lecciones completas de cada UD.
