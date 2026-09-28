@@ -50,9 +50,17 @@ La escala es propia de ASIR-AI. La equivalencia administrativa con un centro ofi
 
 ## 4. Arquitectura de examen
 
+### Regla de activación
+
+**Ningún examen se activa automáticamente al finalizar una UD o asignatura.**
+
+El alumno decide cuándo quiere presentarse. Antes puede repetir teoría, ejercicios, laboratorios y simulacros tantas veces como necesite, sin penalización.
+
+Solo una solicitud explícita equivalente a **“quiero hacer el examen”** inicia una evaluación calificable.
+
 ### 4.1 Examen de UD
 
-Cada UD tendrá un examen breve o medio.
+Cada UD tendrá un examen breve o medio, disponible bajo demanda.
 
 Objetivo:
 
@@ -68,7 +76,7 @@ Duración orientativa:
 
 ### 4.2 Examen final de asignatura
 
-Cada asignatura tendrá un examen final integrador.
+Cada asignatura tendrá un examen final integrador, también bajo demanda y únicamente cuando el alumno decida presentarse.
 
 Objetivo:
 
@@ -101,7 +109,9 @@ Condiciones:
 
 ## 6. Recuperación
 
-Si no se supera una asignatura, se realiza un **examen de recuperación integral**.
+Si no se supera una asignatura, el alumno podrá seguir estudiando y solicitar un **examen de recuperación integral** cuando considere que está preparado.
+
+No hay límite pedagógico de intentos ni penalización por necesitar más tiempo.
 
 Reglas:
 
