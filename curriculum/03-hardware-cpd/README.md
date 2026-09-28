@@ -1,50 +1,71 @@
 # ASIR-03 · Hardware y CPD — Fundamentos de Hardware
 
+**Estado:** especificación curricular completada  
+**UDs:** 9
+
 ## Finalidad
 
-Seleccionar, montar, mantener y diagnosticar hardware de puesto, servidor y CPD entendiendo disponibilidad, energía y almacenamiento.
+Comprender el hardware como infraestructura operativa: seleccionar, mantener, monitorizar y diagnosticar puestos, servidores y elementos básicos de CPD con criterios de rendimiento, disponibilidad, energía y ciclo de vida.
 
-## Prerrequisitos
-
-ASIR-00 recomendado.
-
-## Resultado esperado de la asignatura
-
-Al finalizar, el alumno deberá poder explicar los fundamentos, ejecutar los procedimientos esenciales sin depender de recetas ciegas, diagnosticar errores habituales, documentar lo realizado y justificar las decisiones técnicas propias del alcance de la asignatura.
-
-## Secuencia de unidades
+## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | Arquitectura de hardware: CPU, memoria, buses y placas | Planificada |
-| UD02 | UEFI/BIOS, POST, arranque y configuración de firmware | Planificada |
-| UD03 | Almacenamiento: HDD, SSD, NVMe e interfaces | Planificada |
-| UD04 | RAID, redundancia y rendimiento de almacenamiento | Planificada |
-| UD05 | Hardware de servidor, gestión remota y componentes empresariales | Planificada |
-| UD06 | Energía, fuentes, UPS, protección y continuidad | Planificada |
-| UD07 | Racks, cableado, refrigeración y fundamentos de CPD | Planificada |
-| UD08 | Dispositivos de red, periféricos y compatibilidad | Planificada |
-| UD09 | Diagnóstico, mantenimiento, inventario y ciclo de vida | Planificada |
+| UD01 | Arquitectura de hardware: CPU, memoria, buses y placas | Especificada |
+| UD02 | UEFI/BIOS, POST, arranque y configuración de firmware | Especificada |
+| UD03 | Almacenamiento: HDD, SSD, NVMe e interfaces | Especificada |
+| UD04 | RAID, redundancia y rendimiento de almacenamiento | Especificada |
+| UD05 | Hardware de servidor, gestión remota y componentes empresariales | Especificada |
+| UD06 | Energía, fuentes, UPS, protección y continuidad | Especificada |
+| UD07 | Racks, cableado, refrigeración y fundamentos de CPD | Especificada |
+| UD08 | Dispositivos de red, periféricos y compatibilidad | Especificada |
+| UD09 | Diagnóstico, mantenimiento, inventario y ciclo de vida | Especificada |
 
-## Metodología
+## Arquitectura pedagógica
 
-Cada UD seguirá la secuencia **comprender → practicar → aplicar → diagnosticar → documentar → evaluar**. La teoría se enlazará con ejercicios cortos y, cuando proceda, con un laboratorio reproducible.
+```text
+CPU / RAM / buses
+       ↓
+firmware / arranque
+       ↓
+almacenamiento
+       ↓
+RAID
+       ↓
+servidor empresarial
+       ↓
+energía / UPS
+       ↓
+rack / CPD / refrigeración
+       ↓
+interfaces / periféricos
+       ↓
+diagnóstico + ciclo de vida
+```
+
+## Principios
+
+- leer especificaciones con criterio;
+- separar capacidad, rendimiento, latencia y disponibilidad;
+- RAID no es backup;
+- considerar energía, temperatura y mantenibilidad;
+- priorizar telemetría y evidencia;
+- documentar inventario y ciclo de vida;
+- sustituir componentes solo con hipótesis razonada.
+
+## Relación con módulos posteriores
+
+ASIR-03 alimenta directamente:
+
+- ASIR-09 Sistemas II;
+- ASIR-13 Seguridad y Alta Disponibilidad;
+- ASIR-16 DevOps/Cloud en aspectos de infraestructura;
+- ASIR-17 Proyecto.
 
 ## Evaluación
 
-- Los ejercicios y laboratorios son formativos.
-- La calificación se obtiene mediante exámenes.
-- Cada examen comprobará comprensión, aplicación y diagnóstico; no solo memorización.
-- Antes de avanzar, deberán cumplirse los criterios de dominio de la UD.
+Los ejercicios y laboratorios son formativos. La calificación se obtiene mediante exámenes.
 
-## Evidencias y documentación
+## Estado de cierre
 
-Las evidencias técnicas relevantes se guardarán en Git mediante Markdown, configuraciones, scripts, diagramas y resultados reproducibles. Cuando una tecnología transversal ya haya sido introducida, se reutilizará aquí en lugar de volver a enseñarla desde cero.
-
-## Dependencias transversales
-
-Consultar `../../docs/DEPENDENCY_MAP.md` y `../../transversal/ROADMAP.md`.
-
-## Desarrollo pendiente
-
-La siguiente fase creará `UD01.md`, `UD02.md`, etc., usando la plantilla común de `docs/UD_TEMPLATE.md`.
+La asignatura queda curricularmente especificada. En fases posteriores se crearán bancos de ejercicios, laboratorios completos, blueprints de evaluación y el desarrollo didáctico de cada UD.
