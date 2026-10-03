@@ -1,0 +1,172 @@
+schema_version: 0.1.0
+subject: ASIR-15
+name: Carrera Profesional II — IPE II
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_docs
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 4, reasoning: 3, evidence: 2, clarity: 1}
+items:
+  - id: ASIR-15-UD01-Q001
+    unit: UD01
+    title: Mapa profesional
+    competency: Relacionar competencias con posibles especializaciones.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "A partir de un perfil con sistemas, redes, scripting y cloud básicos, propone dos rutas de especialización y qué brechas tendría que cubrir en cada una."
+    expected_answer: "Rutas coherentes con competencias y brechas concretas; evita nombres de puestos sin justificación."
+    tags: [career, strategy]
+  - id: ASIR-15-UD01-Q002
+    unit: UD01
+    title: Decisión de especialización
+    competency: Comparar opciones profesionales con criterios explícitos.
+    difficulty: D3
+    type: comparison
+    estimated_time_minutes: 12
+    prompt: "Compara administración de sistemas, cloud/DevOps y ciberseguridad para un perfil dado atendiendo a tareas, requisitos, curva de aprendizaje y evidencias necesarias."
+    expected_answer: "Comparación estructurada y decisión justificada, sin afirmar que una ruta es universalmente mejor."
+    tags: [career, decision]
+  - id: ASIR-15-UD02-Q001
+    unit: UD02
+    title: Búsqueda de empleo
+    competency: Diseñar una estrategia de búsqueda enfocada.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Diseña una semana de búsqueda para un perfil junior IT: canales, alertas, registro de candidaturas y seguimiento."
+    expected_answer: "Plan reproducible con fuentes, criterios, tracking y seguimiento; evita envío masivo indiscriminado."
+    tags: [job_search]
+  - id: ASIR-15-UD02-Q002
+    unit: UD02
+    title: Oferta mal ajustada
+    competency: Evaluar requisitos imprescindibles y deseables.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Una oferta pide 10 tecnologías y 2 años de experiencia, pero 5 son 'nice to have'. Decide si aplicarías y cómo adaptarías candidatura sin mentir."
+    expected_answer: "Distingue esenciales/deseables, evidencia competencias transferibles y declara brechas honestamente."
+    tags: [job_search, application]
+  - id: ASIR-15-UD03-Q001
+    unit: UD03
+    title: Portfolio verificable
+    competency: Convertir una competencia en evidencia técnica.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Para demostrar 'sé Linux y redes', define tres evidencias concretas que un reclutador pueda revisar."
+    expected_answer: "Repos/labs/documentación/demos con objetivo, configuración, pruebas y autoría clara."
+    tags: [portfolio, github]
+  - id: ASIR-15-UD03-Q002
+    unit: UD03
+    title: Repo profesional
+    competency: Auditar un repositorio como evidencia de trabajo.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Un repo tiene código sin README, commits 'fix', secretos de prueba y screenshots sin explicación. Prioriza mejoras para hacerlo profesional."
+    expected_answer: "Retirar/rotar secretos, README reproducible, commits claros, documentación de arquitectura/pruebas y licencia si procede."
+    critical_errors: ["Mantener secretos expuestos"]
+    tags: [portfolio, github]
+  - id: ASIR-15-UD04-Q001
+    unit: UD04
+    title: CV orientado a evidencia
+    competency: Redactar experiencia técnica sin inflarla.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Reescribe tres frases genéricas de CV para indicar acción, tecnología, alcance y evidencia, sin inventar resultados."
+    expected_answer: "Bullets específicos, verificables y ajustados al nivel real."
+    tags: [cv]
+  - id: ASIR-15-UD04-Q002
+    unit: UD04
+    title: Prueba técnica
+    competency: Explicar decisiones y límites bajo evaluación.
+    difficulty: D3
+    type: oral
+    estimated_time_minutes: 10
+    prompt: "Defiende una solución técnica dada durante cinco minutos e indica qué mejorarías con más tiempo y qué supuestos has hecho."
+    expected_answer: "Explicación coherente, límites explícitos, decisiones justificadas y sin ocultar incertidumbre."
+    tags: [interview, technical_test]
+  - id: ASIR-15-UD05-Q001
+    unit: UD05
+    title: Propuesta de valor
+    competency: Formular un problema, cliente y valor entregado.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Define propuesta de valor para un pequeño servicio de soporte/monitorización IT: cliente, problema, solución y beneficio medible."
+    expected_answer: "Cliente y problema concretos, solución proporcionada y valor no basado solo en 'usar tecnología'."
+    tags: [entrepreneurship]
+  - id: ASIR-15-UD05-Q002
+    unit: UD05
+    title: Idea sin problema
+    competency: Detectar una propuesta centrada en tecnología en lugar de necesidad.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Una idea dice 'venderemos una plataforma con IA y blockchain' sin cliente ni problema. Explica qué preguntas deben responderse antes de desarrollarla."
+    expected_answer: "Cliente, problema, frecuencia/coste, alternativa actual, valor, validación y modelo; tecnología después."
+    tags: [entrepreneurship, validation]
+  - id: ASIR-15-UD06-Q001
+    unit: UD06
+    title: Coste y precio
+    competency: Calcular coste mínimo y margen básico.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 12
+    prompt: "Un servicio cuesta 80 € de infraestructura y 6 h de trabajo a 20 €/h. Calcula coste directo y precio con margen del 25% sobre coste."
+    expected_answer: "Coste 200 €; precio 250 € si margen se define como recargo del 25% sobre coste. Debe explicitar definición."
+    tags: [finance, pricing]
+  - id: ASIR-15-UD06-Q002
+    unit: UD06
+    title: Viabilidad mensual
+    competency: Analizar punto de equilibrio simple.
+    difficulty: D3
+    type: calculation
+    estimated_time_minutes: 15
+    prompt: "Costes fijos 1200 €/mes, margen de contribución 60 € por cliente. Calcula clientes para cubrir costes y comenta dos riesgos del cálculo."
+    expected_answer: "20 clientes; riesgos como churn, impuestos/costes omitidos, capacidad o margen variable."
+    tags: [finance, break_even]
+  - id: ASIR-15-UD07-Q001
+    unit: UD07
+    title: Kanban útil
+    competency: Gestionar flujo de trabajo visible.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Diseña un tablero Kanban mínimo para proyecto IT con límites WIP y definición de terminado."
+    expected_answer: "Columnas de flujo, WIP razonable, criterios Done y trabajo trazable."
+    tags: [project_management, kanban]
+  - id: ASIR-15-UD07-Q002
+    unit: UD07
+    title: Proyecto siempre al 90%
+    competency: Detectar mala gestión de alcance y progreso.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Un proyecto tiene muchas tareas 'en progreso' y ninguna termina. Analiza causas y propone cambios de WIP, slicing y prioridades."
+    expected_answer: "Reducir WIP, dividir entregables, terminar antes de empezar más y priorizar por valor/riesgo."
+    tags: [project_management]
+  - id: ASIR-15-UD08-Q001
+    unit: UD08
+    title: Plan de inserción A
+    competency: Integrar estrategia, portfolio y candidatura.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 25
+    prompt: "Diseña un plan de 90 días para lograr entrevistas junior: objetivo, skills, dos proyectos/evidencias, CV/GitHub, canales y métricas."
+    expected_answer: "Plan medible, realista, evidencia concreta, feedback y ajuste periódico."
+    tags: [integrative, career_plan]
+  - id: ASIR-15-UD08-Q002
+    unit: UD08
+    title: Defensa del perfil
+    competency: Defender competencias con evidencia verificable.
+    difficulty: D4
+    type: oral
+    estimated_time_minutes: 12
+    prompt: "Defiende tu perfil para un puesto suministrado: tres fortalezas con evidencia, dos brechas y un plan para cerrarlas."
+    expected_answer: "Evidencia específica, honestidad sobre brechas y plan concreto; no se premia exageración."
+    critical_errors: ["Inventar experiencia, certificaciones o métricas"]
+    tags: [integrative, recovery]
