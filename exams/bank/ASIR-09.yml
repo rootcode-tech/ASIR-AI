@@ -1,0 +1,234 @@
+schema_version: 0.1.0
+subject: ASIR-09
+name: Sistemas II — Administración de Sistemas Operativos
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_lab
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 3.5, reasoning: 2, verification: 2, security: 1.5, clarity: 1}
+items:
+  - id: ASIR-09-UD01-Q001
+    unit: UD01
+    title: Linux avanzado operativo
+    competency: Gestionar recursos y servicios de Linux con verificación.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Identifica los tres procesos con mayor uso de memoria, limita/ajusta un servicio de laboratorio según el enunciado y demuestra el efecto."
+    expected_answer: "Uso correcto de herramientas, cambio mínimo y evidencia antes/después."
+    tags: [linux, administration]
+  - id: ASIR-09-UD01-Q002
+    unit: UD01
+    title: Carga alta sin CPU alta
+    competency: Diagnosticar presión de recursos Linux.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "El load average es alto pero la CPU no está saturada. Diseña un diagnóstico que contemple I/O wait, procesos bloqueados y memoria."
+    expected_answer: "Debe correlacionar load con estados de proceso, iowait, almacenamiento y memoria, evitando asumir CPU."
+    tags: [linux, diagnosis]
+  - id: ASIR-09-UD02-Q001
+    unit: UD02
+    title: Administración remota Windows Server
+    competency: Administrar Windows Server remotamente con privilegio mínimo.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Realiza una tarea administrativa remota suministrada usando PowerShell/gestión remota y verifica el estado final."
+    expected_answer: "Conexión autorizada, comando/cmdlet correcto, mínimo privilegio y verificación independiente."
+    tags: [windows_server, powershell]
+  - id: ASIR-09-UD02-Q002
+    unit: UD02
+    title: Remoting falla
+    competency: Diagnosticar WinRM/administración remota.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Un servidor responde a ping pero PowerShell Remoting falla. Ordena comprobaciones de servicio, listener, firewall, autenticación y permisos."
+    expected_answer: "Diagnóstico por capas sin desactivar firewall globalmente; valida causa y recuperación."
+    tags: [windows_server, diagnosis]
+  - id: ASIR-09-UD03-Q001
+    unit: UD03
+    title: OU y GPO
+    competency: Diseñar una estructura básica de AD y aplicar políticas.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Crea una OU para un departamento, mueve usuarios/equipos de laboratorio y aplica una GPO sencilla solo a ese ámbito."
+    expected_answer: "OU/GPO enlazada correctamente, alcance limitado y efecto verificado en cliente."
+    tags: [ad, gpo]
+  - id: ASIR-09-UD03-Q002
+    unit: UD03
+    title: GPO no aplicada
+    competency: Diagnosticar ámbito, filtrado y procesamiento de políticas.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 20
+    prompt: "Una GPO aparece creada pero no afecta a un equipo. Diagnostica enlace, OU, permisos/filtrado y resultado de políticas."
+    expected_answer: "Usa evidencia de gpresult/equivalente y corrige la causa sin ampliar permisos indiscriminadamente."
+    tags: [ad, gpo, diagnosis]
+  - id: ASIR-09-UD04-Q001
+    unit: UD04
+    title: Autenticación y autorización
+    competency: Diferenciar identidad, autenticación y autorización.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Explica la diferencia entre directorio LDAP, autenticación Kerberos y autorización sobre un recurso."
+    expected_answer: "Directorio almacena/consulta identidad, Kerberos autentica mediante tickets y autorización decide acceso según permisos/políticas."
+    tags: [ldap, kerberos, identity]
+  - id: ASIR-09-UD04-Q002
+    unit: UD04
+    title: Kerberos y reloj
+    competency: Diagnosticar un fallo de autenticación por tiempo.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Un cliente unido al dominio falla autenticación y su reloj difiere mucho del controlador. Explica relación con Kerberos y cómo verificar/corregir."
+    expected_answer: "Kerberos depende de sincronización temporal; revisar NTP/time service y tickets tras corregir, sin debilitar seguridad."
+    tags: [kerberos, time, diagnosis]
+  - id: ASIR-09-UD05-Q001
+    unit: UD05
+    title: LVM ampliación segura
+    competency: Ampliar almacenamiento lógico sin pérdida.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Amplía un volumen lógico y su sistema de archivos usando espacio disponible, verificando estado antes y después."
+    expected_answer: "Identifica PV/VG/LV, amplía capa correcta y filesystem, verifica capacidad y datos."
+    critical_errors: ["Operar sobre el dispositivo equivocado sin verificar"]
+    tags: [lvm, storage]
+  - id: ASIR-09-UD05-Q002
+    unit: UD05
+    title: RAID degradado
+    competency: Diagnosticar y recuperar RAID software.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Un RAID software de laboratorio está degradado tras perder un miembro. Identifica estado, sustituye el miembro simulado y verifica resincronización."
+    expected_answer: "Detecta degradación, añade dispositivo correcto y comprueba rebuild sin destruir datos."
+    tags: [raid, recovery]
+  - id: ASIR-09-UD06-Q001
+    unit: UD06
+    title: Script repetible
+    competency: Automatizar una tarea administrativa con validación.
+    difficulty: D2
+    type: script
+    estimated_time_minutes: 20
+    prompt: "Escribe un script Bash o PowerShell que cree un recurso solo si no existe, registre acciones y devuelva código de salida coherente."
+    expected_answer: "Funciona en primera y segunda ejecución sin duplicar estado, maneja errores y registra resultado."
+    tags: [automation, bash, powershell]
+  - id: ASIR-09-UD06-Q002
+    unit: UD06
+    title: Script silenciosamente fallido
+    competency: Diagnosticar automatización que devuelve éxito incorrecto.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Un script sigue ejecutando y termina con código 0 aunque un comando crítico falló. Corrige control de errores y demuestra comportamiento."
+    expected_answer: "Detecta error, detiene/gestiona flujo, propaga exit code y deja logs útiles."
+    tags: [automation, error_handling]
+  - id: ASIR-09-UD07-Q001
+    unit: UD07
+    title: Tarea programada
+    competency: Programar una operación recurrente con logs.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 15
+    prompt: "Programa una tarea diaria con systemd timer o Task Scheduler y registra salida/errores en ubicación definida."
+    expected_answer: "Planificación correcta, identidad/permisos adecuados, logs y prueba manual/forzada."
+    tags: [scheduling]
+  - id: ASIR-09-UD07-Q002
+    unit: UD07
+    title: Job funciona manual pero no programado
+    competency: Diagnosticar diferencias de entorno.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Un script funciona en shell interactiva pero falla como tarea programada. Investiga PATH, cwd, usuario, variables y permisos."
+    expected_answer: "Aísla diferencia de entorno, usa rutas explícitas y verifica bajo identidad real del job."
+    tags: [scheduling, diagnosis]
+  - id: ASIR-09-UD08-Q001
+    unit: UD08
+    title: VM versus contenedor
+    competency: Comparar aislamiento y arquitectura.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Compara VM y contenedor en kernel, aislamiento, arranque y densidad."
+    expected_answer: "VM incluye SO/kernel invitado; contenedor comparte kernel del host, menor overhead pero aislamiento distinto."
+    tags: [virtualization, containers]
+  - id: ASIR-09-UD08-Q002
+    unit: UD08
+    title: Selección de aislamiento
+    competency: Elegir virtualización según requisito.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Necesitas ejecutar una aplicación Linux ligera y otra que exige kernel/SO distinto. Decide contenedor o VM para cada una y justifica."
+    expected_answer: "Contenedor para app compatible con host; VM para SO/kernel distinto, atendiendo aislamiento y operación."
+    tags: [virtualization, design]
+  - id: ASIR-09-UD09-Q001
+    unit: UD09
+    title: Restore verificado
+    competency: Restaurar datos y validar integridad.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Restaura un conjunto de datos desde backup a ubicación alternativa y verifica integridad, permisos y accesibilidad."
+    expected_answer: "Restore real, hashes/contenido y permisos correctos; evidencia de acceso."
+    critical_errors: ["Declarar éxito sin verificar restore"]
+    tags: [backup, restore]
+  - id: ASIR-09-UD09-Q002
+    unit: UD09
+    title: RPO RTO
+    competency: Elegir estrategia de recuperación según objetivos.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Diseña una estrategia para RPO 4 h y RTO 2 h, explicando frecuencia, retención y pruebas."
+    expected_answer: "Política compatible con objetivos, almacenamiento separado y ejercicios de recuperación."
+    tags: [backup, continuity]
+  - id: ASIR-09-UD10-Q001
+    unit: UD10
+    title: Logs versus métricas
+    competency: Distinguir observabilidad básica.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Explica qué aportan logs y métricas para diagnosticar un servicio y da un ejemplo de cada uno."
+    expected_answer: "Logs eventos/contexto discreto, métricas series numéricas/tendencias; uso complementario."
+    tags: [observability]
+  - id: ASIR-09-UD10-Q002
+    unit: UD10
+    title: Alerta sin contexto
+    competency: Correlacionar señales antes de actuar.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Una alerta de CPU alta aparece 5 minutos. Diseña qué datos consultarías antes de reiniciar el servidor."
+    expected_answer: "Carga histórica, procesos, latencia, errores, memoria/I/O y contexto de tráfico; evita reinicio como primera acción."
+    tags: [observability, diagnosis]
+  - id: ASIR-09-UD11-Q001
+    unit: UD11
+    title: Hardening mínimo
+    competency: Aplicar controles sin romper servicio.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Endurece un servidor de laboratorio eliminando un servicio innecesario, revisando privilegios y limitando exposición; verifica que el servicio requerido sigue operativo."
+    expected_answer: "Reduce superficie con cambios justificados y pruebas funcionales/negativas."
+    critical_errors: ["Deshabilitar seguridad para resolver la tarea"]
+    tags: [hardening]
+  - id: ASIR-09-UD11-Q002
+    unit: UD11
+    title: Incidente integral de sistemas
+    competency: Diagnosticar y recuperar infraestructura administrada.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 35
+    prompt: "Entorno con fallo de identidad, tarea automática errónea y servicio degradado. Recoge evidencia, aísla causas, recupera y documenta prevención."
+    expected_answer: "Proceso estructurado, cambios mínimos, seguridad preservada, verificaciones funcionales y RCA."
+    critical_errors: ["Borrar logs/evidencia", "Usar privilegios globales innecesarios", "Cambiar varias capas sin control"]
+    tags: [integrative, recovery]
