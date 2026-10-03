@@ -1,0 +1,201 @@
+schema_version: 0.1.0
+subject: ASIR-05
+name: Lenguajes y Datos — Lenguajes de Marcas y SGI
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_docs
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 4, reasoning: 2.5, verification: 2, clarity: 1.5}
+items:
+  - id: ASIR-05-UD01-Q001
+    unit: UD01
+    title: HTML semántico
+    competency: Estructurar un documento con elementos semánticos adecuados.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Construye una página sencilla con header, nav, main, article y footer, usando encabezados en orden lógico."
+    expected_answer: "Estructura semántica correcta, jerarquía de headings coherente y HTML válido."
+    tags: [html, semantics]
+  - id: ASIR-05-UD01-Q002
+    unit: UD01
+    title: Div soup
+    competency: Analizar una estructura HTML poco semántica.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Un documento usa solo div para menú, contenido principal y artículos. Propón una refactorización semántica y explica beneficios."
+    expected_answer: "Sustituye por elementos apropiados y relaciona semántica con accesibilidad, mantenimiento y SEO."
+    tags: [html, accessibility]
+  - id: ASIR-05-UD02-Q001
+    unit: UD02
+    title: CSS accesible
+    competency: Aplicar estilos sin degradar legibilidad.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Aplica una hoja CSS a una página dada manteniendo contraste, foco visible y diseño legible en distintos tamaños."
+    expected_answer: "Selectores y layout correctos, foco visible, contraste razonable y adaptación básica."
+    tags: [css, accessibility]
+  - id: ASIR-05-UD02-Q002
+    unit: UD02
+    title: Especificidad problemática
+    competency: Diagnosticar un conflicto de CSS.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 12
+    prompt: "Una regla no se aplica aunque el archivo CSS carga. Usa cascada/especificidad para localizar la causa y corrige sin !important salvo justificación."
+    expected_answer: "Identifica selector ganador/origen/orden, corrige especificidad o estructura y verifica en inspector."
+    tags: [css, diagnosis]
+  - id: ASIR-05-UD03-Q001
+    unit: UD03
+    title: XML bien formado
+    competency: Crear XML bien formado con namespaces básicos.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 12
+    prompt: "Crea un XML de inventario con tres equipos, atributos de id y namespace declarado correctamente."
+    expected_answer: "Un único root, etiquetas cerradas/anidadas, atributos válidos y namespace coherente."
+    tags: [xml, namespaces]
+  - id: ASIR-05-UD03-Q002
+    unit: UD03
+    title: Error de namespace
+    competency: Diagnosticar un XML que falla al procesarse.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 12
+    prompt: "Un XPath no encuentra nodos en un XML con namespace por defecto. Explica la causa y cómo resolverla."
+    expected_answer: "Los nodos están en namespace; registrar prefijo en herramienta/consulta y usarlo correctamente."
+    tags: [xml, namespaces, diagnosis]
+  - id: ASIR-05-UD04-Q001
+    unit: UD04
+    title: XSD básico
+    competency: Definir estructura y restricciones con XML Schema.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 15
+    prompt: "Define un XSD para producto con id entero positivo, nombre obligatorio y precio decimal no negativo."
+    expected_answer: "Tipos y restricciones coherentes, elementos obligatorios y esquema validable."
+    tags: [xsd, validation]
+  - id: ASIR-05-UD04-Q002
+    unit: UD04
+    title: DTD versus XSD
+    competency: Comparar mecanismos de validación.
+    difficulty: D3
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Compara DTD y XSD para validar datos tipados y con namespaces. Justifica qué elegirías en un nuevo proyecto."
+    expected_answer: "XSD ofrece tipos ricos/namespaces; DTD más limitado. Se valora razonamiento, no absolutismo."
+    tags: [dtd, xsd]
+  - id: ASIR-05-UD05-Q001
+    unit: UD05
+    title: XPath de filtrado
+    competency: Seleccionar nodos por condición.
+    difficulty: D2
+    type: command_interpretation
+    estimated_time_minutes: 12
+    prompt: "Escribe un XPath que seleccione productos con precio superior a 100 del XML suministrado."
+    expected_answer: "Expresión equivalente correcta según estructura y namespaces."
+    tags: [xpath]
+  - id: ASIR-05-UD05-Q002
+    unit: UD05
+    title: Transformación XSLT
+    competency: Transformar XML a una salida HTML simple.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 18
+    prompt: "Crea una XSLT que convierta una lista XML de productos en una tabla HTML ordenada por precio."
+    expected_answer: "Plantilla funcional, iteración, extracción correcta y ordenación; salida válida."
+    tags: [xslt, transformation]
+  - id: ASIR-05-UD06-Q001
+    unit: UD06
+    title: JSON YAML TOML
+    competency: Comparar formatos de configuración.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Compara JSON, YAML y TOML en comentarios, legibilidad, tipado/estructura y riesgos de edición manual."
+    expected_answer: "Reconoce fortalezas/limitaciones; YAML sensible a indentación, JSON sin comentarios estándar, TOML orientado a config legible."
+    tags: [json, yaml, toml]
+  - id: ASIR-05-UD06-Q002
+    unit: UD06
+    title: YAML inválido
+    competency: Diagnosticar un archivo de configuración estructurado.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 10
+    prompt: "Un YAML falla tras mover dos espacios una línea. Localiza el problema, corrígelo y explica por qué la estructura cambió."
+    expected_answer: "Identifica indentación/nivel, corrige y valida con parser."
+    tags: [yaml, diagnosis]
+  - id: ASIR-05-UD07-Q001
+    unit: UD07
+    title: HTTP y representación
+    competency: Interpretar una interacción API básica.
+    difficulty: D2
+    type: command_interpretation
+    estimated_time_minutes: 12
+    prompt: "Interpreta una petición GET y una respuesta 200 JSON indicando método, recurso, status, headers relevantes y body."
+    expected_answer: "Distingue partes de HTTP y representación del recurso."
+    tags: [http, api]
+  - id: ASIR-05-UD07-Q002
+    unit: UD07
+    title: Error 401 versus 404
+    competency: Diagnosticar respuestas API sin adivinar.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 12
+    prompt: "Una API devuelve 401 a una llamada y 404 a otra. Explica qué significa cada código y qué comprobarías antes de modificar el cliente."
+    expected_answer: "401 autenticación/credencial; 404 recurso/ruta; revisar docs, URL, auth y logs."
+    tags: [http, api, diagnosis]
+  - id: ASIR-05-UD08-Q001
+    unit: UD08
+    title: Feed estructurado
+    competency: Identificar información esencial en un formato de sindicación.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "A partir de un feed suministrado identifica canal, ítems, título, enlace y fecha, y explica para qué sirve la sindicación."
+    expected_answer: "Extrae campos correctamente y explica distribución automatizada de actualizaciones."
+    tags: [syndication]
+  - id: ASIR-05-UD08-Q002
+    unit: UD08
+    title: Integración de formatos
+    competency: Transformar datos entre representaciones sin perder significado.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Convierte un conjunto pequeño de datos XML a JSON preservando IDs, listas y valores numéricos; documenta decisiones ambiguas."
+    expected_answer: "JSON válido, semántica preservada y decisiones explícitas sobre atributos/listas/tipos."
+    tags: [integration, json, xml]
+  - id: ASIR-05-UD09-Q001
+    unit: UD09
+    title: README reproducible
+    competency: Documentar un procedimiento técnico con Markdown.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Escribe un README corto para ejecutar una utilidad, incluyendo requisitos, pasos, ejemplo, verificación y rollback si procede."
+    expected_answer: "Markdown claro, comandos separados, pasos reproducibles y criterio de éxito."
+    tags: [markdown, documentation]
+  - id: ASIR-05-UD09-Q002
+    unit: UD09
+    title: Flujo Git y datos integrado
+    competency: Versionar una transformación de datos de forma reproducible.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 25
+    prompt: "Corrige un archivo YAML, transforma datos a JSON con una utilidad simple, documenta el proceso y registra cambios en Git con un commit coherente."
+    expected_answer: "Archivos válidos, transformación verificable, documentación suficiente y commit enfocado sin secretos."
+    critical_errors: ["Incluir credenciales reales en el repositorio"]
+    tags: [integrative, markdown, git, data]
+  - id: ASIR-05-UD09-Q003
+    unit: UD09
+    title: Incidente de configuración alternativo
+    competency: Diagnosticar una cadena de datos/configuración.
+    difficulty: D4
+    type: troubleshooting
+    estimated_time_minutes: 25
+    prompt: "Una aplicación deja de arrancar tras cambiar un YAML y consumir una API local. Aísla si falla sintaxis, estructura o datos de la API, corrige y documenta evidencias."
+    expected_answer: "Valida YAML, comprueba request/response, corrige la causa mínima y demuestra arranque funcional."
+    tags: [integrative, recovery]
