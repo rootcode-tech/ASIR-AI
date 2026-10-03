@@ -1,0 +1,233 @@
+schema_version: 0.1.0
+subject: ASIR-10
+name: Servicios de Red e Internet
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_lab
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 3.5, reasoning: 2, verification: 2, security: 1.5, clarity: 1}
+items:
+  - id: ASIR-10-UD01-Q001
+    unit: UD01
+    title: Cadena de servicio
+    competency: Verificar un servicio extremo a extremo.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Explica una cadena de comprobación desde configuración hasta cliente para decidir si un servicio está realmente operativo."
+    expected_answer: "Configuración, proceso, socket, red/DNS, auth/permisos, cliente real, respuesta y logs."
+    tags: [services, verification]
+  - id: ASIR-10-UD01-Q002
+    unit: UD01
+    title: Puerto abierto sin servicio útil
+    competency: Distinguir escucha de salud funcional.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 12
+    prompt: "Un puerto TCP acepta conexión pero la aplicación cliente falla. Explica qué capas comprobarías después."
+    expected_answer: "Protocolo/respuesta, TLS, auth, aplicación/backend, permisos y logs; puerto abierto no prueba servicio sano."
+    tags: [services, diagnosis]
+  - id: ASIR-10-UD02-Q001
+    unit: UD02
+    title: Zona DNS autoritativa
+    competency: Configurar registros básicos y validar resolución.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 18
+    prompt: "Configura una zona de laboratorio con SOA, NS, A/AAAA y CNAME según el escenario y valida con consultas directas."
+    expected_answer: "Zona carga sin errores, registros correctos, serial coherente y respuestas autoritativas esperadas."
+    tags: [dns, authoritative]
+  - id: ASIR-10-UD02-Q002
+    unit: UD02
+    title: DNS recursivo versus autoritativo
+    competency: Diagnosticar una respuesta DNS incorrecta.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Un nombre interno resuelve distinto según el servidor consultado. Aísla caché, autoridad y delegación antes de corregir."
+    expected_answer: "Consulta servidores explícitos, autoridad/TTL/caché/delegación y corrige fuente, no clientes al azar."
+    tags: [dns, diagnosis]
+  - id: ASIR-10-UD03-Q001
+    unit: UD03
+    title: DHCP relay
+    competency: Entender entrega DHCP entre subredes.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 15
+    prompt: "Configura o describe un relay DHCP para clientes en otra VLAN y verifica concesión con gateway/DNS correctos."
+    expected_answer: "Relay apunta al servidor, scope corresponde a subred y cliente recibe opciones correctas."
+    tags: [dhcp, relay]
+  - id: ASIR-10-UD03-Q002
+    unit: UD03
+    title: Scope agotado
+    competency: Diagnosticar clientes sin concesión.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Nuevos clientes no reciben IP pero los antiguos sí. Diseña comprobaciones para detectar agotamiento del pool y diferenciarlo de red/relay."
+    expected_answer: "Revisar leases libres, logs, solicitudes, reachability/relay y ampliar/limpiar de forma controlada."
+    tags: [dhcp, diagnosis]
+  - id: ASIR-10-UD04-Q001
+    unit: UD04
+    title: Virtual host web
+    competency: Publicar dos sitios por nombre.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 18
+    prompt: "Configura dos virtual hosts HTTP con nombres distintos, contenido diferente y logs separados. Verifica por Host/DNS local."
+    expected_answer: "Selección correcta por nombre, respuestas distintas y logs trazables."
+    tags: [http, web_server]
+  - id: ASIR-10-UD04-Q002
+    unit: UD04
+    title: 502 desde reverse proxy
+    competency: Diagnosticar backend inaccesible.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Un proxy devuelve 502. Determina si falla resolución, puerto, proceso backend o configuración upstream."
+    expected_answer: "Prueba backend directamente desde proxy, socket/red, logs y upstream; corrige causa mínima."
+    tags: [http, proxy, diagnosis]
+  - id: ASIR-10-UD05-Q001
+    unit: UD05
+    title: TLS válido
+    competency: Configurar HTTPS y verificar certificado.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Publica un servicio HTTPS de laboratorio y verifica cadena/certificado, nombre, fechas y negociación."
+    expected_answer: "TLS funcional, nombre coincide, certificado vigente/confiable según laboratorio y HTTP redirigido si requerido."
+    tags: [tls, https]
+  - id: ASIR-10-UD05-Q002
+    unit: UD05
+    title: Certificado válido para otro nombre
+    competency: Diagnosticar error TLS de hostname.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "El navegador confía en la CA pero avisa de certificado inválido para el sitio. Explica cómo comprobar SAN/CN y SNI/configuración."
+    expected_answer: "Verifica nombres del certificado y virtual host/SNI; emitir/usar certificado con SAN correcto."
+    tags: [tls, diagnosis]
+  - id: ASIR-10-UD06-Q001
+    unit: UD06
+    title: Flujo SMTP e IMAP
+    competency: Explicar envío y acceso al correo.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Explica el papel de SMTP e IMAP desde que un usuario envía un mensaje hasta que otro lo lee."
+    expected_answer: "SMTP entrega/transfiere; IMAP permite acceso/sincronización del buzón; auth/TLS según tramo."
+    tags: [mail]
+  - id: ASIR-10-UD06-Q002
+    unit: UD06
+    title: Relay abierto
+    competency: Detectar una configuración de correo insegura.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Un servidor acepta enviar correo de cualquier origen a cualquier destino sin autenticación. Explica el riesgo y cómo limitar relay."
+    expected_answer: "Open relay facilita abuso/spam; restringir redes/usuarios autenticados y dominios, mantener recepción legítima."
+    critical_errors: ["Mantener relay abierto como solución"]
+    tags: [mail, security]
+  - id: ASIR-10-UD07-Q001
+    unit: UD07
+    title: SSH por clave
+    competency: Configurar acceso remoto seguro con claves.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Configura acceso SSH de un usuario mediante clave, sin compartir clave privada, y verifica acceso/denegación según requisito."
+    expected_answer: "Clave pública instalada con permisos correctos, autenticación funcional y privada protegida."
+    tags: [ssh, security]
+  - id: ASIR-10-UD07-Q002
+    unit: UD07
+    title: SFTP falla por permisos
+    competency: Diagnosticar acceso de archivo sin abrir permisos globales.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "SSH funciona pero un usuario no puede escribir por SFTP en un directorio. Diagnostica propietario/grupo/ACL antes de cambiar permisos."
+    expected_answer: "Identifica control de acceso efectivo y ajusta mínimo privilegio; verifica usuario permitido y tercero denegado."
+    critical_errors: ["Usar chmod 777"]
+    tags: [sftp, permissions]
+  - id: ASIR-10-UD08-Q001
+    unit: UD08
+    title: NFS versus Samba
+    competency: Elegir servicio de archivos por entorno.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Compara NFS y SMB/Samba para clientes Linux y Windows y justifica una elección en un entorno mixto."
+    expected_answer: "Reconoce integración/protocolo/permisos y elige según clientes/identidad/requisitos."
+    tags: [nfs, samba]
+  - id: ASIR-10-UD08-Q002
+    unit: UD08
+    title: Share visible pero inaccesible
+    competency: Diagnosticar permisos de compartición y filesystem.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Un recurso Samba aparece en red pero un usuario autorizado recibe acceso denegado. Aísla permisos de share, identidad y filesystem."
+    expected_answer: "Verifica autenticación, configuración de share y permisos/ACL subyacentes; corrige la capa responsable."
+    tags: [samba, diagnosis]
+  - id: ASIR-10-UD09-Q001
+    unit: UD09
+    title: VPN sitio-remoto
+    competency: Explicar rutas y cifrado de una VPN.
+    difficulty: D2
+    type: architecture
+    estimated_time_minutes: 12
+    prompt: "Diseña conceptualmente acceso VPN de un trabajador a una red interna indicando autenticación, túnel y rutas."
+    expected_answer: "Cliente autenticado, túnel cifrado, rutas solo a redes requeridas y controles de acceso."
+    tags: [vpn]
+  - id: ASIR-10-UD09-Q002
+    unit: UD09
+    title: Túnel arriba sin acceso
+    competency: Diagnosticar una VPN establecida sin tráfico útil.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "La VPN aparece conectada pero no se accede a la LAN. Revisa rutas, forwarding, firewall y solapes de red."
+    expected_answer: "Diagnóstico de routing/ACL/forwarding y posibles prefijos solapados, con pruebas por IP antes de DNS."
+    tags: [vpn, diagnosis]
+  - id: ASIR-10-UD10-Q001
+    unit: UD10
+    title: NTP y logs
+    competency: Explicar por qué el tiempo correcto es crítico.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Explica por qué NTP es importante para logs, TLS y autenticación."
+    expected_answer: "Correlación temporal, validez de certificados/tokens y protocolos como Kerberos; tiempo coherente facilita diagnóstico."
+    tags: [ntp, syslog]
+  - id: ASIR-10-UD10-Q002
+    unit: UD10
+    title: Proxy y caché incorrecta
+    competency: Analizar efectos de caché/intermediarios.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Usuarios reciben contenido antiguo detrás de un proxy. Diseña comprobaciones de headers de caché, TTL y bypass controlado."
+    expected_answer: "Inspecciona cache-control/age/etags/config y prueba origen; no vacía todo sin evidencia."
+    tags: [proxy, cache]
+  - id: ASIR-10-UD11-Q001
+    unit: UD11
+    title: Health check de servicios
+    competency: Automatizar verificación funcional básica.
+    difficulty: D3
+    type: script
+    estimated_time_minutes: 20
+    prompt: "Crea una comprobación que valide DNS, HTTPS y un servicio TCP, registre resultado y falle con código no cero si algo esencial no funciona."
+    expected_answer: "Pruebas funcionales, timeouts, exit codes y logs claros."
+    tags: [automation, monitoring]
+  - id: ASIR-10-UD11-Q002
+    unit: UD11
+    title: Incidente multiprotocolo
+    competency: Diagnosticar un servicio web publicado con dependencias.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 35
+    prompt: "Un sitio HTTPS no carga para clientes externos. El entorno incluye DNS, reverse proxy, TLS y backend. Aísla la capa fallida, recupera y documenta RCA."
+    expected_answer: "Comprobación ordenada DNS→TCP/TLS→proxy→backend→logs, corrección mínima y validación desde cliente."
+    critical_errors: ["Desactivar TLS o firewall globalmente como solución", "Exponer backend innecesariamente"]
+    tags: [integrative, recovery]
