@@ -1,0 +1,213 @@
+schema_version: 0.1.0
+subject: ASIR-04
+name: Bases de Datos I — Gestión de Bases de Datos
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_lab
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 4, reasoning: 2.5, verification: 2, integrity: 1, clarity: 0.5}
+items:
+  - id: ASIR-04-UD01-Q001
+    unit: UD01
+    title: Dato, información y SGBD
+    competency: Distinguir conceptos básicos de sistemas de información.
+    difficulty: D1
+    type: short_answer
+    estimated_time_minutes: 8
+    prompt: "Diferencia dato, información y sistema gestor de bases de datos con un ejemplo sencillo."
+    expected_answer: "Define dato como valor, información como dato interpretado en contexto y SGBD como software que almacena/consulta/protege datos."
+    tags: [fundamentals]
+  - id: ASIR-04-UD01-Q002
+    unit: UD01
+    title: Elección de modelo
+    competency: Elegir un modelo de datos según requisitos.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Una aplicación necesita clientes, pedidos, productos y relaciones consistentes entre ellos. Explica por qué un modelo relacional es adecuado y qué garantías aporta."
+    expected_answer: "Relaciones explícitas, claves, restricciones, transacciones e integridad referencial; puede reconocer alternativas sin perder requisitos."
+    tags: [modeling]
+  - id: ASIR-04-UD02-Q001
+    unit: UD02
+    title: ER básico
+    competency: Modelar entidades, atributos y relaciones.
+    difficulty: D2
+    type: architecture
+    estimated_time_minutes: 15
+    prompt: "Diseña un modelo ER para clientes que realizan pedidos con una o más líneas de producto. Incluye cardinalidades."
+    expected_answer: "Cliente 1:N Pedido, Pedido 1:N Línea, Producto 1:N Línea; atributos/identificadores coherentes."
+    tags: [er_model]
+  - id: ASIR-04-UD02-Q002
+    unit: UD02
+    title: Relación N:M
+    competency: Detectar y resolver una relación muchos-a-muchos.
+    difficulty: D3
+    type: architecture
+    estimated_time_minutes: 12
+    prompt: "Estudiantes pueden matricularse en muchas asignaturas y cada asignatura tiene muchos estudiantes. Modela correctamente la relación y los datos propios de la matrícula."
+    expected_answer: "Entidad asociativa Matrícula con claves foráneas y atributos como fecha/estado; evita lista multivaluada."
+    tags: [er_model, many_to_many]
+  - id: ASIR-04-UD03-Q001
+    unit: UD03
+    title: Claves y restricciones
+    competency: Transformar un modelo en tablas con claves correctas.
+    difficulty: D2
+    type: sql
+    estimated_time_minutes: 15
+    prompt: "Define tablas Cliente y Pedido con PK, FK y restricciones básicas para impedir pedidos huérfanos."
+    expected_answer: "DDL equivalente con PKs y FK Pedido→Cliente; tipos razonables y restricciones esenciales."
+    tags: [relational_model, keys]
+  - id: ASIR-04-UD03-Q002
+    unit: UD03
+    title: Clave natural o sustituta
+    competency: Justificar una estrategia de clave.
+    difficulty: D3
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Compara usar email como PK de cliente frente a un identificador interno. ¿Qué elegirías y por qué?"
+    expected_answer: "Reconoce estabilidad, tamaño, privacidad/cambio del email; suele preferir ID sustituto más UNIQUE en email."
+    tags: [keys, design]
+  - id: ASIR-04-UD04-Q001
+    unit: UD04
+    title: Primera a tercera forma normal
+    competency: Normalizar un diseño con dependencias claras.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Una tabla Pedido guarda id_pedido, fecha, id_cliente, nombre_cliente y dirección_cliente repetidos en cada pedido. Identifica la anomalía y normaliza."
+    expected_answer: "Separar Cliente y Pedido; datos de cliente dependen de id_cliente, reduce redundancia y anomalías de actualización."
+    tags: [normalization]
+  - id: ASIR-04-UD04-Q002
+    unit: UD04
+    title: Desnormalización justificada
+    competency: Evaluar cuándo no normalizar más.
+    difficulty: D4
+    type: comparison
+    estimated_time_minutes: 12
+    prompt: "Una consulta analítica muy frecuente requiere joins costosos. Explica cuándo considerarías desnormalizar y qué controles exigirías."
+    expected_answer: "Solo con evidencia de rendimiento, comprendiendo redundancia/consistencia, estrategia de actualización y medición antes/después."
+    tags: [normalization, tradeoff]
+  - id: ASIR-04-UD05-Q001
+    unit: UD05
+    title: DDL con restricciones
+    competency: Crear un esquema consistente.
+    difficulty: D2
+    type: sql
+    estimated_time_minutes: 15
+    prompt: "Crea una tabla producto con id, nombre no nulo, precio positivo y sku único."
+    expected_answer: "DDL válido con PK, NOT NULL, CHECK precio>0 y UNIQUE(sku)."
+    tags: [sql, ddl]
+  - id: ASIR-04-UD05-Q002
+    unit: UD05
+    title: Restricción mal ubicada
+    competency: Diagnosticar integridad que debería vivir en el esquema.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "La aplicación impide precios negativos, pero otra herramienta inserta -5 sin error. Explica el problema y corrígelo."
+    expected_answer: "La integridad solo en aplicación es insuficiente; añadir CHECK en BD y validar datos existentes."
+    tags: [sql, integrity]
+  - id: ASIR-04-UD06-Q001
+    unit: UD06
+    title: INSERT UPDATE DELETE seguros
+    competency: Modificar datos con filtros correctos.
+    difficulty: D2
+    type: sql
+    estimated_time_minutes: 15
+    prompt: "Inserta un cliente, actualiza solo su teléfono y elimina un registro de prueba identificado por PK. Verifica cada operación."
+    expected_answer: "DML correcto, WHERE limitado y SELECT de verificación antes/después."
+    critical_errors: ["UPDATE o DELETE sin filtro cuando el requisito es sobre un registro concreto"]
+    tags: [sql, dml]
+  - id: ASIR-04-UD06-Q002
+    unit: UD06
+    title: UPDATE peligroso
+    competency: Prevenir una modificación masiva accidental.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 12
+    prompt: "Debes aumentar un 5% solo los precios de una categoría. Diseña una ejecución segura que permita comprobar filas afectadas antes de confirmar."
+    expected_answer: "SELECT previo, transacción, UPDATE con WHERE correcto, revisión row count/datos y COMMIT o ROLLBACK."
+    tags: [sql, safety]
+  - id: ASIR-04-UD07-Q001
+    unit: UD07
+    title: Agregación
+    competency: Consultar y agrupar datos correctamente.
+    difficulty: D2
+    type: sql
+    estimated_time_minutes: 12
+    prompt: "Obtén número de pedidos e importe total por cliente, mostrando solo clientes con al menos 3 pedidos."
+    expected_answer: "JOIN/agrupación correctos, COUNT/SUM y HAVING para el umbral."
+    tags: [sql, select, aggregate]
+  - id: ASIR-04-UD07-Q002
+    unit: UD07
+    title: WHERE versus HAVING
+    competency: Distinguir filtros de filas y grupos.
+    difficulty: D3
+    type: command_interpretation
+    estimated_time_minutes: 10
+    prompt: "Explica por qué filtrar SUM(total)>1000 con WHERE es incorrecto y dónde debe aplicarse."
+    expected_answer: "WHERE filtra filas antes del GROUP BY; HAVING filtra grupos/aggregates después."
+    tags: [sql, aggregate]
+  - id: ASIR-04-UD08-Q001
+    unit: UD08
+    title: JOIN de tres tablas
+    competency: Resolver una consulta relacional multi-tabla.
+    difficulty: D2
+    type: sql
+    estimated_time_minutes: 15
+    prompt: "Lista pedidos con nombre de cliente y nombres de productos incluidos, usando el esquema suministrado."
+    expected_answer: "JOIN Cliente→Pedido→Línea→Producto con condiciones correctas y sin producto cartesiano."
+    tags: [sql, joins]
+  - id: ASIR-04-UD08-Q002
+    unit: UD08
+    title: Duplicados inesperados
+    competency: Diagnosticar cardinalidad y joins defectuosos.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Una consulta devuelve cada pedido muchas veces. Explica cómo distinguir duplicados reales de multiplicación por cardinalidad de un JOIN."
+    expected_answer: "Inspeccionar claves/cardinalidades y JOIN conditions; no usar DISTINCT para ocultar un join incorrecto sin entender causa."
+    tags: [sql, joins, diagnosis]
+  - id: ASIR-04-UD09-Q001
+    unit: UD09
+    title: Transacción atómica
+    competency: Aplicar COMMIT/ROLLBACK a una operación multi-paso.
+    difficulty: D2
+    type: sql
+    estimated_time_minutes: 15
+    prompt: "Registra un pedido y descuenta stock de forma que ambas operaciones se confirmen juntas o ninguna."
+    expected_answer: "Transacción explícita con operaciones relacionadas y rollback ante fallo; integridad preservada."
+    tags: [transactions]
+  - id: ASIR-04-UD09-Q002
+    unit: UD09
+    title: Actualización concurrente
+    competency: Analizar un problema de concurrencia.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Dos sesiones leen stock=1 y ambas intentan vender la última unidad. Explica el riesgo y una estrategia transaccional para evitar stock negativo."
+    expected_answer: "Bloqueo/UPDATE condicional/aislamiento adecuado y verificación de filas afectadas; no confiar solo en lectura previa."
+    tags: [transactions, concurrency]
+  - id: ASIR-04-UD10-Q001
+    unit: UD10
+    title: Privilegios mínimos
+    competency: Crear un usuario de aplicación con permisos limitados.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 12
+    prompt: "Concede a una aplicación lectura/escritura sobre su esquema sin otorgarle administración global. Demuestra acceso permitido y denegado."
+    expected_answer: "Rol/usuario con privilegios mínimos y pruebas positiva/negativa."
+    critical_errors: ["Usar superusuario como cuenta de aplicación"]
+    tags: [security, privileges]
+  - id: ASIR-04-UD10-Q002
+    unit: UD10
+    title: Recuperación integrada
+    competency: Combinar backup, privilegios e integridad en un incidente.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 25
+    prompt: "En una base de laboratorio restaura una copia, verifica restricciones, crea un usuario de aplicación limitado y demuestra una consulta funcional."
+    expected_answer: "Restore correcto, esquema consistente, permisos mínimos y pruebas reproducibles de acceso/datos."
+    critical_errors: ["Afirmar restauración sin verificar datos"]
+    tags: [integrative, recovery]
