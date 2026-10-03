@@ -1,0 +1,170 @@
+schema_version: 0.1.0
+subject: ASIR-08
+name: Tecnología Sostenible — Sostenibilidad
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_docs
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 4, reasoning: 3, evidence: 2, clarity: 1}
+items:
+  - id: ASIR-08-UD01-Q001
+    unit: UD01
+    title: Sostenibilidad aplicada
+    competency: Relacionar sostenibilidad con decisiones IT.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 8
+    prompt: "Explica cómo una decisión de infraestructura puede tener impacto ambiental, económico y social al mismo tiempo."
+    expected_answer: "Debe conectar consumo/recursos, coste y efectos humanos/proveedores sin usar slogans vacíos."
+    tags: [sustainability]
+  - id: ASIR-08-UD01-Q002
+    unit: UD01
+    title: Greenwashing
+    competency: Detectar una afirmación ambiental sin evidencia.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Un proveedor afirma que su servicio es '100% verde' sin aportar métricas. Explica qué evidencias pedirías."
+    expected_answer: "Metodología, alcance, consumo, factores de emisión, periodo, certificación/tercero y límites."
+    tags: [esg, evidence]
+  - id: ASIR-08-UD02-Q001
+    unit: UD02
+    title: Ciclo de vida hardware
+    competency: Analizar impactos desde fabricación hasta fin de vida.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Enumera etapas del ciclo de vida de un portátil y un impacto relevante en cada una."
+    expected_answer: "Materias primas/fabricación, transporte, uso, reparación/reutilización y fin de vida."
+    tags: [lifecycle]
+  - id: ASIR-08-UD02-Q002
+    unit: UD02
+    title: Sustituir o prolongar
+    competency: Comparar reemplazo y extensión de vida útil.
+    difficulty: D4
+    type: comparison
+    estimated_time_minutes: 15
+    prompt: "Un PC de 4 años consume más que uno nuevo, pero aún cumple su función. Explica qué datos necesitas antes de decidir sustituirlo por eficiencia."
+    expected_answer: "Consumo real, horas, energía incorporada, vida restante, reparación, coste, rendimiento y requisitos."
+    tags: [lifecycle, tradeoff]
+  - id: ASIR-08-UD03-Q001
+    unit: UD03
+    title: Consumo anual
+    competency: Calcular energía y coste.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 10
+    prompt: "Un servidor consume 350 W de media, 24 h/día, 365 días. Calcula kWh/año."
+    expected_answer: "0,35×24×365=3066 kWh/año aproximadamente."
+    tags: [energy]
+  - id: ASIR-08-UD03-Q002
+    unit: UD03
+    title: Medido versus nominal
+    competency: Distinguir datos medidos de estimaciones.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Una fuente es de 750 W y alguien usa 750 W como consumo continuo del PC. Explica por qué es incorrecto y cómo medir mejor."
+    expected_answer: "750 W es capacidad nominal; usar wattímetro/telemetría y perfil de carga real."
+    tags: [energy, measurement]
+  - id: ASIR-08-UD04-Q001
+    unit: UD04
+    title: Reutilizar antes que reciclar
+    competency: Ordenar opciones de circularidad según contexto.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Un equipo funcional queda corto para producción pero sirve para laboratorio. Justifica reutilización frente a reciclaje inmediato."
+    expected_answer: "Extender vida evita nueva fabricación y mantiene valor funcional si seguridad/eficiencia son aceptables."
+    tags: [circular_economy]
+  - id: ASIR-08-UD04-Q002
+    unit: UD04
+    title: RAEE con datos
+    competency: Diseñar retirada segura de equipo.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Debes retirar discos con datos y equipos electrónicos. Diseña pasos de borrado/destrucción según riesgo, inventario y entrega a gestor autorizado."
+    expected_answer: "Trazabilidad, sanitización adecuada, verificación, segregación y gestión autorizada."
+    tags: [ewaste, data_security]
+  - id: ASIR-08-UD05-Q001
+    unit: UD05
+    title: Compra responsable
+    competency: Comparar equipos más allá del precio inicial.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 12
+    prompt: "Compara dos portátiles usando consumo, reparabilidad, garantía, vida útil y coste total además del precio."
+    expected_answer: "Decisión multicriterio coherente y datos trazables."
+    tags: [procurement, tco]
+  - id: ASIR-08-UD05-Q002
+    unit: UD05
+    title: Cadena de suministro
+    competency: Analizar riesgos de proveedor.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Un proveedor muy barato no ofrece información de origen, reparabilidad ni soporte. Identifica riesgos técnicos y sostenibles."
+    expected_answer: "Riesgo de ciclo de vida, repuestos, soporte, cumplimiento, residuos y dependencia."
+    tags: [supply_chain]
+  - id: ASIR-08-UD06-Q001
+    unit: UD06
+    title: Consolidación
+    competency: Explicar cómo la virtualización puede mejorar utilización.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Cinco servidores físicos están al 5-10% de uso. Explica cuándo consolidarlos puede reducir consumo y qué riesgo introduce."
+    expected_answer: "Mejor utilización/menos hardware, pero concentración de fallo/capacidad y necesidad de HA/medición."
+    tags: [green_it, virtualization]
+  - id: ASIR-08-UD06-Q002
+    unit: UD06
+    title: Cloud no siempre más verde
+    competency: Comparar opciones con datos.
+    difficulty: D4
+    type: comparison
+    estimated_time_minutes: 15
+    prompt: "Compara on-prem y cloud para una carga estable usando datos suministrados de consumo, PUE, utilización y región."
+    expected_answer: "Cálculo/comparación con mismas unidades y periodo; conclusión condicionada a datos, no automática."
+    tags: [cloud, green_it]
+  - id: ASIR-08-UD07-Q001
+    unit: UD07
+    title: KPI energético
+    competency: Definir indicadores accionables.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Propón tres KPI para eficiencia de una pequeña infraestructura y explica qué decisión permite cada uno."
+    expected_answer: "Ejemplos: kWh/servicio, utilización, PUE si aplica, edad/reutilización; deben ser medibles y útiles."
+    tags: [kpi]
+  - id: ASIR-08-UD07-Q002
+    unit: UD07
+    title: Indicador mal diseñado
+    competency: Detectar una métrica que incentiva comportamiento incorrecto.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Un objetivo exige reducir servidores físicos un 50% sin medir capacidad ni disponibilidad. Explica qué puede salir mal y mejora el KPI."
+    expected_answer: "Puede degradar servicio/concentrar riesgo; combinar eficiencia con capacidad, disponibilidad y coste/servicio."
+    tags: [kpi, risk]
+  - id: ASIR-08-UD08-Q001
+    unit: UD08
+    title: Plan de sostenibilidad A
+    competency: Diseñar un plan medible de mejora.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 25
+    prompt: "Con un inventario y consumos suministrados, prioriza tres acciones, estima impacto y define indicadores de seguimiento."
+    expected_answer: "Baseline, acciones justificadas, estimaciones trazables, costes/limitaciones y KPI."
+    tags: [integrative, plan]
+  - id: ASIR-08-UD08-Q002
+    unit: UD08
+    title: Plan de sostenibilidad B
+    competency: Comparar alternativas con ciclo de vida.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 25
+    prompt: "Decide entre reparar, reutilizar o reemplazar una flota pequeña usando datos de consumo, coste, edad y requisitos."
+    expected_answer: "Decisión por equipo/grupo basada en datos, vida útil y requisitos; explicita incertidumbre."
+    tags: [integrative, recovery]
