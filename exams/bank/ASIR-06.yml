@@ -1,0 +1,170 @@
+schema_version: 0.1.0
+subject: ASIR-06
+name: Carrera Profesional I — IPE I
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_docs
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 4, reasoning: 3, evidence: 2, clarity: 1}
+items:
+  - id: ASIR-06-UD01-Q001
+    unit: UD01
+    title: Perfil profesional IT
+    competency: Relacionar tareas, competencias y perfiles del sector.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Relaciona tres tareas dadas con perfiles IT plausibles y justifica qué competencias técnicas y transversales exige cada una."
+    expected_answer: "Correspondencia razonada entre tareas, roles y competencias; admite varias respuestas si están justificadas."
+    tags: [career, sector]
+  - id: ASIR-06-UD01-Q002
+    unit: UD01
+    title: Competencia transferible
+    competency: Analizar cómo una experiencia previa se traduce al sector IT.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Una persona viene de un sector técnico no informático. Identifica tres competencias transferibles a administración de sistemas y cómo demostraría cada una."
+    expected_answer: "Ejemplos como diagnóstico, seguridad, documentación, trabajo con procedimientos; cada uno ligado a evidencia concreta."
+    tags: [career, skills]
+  - id: ASIR-06-UD02-Q001
+    unit: UD02
+    title: Derechos y deberes básicos
+    competency: Interpretar una situación laboral usando fuentes vigentes suministradas.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Con la normativa/documentación aportada, identifica derechos y obligaciones relevantes en un caso de jornada, descanso y comunicación de incidencias."
+    expected_answer: "Aplica correctamente la referencia suministrada y diferencia hechos, derecho aplicable y actuación."
+    tags: [labor, rights]
+  - id: ASIR-06-UD02-Q002
+    unit: UD02
+    title: Conflicto laboral documentado
+    competency: Analizar un desacuerdo profesional sin inventar normas.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Ante un conflicto sobre una instrucción laboral, explica qué hechos documentarías, qué canal usarías y qué fuente consultarías antes de afirmar que existe incumplimiento."
+    expected_answer: "Separar hechos/opiniones, conservar evidencia, seguir canales y verificar convenio/norma vigente."
+    tags: [labor, conflict]
+  - id: ASIR-06-UD03-Q001
+    unit: UD03
+    title: Lectura de nómina
+    competency: Interpretar conceptos esenciales de una nómina.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 12
+    prompt: "A partir de una nómina ficticia identifica devengos, deducciones, bruto y neto, y comprueba la aritmética."
+    expected_answer: "Clasificación correcta y neto coherente con los importes suministrados."
+    tags: [payroll]
+  - id: ASIR-06-UD03-Q002
+    unit: UD03
+    title: Comparación de contratos
+    competency: Comparar condiciones contractuales con información vigente suministrada.
+    difficulty: D3
+    type: comparison
+    estimated_time_minutes: 15
+    prompt: "Compara dos ofertas/contratos ficticios atendiendo a duración, jornada, salario, periodo de prueba y condiciones relevantes."
+    expected_answer: "Comparación estructurada sin inventar consecuencias legales no presentes en fuentes."
+    tags: [contracts]
+  - id: ASIR-06-UD04-Q001
+    unit: UD04
+    title: Riesgos en puesto IT
+    competency: Identificar riesgos y medidas preventivas.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Identifica riesgos físicos, ergonómicos y organizativos en un puesto de soporte/CPD y propone medidas preventivas."
+    expected_answer: "Riesgos pertinentes y medidas por jerarquía razonable: evitar, reducir, proteger, formar."
+    tags: [prl, prevention]
+  - id: ASIR-06-UD04-Q002
+    unit: UD04
+    title: Priorización preventiva
+    competency: Priorizar acciones según gravedad y probabilidad.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Hay cableado suelto en pasillo, pantalla mal ajustada y regleta sobrecargada. Prioriza actuaciones y justifica."
+    expected_answer: "Prioriza peligro eléctrico/incendio y caída antes que ergonomía, sin ignorar esta última."
+    tags: [prl, risk]
+  - id: ASIR-06-UD05-Q001
+    unit: UD05
+    title: Actuación ante emergencia
+    competency: Aplicar principios básicos de actuación segura.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Ante humo en una sala técnica, describe una secuencia segura de actuación sin asumir funciones para las que no estás formado."
+    expected_answer: "Alertar, protegerse, seguir plan de emergencia, cortar/aislar solo si es seguro y evacuar/avisar servicios competentes."
+    tags: [emergency, safety]
+  - id: ASIR-06-UD05-Q002
+    unit: UD05
+    title: Primeros auxilios y límites
+    competency: Reconocer prioridades y límites de actuación.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Un compañero se desploma. Explica prioridades iniciales y qué acciones no realizarías sin formación o medios."
+    expected_answer: "Seguridad, comprobar respuesta/respiración, pedir ayuda/112, seguir instrucciones y no improvisar procedimientos invasivos."
+    tags: [first_aid]
+  - id: ASIR-06-UD06-Q001
+    unit: UD06
+    title: Comunicación de incidencia
+    competency: Comunicar un problema técnico de forma profesional.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 12
+    prompt: "Redacta un mensaje breve a un responsable indicando impacto, evidencia, acciones realizadas y siguiente paso de una incidencia."
+    expected_answer: "Mensaje claro, objetivo, sin culpabilizar y con hechos diferenciados de hipótesis."
+    tags: [communication]
+  - id: ASIR-06-UD06-Q002
+    unit: UD06
+    title: Conflicto de equipo
+    competency: Proponer una resolución profesional de desacuerdo.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Dos técnicos discrepan sobre aplicar un cambio urgente. Propón cómo llegar a una decisión sin bloquear el servicio ni saltarse controles."
+    expected_answer: "Aclarar objetivo/evidencia/riesgo, responsable de decisión, rollback, cambio controlado y comunicación."
+    tags: [teamwork, conflict]
+  - id: ASIR-06-UD07-Q001
+    unit: UD07
+    title: Identidad digital profesional
+    competency: Evaluar una presencia profesional básica.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Revisa un perfil profesional ficticio y señala tres mejoras para hacerlo verificable y relevante para IT."
+    expected_answer: "Evidencias técnicas, descripción clara, enlaces válidos, coherencia y evitar datos sensibles innecesarios."
+    tags: [employability, digital_identity]
+  - id: ASIR-06-UD07-Q002
+    unit: UD07
+    title: Plan de aprendizaje continuo
+    competency: Diseñar una estrategia de actualización profesional.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Diseña un plan trimestral para aprender una tecnología nueva combinando documentación, laboratorio y evidencia pública."
+    expected_answer: "Objetivos medibles, recursos fiables, práctica, verificación y evidencia/portfolio."
+    tags: [learning, career]
+  - id: ASIR-06-UD08-Q001
+    unit: UD08
+    title: Plan profesional
+    competency: Construir objetivos profesionales concretos y medibles.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Define objetivo profesional a 12 meses, brechas actuales, tres acciones, evidencias y criterio de progreso."
+    expected_answer: "Objetivo realista, brechas explícitas, acciones calendarizables y evidencias verificables."
+    tags: [career_plan]
+  - id: ASIR-06-UD08-Q002
+    unit: UD08
+    title: Caso profesional integrado
+    competency: Integrar empleabilidad, comunicación y prevención.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 25
+    prompt: "Caso: nuevo técnico entra en empresa con una incidencia urgente, riesgo físico visible y dudas sobre su función. Prioriza actuaciones, comunicación y aprendizaje posterior."
+    expected_answer: "Primero seguridad, luego proceso de incidencia y escalado, límites del rol, documentación y reflexión de competencia a desarrollar."
+    tags: [integrative, recovery]
