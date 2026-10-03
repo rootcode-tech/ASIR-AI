@@ -1,0 +1,174 @@
+schema_version: 0.1.0
+subject: ASIR-07
+name: Transformación Digital — Digitalización
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_docs
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 4, reasoning: 3, evidence: 2, clarity: 1}
+items:
+  - id: ASIR-07-UD01-Q001
+    unit: UD01
+    title: Digitalizar versus transformar
+    competency: Distinguir digitalización de transformación digital.
+    difficulty: D1
+    type: short_answer
+    estimated_time_minutes: 8
+    prompt: "Explica la diferencia entre convertir un formulario en PDF y rediseñar el proceso completo para reducir errores y tiempos."
+    expected_answer: "Digitalizar no implica rediseñar; transformación cambia proceso, integración y medición para mejorar resultado."
+    tags: [transformation, process]
+  - id: ASIR-07-UD01-Q002
+    unit: UD01
+    title: Madurez de proceso
+    competency: Evaluar un proceso antes de elegir tecnología.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Un proceso manual tiene pasos duplicados y aprobaciones sin criterio. Analiza qué corregirías antes de automatizarlo."
+    expected_answer: "Mapear proceso, eliminar redundancia, definir responsables/criterios y métricas antes de automatizar."
+    tags: [process, maturity]
+  - id: ASIR-07-UD02-Q001
+    unit: UD02
+    title: IT y OT
+    competency: Diferenciar sistemas IT y OT y su convergencia.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Compara un ERP y un PLC en objetivo, criticidad, ciclos de actualización y consecuencias de indisponibilidad."
+    expected_answer: "IT gestiona información/negocio; OT controla proceso físico, con disponibilidad/seguridad y ciclos distintos."
+    tags: [it, ot]
+  - id: ASIR-07-UD02-Q002
+    unit: UD02
+    title: Integración IT/OT segura
+    competency: Analizar riesgos de conectar entornos.
+    difficulty: D4
+    type: architecture
+    estimated_time_minutes: 15
+    prompt: "Diseña a alto nivel una integración entre sensores OT y plataforma IT sin exponer directamente el control industrial a Internet."
+    expected_answer: "Segmentación, gateway/broker, mínimos flujos, autenticación, monitorización y separación de control."
+    tags: [it, ot, security]
+  - id: ASIR-07-UD03-Q001
+    unit: UD03
+    title: Dato y gobierno
+    competency: Identificar calidad, propietario y ciclo de vida de datos.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Para una base de clientes identifica propietario del dato, reglas mínimas de calidad y dos riesgos de mantener duplicados."
+    expected_answer: "Responsable claro, validación/consistencia/actualización y riesgos de decisiones/comunicaciones inconsistentes."
+    tags: [data, governance]
+  - id: ASIR-07-UD03-Q002
+    unit: UD03
+    title: Métrica engañosa
+    competency: Analizar un KPI sin confundir correlación con mejora real.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Tras digitalizar un proceso suben las transacciones, pero también las reclamaciones. Explica qué métricas adicionales necesitas antes de declarar éxito."
+    expected_answer: "Tiempo, errores, satisfacción, coste, tasa de reclamación y baseline comparable; volumen solo no prueba mejora."
+    tags: [analytics, kpi]
+  - id: ASIR-07-UD04-Q001
+    unit: UD04
+    title: IaaS PaaS SaaS
+    competency: Distinguir modelos de servicio cloud.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Clasifica tres escenarios suministrados como IaaS, PaaS o SaaS y explica quién administra SO, runtime y aplicación."
+    expected_answer: "Clasificación coherente con reparto de responsabilidades."
+    tags: [cloud]
+  - id: ASIR-07-UD04-Q002
+    unit: UD04
+    title: Cloud o edge
+    competency: Elegir ubicación de cómputo según latencia y conectividad.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Una fábrica necesita respuesta en milisegundos incluso si pierde Internet, pero quiere analítica centralizada. Diseña reparto edge/cloud."
+    expected_answer: "Control crítico en edge/local, agregación/analítica en cloud, sincronización tolerante a desconexión y seguridad."
+    tags: [cloud, edge, design]
+  - id: ASIR-07-UD05-Q001
+    unit: UD05
+    title: API para integrar procesos
+    competency: Identificar cuándo una API reduce acoplamiento manual.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Dos sistemas intercambian CSV manualmente cada día. Propón una integración por API y qué contrato mínimo definirías."
+    expected_answer: "Endpoints/recursos, autenticación, esquema, errores, idempotencia si aplica y observabilidad."
+    tags: [automation, api]
+  - id: ASIR-07-UD05-Q002
+    unit: UD05
+    title: Reintentos peligrosos
+    competency: Analizar idempotencia en integraciones.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Un cliente reintenta una petición de creación tras timeout y duplica pedidos. Explica el problema y una estrategia de idempotencia."
+    expected_answer: "Timeout no confirma fracaso; usar idempotency key/identificador único y respuesta repetible."
+    tags: [api, idempotency]
+  - id: ASIR-07-UD06-Q001
+    unit: UD06
+    title: Auditoría de salida IA
+    competency: Verificar una respuesta generativa antes de usarla.
+    difficulty: D3
+    type: case_study
+    modality: controlled_ai
+    estimated_time_minutes: 15
+    ai: {allowed: true, mode: controlled, purpose: verification}
+    prompt: "Pide a una IA una propuesta técnica breve sobre un caso suministrado. Señala al menos dos afirmaciones que requieran verificación y contrástalas con documentación aportada."
+    expected_answer: "Se evalúa identificación de riesgo, contraste, corrección y límites, no la redacción del modelo."
+    tags: [ai, verification]
+  - id: ASIR-07-UD06-Q002
+    unit: UD06
+    title: IA inapropiada
+    competency: Decidir cuándo no usar IA generativa.
+    difficulty: D4
+    type: case_study
+    modality: controlled_ai
+    estimated_time_minutes: 15
+    ai: {allowed: true, mode: controlled, purpose: risk_assessment}
+    prompt: "Evalúa si es apropiado enviar a un servicio generativo externo logs con datos personales y secretos. Propón alternativa segura."
+    expected_answer: "No enviar sin base, minimización y controles; anonimizar/redactar, usar entorno autorizado/local o método no generativo."
+    tags: [ai, privacy, security]
+  - id: ASIR-07-UD07-Q001
+    unit: UD07
+    title: Riesgo digital
+    competency: Identificar activos, amenazas, impacto y controles.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Para una aplicación con datos de clientes identifica dos amenazas, impacto y un control preventivo/detectivo por amenaza."
+    expected_answer: "Relación coherente activo-amenaza-impacto-control, no lista genérica."
+    tags: [security, privacy]
+  - id: ASIR-07-UD07-Q002
+    unit: UD07
+    title: Privacidad desde diseño
+    competency: Aplicar minimización y propósito a un proyecto digital.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Una app solicita fecha de nacimiento, DNI, ubicación permanente y contactos para una función que solo necesita email. Analiza qué cambiarías."
+    expected_answer: "Minimizar datos, justificar finalidad, permisos proporcionales, retención y transparencia."
+    tags: [privacy, ethics]
+  - id: ASIR-07-UD08-Q001
+    unit: UD08
+    title: Proyecto de digitalización A
+    competency: Diseñar una mejora medible de proceso.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 25
+    prompt: "Diseña la digitalización de un proceso de aprobación manual: estado actual, problema, solución, datos, integraciones, riesgos y tres KPI."
+    expected_answer: "Problema claro, solución proporcional, arquitectura básica, seguridad/privacidad y KPI medibles con baseline."
+    tags: [integrative, project]
+  - id: ASIR-07-UD08-Q002
+    unit: UD08
+    title: Proyecto de digitalización B
+    competency: Comparar alternativas y justificar trade-offs.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 25
+    prompt: "Para un proceso logístico compara solución local, cloud y híbrida, y elige una atendiendo a coste, disponibilidad, latencia, privacidad e integración."
+    expected_answer: "Decisión trazable a requisitos y riesgos; reconoce trade-offs y define cómo medir éxito."
+    tags: [integrative, recovery]
