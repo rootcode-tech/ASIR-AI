@@ -1,0 +1,191 @@
+schema_version: 0.1.0
+subject: ASIR-03
+name: Hardware y CPD — Fundamentos de Hardware
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_docs
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 4, reasoning: 3, verification: 2, clarity: 1}
+items:
+  - id: ASIR-03-UD01-Q001
+    unit: UD01
+    title: CPU, memoria y buses
+    competency: Explicar cómo cooperan los componentes principales.
+    difficulty: D1
+    type: short_answer
+    estimated_time_minutes: 8
+    prompt: "Explica el papel de CPU, RAM, chipset/buses y almacenamiento al ejecutar un programa."
+    expected_answer: "Debe distinguir cómputo, memoria de trabajo, interconexión y persistencia."
+    tags: [hardware, architecture]
+  - id: ASIR-03-UD01-Q002
+    unit: UD01
+    title: Compatibilidad CPU/placa/RAM
+    competency: Detectar incompatibilidades básicas de plataforma.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Se propone combinar una CPU, una placa y memoria con especificaciones suministradas. Determina si son compatibles y justifica cada restricción relevante."
+    expected_answer: "Debe revisar socket, chipset/BIOS, generación/tipo de memoria y límites documentados."
+    tags: [compatibility]
+  - id: ASIR-03-UD02-Q001
+    unit: UD02
+    title: UEFI y orden de arranque
+    competency: Interpretar parámetros básicos de firmware.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Explica qué funciones cumplen UEFI, Secure Boot y el orden de arranque."
+    expected_answer: "Firmware inicializa hardware y carga bootloader; Secure Boot valida cadena autorizada; boot order elige dispositivo."
+    tags: [uefi, boot]
+  - id: ASIR-03-UD02-Q002
+    unit: UD02
+    title: Equipo no detecta disco de arranque
+    competency: Diagnosticar un fallo de firmware/almacenamiento.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 12
+    prompt: "Tras cambiar ajustes de firmware, el SSD aparece físicamente detectado pero no como opción de arranque. Ordena las comprobaciones."
+    expected_answer: "Modo UEFI/Legacy, presencia de entrada EFI/bootloader, partición adecuada y compatibilidad; evitar formatear sin diagnóstico."
+    tags: [uefi, diagnosis]
+  - id: ASIR-03-UD03-Q001
+    unit: UD03
+    title: HDD, SATA SSD y NVMe
+    competency: Comparar tecnologías de almacenamiento.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Compara HDD, SSD SATA y SSD NVMe en latencia, rendimiento, interfaz y caso de uso."
+    expected_answer: "Diferencia mecánico vs flash, limitación SATA, PCIe/NVMe y selección según coste/capacidad/rendimiento."
+    tags: [storage]
+  - id: ASIR-03-UD03-Q002
+    unit: UD03
+    title: Selección de almacenamiento
+    competency: Elegir almacenamiento según carga.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Diseña almacenamiento para SO, base de datos pequeña y archivo histórico con presupuesto limitado. Justifica la combinación."
+    expected_answer: "Debe asignar tecnología según IOPS/latencia, capacidad, coste y criticidad, sin asumir que lo más rápido sirve para todo."
+    tags: [storage, design]
+  - id: ASIR-03-UD04-Q001
+    unit: UD04
+    title: RAID 1 versus RAID 5
+    competency: Comparar redundancia, capacidad y fallo tolerado.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 10
+    prompt: "Con cuatro discos de 2 TB calcula capacidad útil aproximada en RAID 1 por pares y RAID 5, e indica tolerancia de fallos."
+    expected_answer: "RAID1 por pares ≈4 TB y tolerancia por espejo; RAID5 ≈6 TB y un fallo de disco."
+    tags: [raid]
+  - id: ASIR-03-UD04-Q002
+    unit: UD04
+    title: RAID no es backup
+    competency: Analizar riesgos de almacenamiento redundante.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Una empresa afirma que no necesita copias porque usa RAID 6. Explica al menos cuatro escenarios frente a los que RAID no protege."
+    expected_answer: "Borrado lógico, ransomware, corrupción, incendio/robo, fallo controlador/catástrofe, error humano; RAID es disponibilidad, no historial."
+    tags: [raid, backup]
+  - id: ASIR-03-UD05-Q001
+    unit: UD05
+    title: Componentes de servidor
+    competency: Identificar rasgos empresariales de hardware.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Explica para qué sirven ECC, fuentes redundantes, hot-swap y gestión remota BMC/iDRAC/iLO."
+    expected_answer: "Debe relacionarlos con integridad, continuidad, mantenimiento y gestión fuera de banda."
+    tags: [server]
+  - id: ASIR-03-UD05-Q002
+    unit: UD05
+    title: Selección de servidor
+    competency: Dimensionar una plataforma básica.
+    difficulty: D4
+    type: architecture
+    estimated_time_minutes: 15
+    prompt: "Selecciona una configuración razonable para un servidor de virtualización pequeño con 8 VMs y crecimiento previsto. Justifica CPU, RAM, almacenamiento, red y redundancia."
+    expected_answer: "Dimensionamiento coherente con margen, ECC, almacenamiento redundante, NICs y gestión remota según criticidad."
+    tags: [server, sizing]
+  - id: ASIR-03-UD06-Q001
+    unit: UD06
+    title: Potencia de UPS
+    competency: Estimar autonomía y carga básica.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 10
+    prompt: "Una carga consume 600 W y una UPS puede entregar 900 W. Explica por qué no basta esa cifra para conocer autonomía y qué datos adicionales necesitas."
+    expected_answer: "Necesita energía/capacidad de batería, curva de autonomía/eficiencia y margen; W indica potencia máxima, no tiempo."
+    tags: [ups, power]
+  - id: ASIR-03-UD06-Q002
+    unit: UD06
+    title: Protección ante corte eléctrico
+    competency: Diseñar una respuesta segura a pérdida de alimentación.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Diseña el comportamiento de un servidor y su UPS ante corte prolongado: alerta, tiempo de gracia y apagado controlado."
+    expected_answer: "Debe priorizar continuidad breve, monitorización, umbral de batería y shutdown seguro evitando descarga total."
+    tags: [ups, continuity]
+  - id: ASIR-03-UD07-Q001
+    unit: UD07
+    title: Flujo de aire en rack
+    competency: Identificar principios básicos de refrigeración.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 8
+    prompt: "Explica por qué se separan pasillos frío/caliente y qué problema causa recircular aire caliente."
+    expected_answer: "Mejora entrada de aire frío y evacuación; recirculación eleva temperatura de admisión y reduce eficiencia/fiabilidad."
+    tags: [datacenter, cooling]
+  - id: ASIR-03-UD07-Q002
+    unit: UD07
+    title: Rack mal organizado
+    competency: Analizar riesgos físicos de CPD.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Un rack tiene cables bloqueando ventilación, regletas sobrecargadas y equipos sin etiquetar. Prioriza riesgos y propone correcciones."
+    expected_answer: "Prioriza seguridad eléctrica/temperatura, gestión de cableado, distribución de energía, etiquetado y documentación."
+    tags: [datacenter, risk]
+  - id: ASIR-03-UD08-Q001
+    unit: UD08
+    title: Compatibilidad de interfaz
+    competency: Verificar compatibilidad de periféricos y red.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Con especificaciones suministradas, comprueba si una NIC, un transceptor y un switch pueden enlazar a la velocidad prevista."
+    expected_answer: "Debe revisar estándar, velocidad, medio, conector/transceptor y soporte del equipo."
+    tags: [network_hardware, compatibility]
+  - id: ASIR-03-UD08-Q002
+    unit: UD08
+    title: Enlace negociado a menor velocidad
+    competency: Diagnosticar una incompatibilidad física/lógica.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 12
+    prompt: "Un enlace esperado a 10 Gb/s negocia 1 Gb/s. Enumera causas plausibles y un orden de comprobación."
+    expected_answer: "Capacidad de NIC/switch/transceptor/cable, autonegociación, drivers/firmware y configuración; validar extremo a extremo."
+    tags: [network_hardware, diagnosis]
+  - id: ASIR-03-UD09-Q001
+    unit: UD09
+    title: Inventario reproducible
+    competency: Registrar activos de hardware con datos útiles.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 12
+    prompt: "Crea una ficha de inventario para un equipo incluyendo identificador, componentes relevantes, firmware, garantía/fecha y estado."
+    expected_answer: "Ficha trazable, consistente y útil para mantenimiento/ciclo de vida."
+    tags: [inventory]
+  - id: ASIR-03-UD09-Q002
+    unit: UD09
+    title: Diagnóstico hardware integrado
+    competency: Aislar una avería sin sustituciones aleatorias.
+    difficulty: D4
+    type: troubleshooting
+    estimated_time_minutes: 25
+    prompt: "Un servidor presenta reinicios bajo carga y errores intermitentes. Diseña un plan de diagnóstico que cubra temperatura, memoria, alimentación y almacenamiento, minimizando riesgo."
+    expected_answer: "Recoge logs/sensores, reproduce de forma controlada, prueba subsistemas, evita cambiar múltiples piezas a la vez y documenta evidencias."
+    critical_errors: ["Manipulación insegura de alimentación", "Sustitución destructiva sin preservar datos"]
+    tags: [integrative, diagnosis, recovery]
