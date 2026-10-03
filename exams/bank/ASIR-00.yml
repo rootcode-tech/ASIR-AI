@@ -1,0 +1,220 @@
+schema_version: 0.1.0
+subject: ASIR-00
+name: Preparación de acceso a Grado Superior
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: closed_book
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 4, reasoning: 3, verification: 2, clarity: 1}
+items:
+  - id: ASIR-00-UD01-Q001
+    unit: UD01
+    title: Diagnóstico de método de estudio
+    competency: Identificar un método de resolución ordenado y verificable.
+    difficulty: D1
+    type: short_answer
+    estimated_time_minutes: 8
+    prompt: "Explica una secuencia de cinco pasos para resolver un problema técnico sencillo sin empezar a probar cosas al azar."
+    expected_answer: "Debe incluir comprender el problema, reunir datos, formular hipótesis, probar de forma controlada y verificar/documentar el resultado."
+    tags: [method, reasoning]
+  - id: ASIR-00-UD01-Q002
+    unit: UD01
+    title: Diagnóstico de estrategia ineficaz
+    competency: Analizar errores de método y proponer mejora.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Un alumno cambia varias cosas a la vez, no anota nada y al final el problema desaparece sin saber por qué. Analiza qué ha hecho mal y propone un procedimiento reproducible."
+    expected_answer: "Debe señalar falta de aislamiento de variables, ausencia de registro y de verificación; propone cambios de uno en uno, hipótesis, evidencias y rollback."
+    tags: [method, diagnosis]
+  - id: ASIR-00-UD02-Q001
+    unit: UD02
+    title: Porcentajes y proporcionalidad
+    competency: Aplicar porcentajes y proporcionalidad a un caso técnico.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 8
+    prompt: "Un disco de 500 GB tiene ocupado el 72%. ¿Cuántos GB están ocupados y cuántos quedan libres? Muestra el cálculo."
+    expected_answer: "360 GB ocupados y 140 GB libres, con procedimiento correcto."
+    tags: [math, percentage]
+  - id: ASIR-00-UD02-Q002
+    unit: UD02
+    title: Notación científica aplicada
+    competency: Convertir y comparar magnitudes usando notación científica.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 8
+    prompt: "Expresa 0,0000048 y 7.200.000 en notación científica y explica cuál es mayor y por cuántos órdenes de magnitud aproximadamente."
+    expected_answer: "4,8×10^-6 y 7,2×10^6; diferencia de 12 órdenes de magnitud."
+    tags: [math, scientific_notation]
+  - id: ASIR-00-UD03-Q001
+    unit: UD03
+    title: Ecuación lineal
+    competency: Resolver una ecuación y comprobar el resultado.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 8
+    prompt: "Resuelve 3x + 7 = 28 y verifica sustituyendo el valor obtenido."
+    expected_answer: "x=7 y la sustitución da 28."
+    tags: [algebra]
+  - id: ASIR-00-UD03-Q002
+    unit: UD03
+    title: Sistema aplicado
+    competency: Modelizar una situación con un sistema de ecuaciones.
+    difficulty: D3
+    type: calculation
+    estimated_time_minutes: 12
+    prompt: "Dos servicios consumen juntos 18 GB de RAM. El primero consume 4 GB más que el segundo. Plantea y resuelve el sistema."
+    expected_answer: "x+y=18, x=y+4; x=11 GB, y=7 GB."
+    tags: [algebra, modeling]
+  - id: ASIR-00-UD04-Q001
+    unit: UD04
+    title: Lectura de gráfica
+    competency: Interpretar una función representada gráficamente.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Una gráfica de uso de CPU sube de 20% a 80% en 10 minutos y luego permanece estable. Describe el comportamiento y qué información adicional necesitarías antes de afirmar que hay un problema."
+    expected_answer: "Describe crecimiento y meseta; requiere carga, baseline, proceso causante, duración y contexto antes de concluir incidencia."
+    tags: [functions, graphs]
+  - id: ASIR-00-UD04-Q002
+    unit: UD04
+    title: Modelo lineal sencillo
+    competency: Construir una función lineal a partir de datos.
+    difficulty: D3
+    type: calculation
+    estimated_time_minutes: 12
+    prompt: "Una copia transfiere datos a 40 MB/s constantes. Escribe una función para los MB transferidos en t segundos y calcula cuánto tarda en transferir 12.000 MB."
+    expected_answer: "f(t)=40t; t=300 s=5 min."
+    tags: [functions, modeling]
+  - id: ASIR-00-UD05-Q001
+    unit: UD05
+    title: Teorema de Pitágoras aplicado
+    competency: Resolver una medida indirecta con geometría.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 8
+    prompt: "Un cable debe cruzar en diagonal una sala rectangular de 6 m por 8 m. ¿Qué longitud mínima necesita?"
+    expected_answer: "10 m mediante sqrt(6²+8²)."
+    tags: [geometry]
+  - id: ASIR-00-UD05-Q002
+    unit: UD05
+    title: Trigonometría básica
+    competency: Aplicar razones trigonométricas en un caso de medida.
+    difficulty: D3
+    type: calculation
+    estimated_time_minutes: 12
+    prompt: "Desde un punto situado a 20 m de una torre se mide un ángulo de elevación de 35°. Estima la altura usando tan(35°)=0,700."
+    expected_answer: "h≈14 m, indicando fórmula y unidades."
+    tags: [trigonometry]
+  - id: ASIR-00-UD06-Q001
+    unit: UD06
+    title: Media y mediana
+    competency: Calcular e interpretar medidas de centralización.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 10
+    prompt: "Latencias en ms: 12, 13, 13, 14, 48. Calcula media y mediana y explica cuál describe mejor el valor típico."
+    expected_answer: "Media 20 ms, mediana 13 ms; la mediana representa mejor el valor típico por el outlier 48."
+    tags: [statistics]
+  - id: ASIR-00-UD06-Q002
+    unit: UD06
+    title: Probabilidad básica
+    competency: Calcular una probabilidad simple e interpretarla.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 8
+    prompt: "De 50 ejecuciones de una prueba, 8 fallan. Estima la probabilidad empírica de fallo y exprésala en porcentaje."
+    expected_answer: "8/50=0,16=16%."
+    tags: [probability]
+  - id: ASIR-00-UD07-Q001
+    unit: UD07
+    title: Energía y potencia
+    competency: Diferenciar potencia y energía en contexto técnico.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 10
+    prompt: "Un equipo consume 200 W durante 5 horas. Calcula la energía consumida en kWh y explica la diferencia entre W y kWh."
+    expected_answer: "1 kWh; W es potencia instantánea y kWh energía acumulada."
+    tags: [science, energy]
+  - id: ASIR-00-UD07-Q002
+    unit: UD07
+    title: Causa y correlación
+    competency: Distinguir correlación de causalidad en un caso tecnológico.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Tras instalar una actualización aumentan los reinicios del PC. Explica por qué eso no demuestra todavía causalidad y qué evidencias buscarías."
+    expected_answer: "Coincidencia temporal no basta; revisar logs, reproducibilidad, cambios adicionales, rollback/control y patrón antes/después."
+    tags: [science, reasoning]
+  - id: ASIR-00-UD08-Q001
+    unit: UD08
+    title: Síntesis técnica
+    competency: Resumir información manteniendo ideas esenciales.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 12
+    prompt: "Redacta en 80-100 palabras un resumen técnico de un texto suministrado sobre una incidencia, preservando causa, impacto y solución sin añadir información no presente."
+    expected_answer: "Se valora fidelidad, síntesis, estructura, ortografía y ausencia de invenciones."
+    tags: [language, synthesis]
+  - id: ASIR-00-UD08-Q002
+    unit: UD08
+    title: Reescritura profesional
+    competency: Transformar un texto informal en comunicación técnica clara.
+    difficulty: D3
+    type: short_answer
+    estimated_time_minutes: 12
+    prompt: "Reescribe un mensaje informal y ambiguo de soporte en formato claro: problema, evidencia observada, acciones realizadas y estado actual."
+    expected_answer: "Debe separar hechos de hipótesis, ordenar la información y usar lenguaje preciso."
+    tags: [language, technical_writing]
+  - id: ASIR-00-UD09-Q001
+    unit: UD09
+    title: Inglés funcional básico
+    competency: Comprender instrucciones técnicas sencillas en inglés.
+    difficulty: D2
+    type: english
+    estimated_time_minutes: 10
+    prompt: "Lee una instrucción breve en inglés suministrada y explica en español qué acción pide, qué precaución menciona y qué resultado espera."
+    expected_answer: "Comprensión fiel de acción, precaución y resultado; no se exige traducción literal."
+    tags: [english, digital]
+  - id: ASIR-00-UD09-Q002
+    unit: UD09
+    title: Competencia digital y fuentes
+    competency: Evaluar fiabilidad básica de una fuente técnica.
+    difficulty: D3
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Compara una respuesta anónima de foro con documentación oficial para una misma tarea. Explica qué fuente priorizarías y cómo validarías la solución."
+    expected_answer: "Prioriza documentación oficial para comportamiento soportado, puede usar foro como pista y exige prueba reproducible."
+    tags: [digital_literacy, sources]
+  - id: ASIR-00-UD10-Q001
+    unit: UD10
+    title: Estrategia de examen
+    competency: Planificar tiempo y priorizar tareas en una prueba.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 8
+    prompt: "Tienes 120 minutos para 6 ejercicios de pesos 10, 10, 15, 20, 20 y 25 puntos. Propón una estrategia de tiempo razonada dejando margen de revisión."
+    expected_answer: "Debe asignar tiempo aproximadamente proporcional al peso/dificultad, reservar revisión y evitar bloquearse en una sola pregunta."
+    tags: [exam_strategy]
+  - id: ASIR-00-UD10-Q002
+    unit: UD10
+    title: Simulacro integrado A
+    competency: Integrar cálculo, interpretación y comunicación bajo tiempo limitado.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 25
+    prompt: "Caso integrado: interpretar una tabla de consumo, calcular porcentajes, detectar un dato atípico y redactar una conclusión técnica de máximo 120 palabras."
+    expected_answer: "Cálculos correctos, identificación justificada del outlier y conclusión coherente que distingue datos de interpretación."
+    tags: [integrative, simulation]
+  - id: ASIR-00-UD10-Q003
+    unit: UD10
+    title: Simulacro integrado B
+    competency: Integrar álgebra, gráficos y razonamiento crítico.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 25
+    prompt: "Caso alternativo: modelizar una relación lineal, resolver un valor desconocido, interpretar una gráfica y explicar dos limitaciones del modelo."
+    expected_answer: "Modelo y cálculo correctos, lectura gráfica coherente y dos limitaciones pertinentes."
+    tags: [integrative, recovery]
