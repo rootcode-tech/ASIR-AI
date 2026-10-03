@@ -1,0 +1,214 @@
+schema_version: 0.1.0
+subject: ASIR-01
+name: Sistemas I — Implantación de Sistemas Operativos
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_lab
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 4, reasoning: 2.5, verification: 2, security: 1, clarity: 0.5}
+items:
+  - id: ASIR-01-UD01-Q001
+    unit: UD01
+    title: Componentes y función
+    competency: Relacionar CPU, RAM, almacenamiento y SO con su función.
+    difficulty: D1
+    type: short_answer
+    estimated_time_minutes: 8
+    prompt: "Explica la función de CPU, RAM, almacenamiento y sistema operativo en el arranque y ejecución de una aplicación."
+    expected_answer: "Debe diferenciar procesamiento, memoria volátil, persistencia y gestión de recursos/servicios del SO."
+    tags: [architecture]
+  - id: ASIR-01-UD01-Q002
+    unit: UD01
+    title: Cuello de botella inicial
+    competency: Analizar síntomas básicos de recursos.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 12
+    prompt: "Un equipo tarda mucho al abrir varias aplicaciones, la CPU está al 30%, la RAM al 98% y hay mucha E/S de disco. Formula una hipótesis principal y explica cómo la comprobarías."
+    expected_answer: "Hipótesis de presión de memoria/paginación; verificar swap/pagefile, procesos, memoria disponible y E/S antes de cambiar hardware."
+    tags: [diagnosis]
+  - id: ASIR-01-UD02-Q001
+    unit: UD02
+    title: Red virtual básica
+    competency: Crear una VM reproducible con recursos razonables.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Crea una VM Linux con CPU, RAM, disco y red definidos por el enunciado y documenta los parámetros elegidos."
+    expected_answer: "VM arranca, recursos coinciden, red funciona y configuración queda documentada."
+    tags: [virtualization]
+  - id: ASIR-01-UD02-Q002
+    unit: UD02
+    title: Snapshot y rollback
+    competency: Usar checkpoints de forma segura.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Antes de una modificación de riesgo, crea un snapshot, provoca un cambio reversible y demuestra la restauración al estado previo."
+    expected_answer: "Snapshot previo válido, cambio observable, rollback correcto y evidencia del estado restaurado."
+    tags: [virtualization, rollback]
+  - id: ASIR-01-UD03-Q001
+    unit: UD03
+    title: Particionado de instalación
+    competency: Diseñar un esquema de particiones básico.
+    difficulty: D2
+    type: architecture
+    estimated_time_minutes: 12
+    prompt: "Para una VM Linux de 80 GB, propone un esquema de particiones sencillo y justifica qué dejarías separado."
+    expected_answer: "Debe incluir EFI si procede, raíz y swap según escenario; separación adicional solo si aporta una razón operativa."
+    tags: [installation, partitioning]
+  - id: ASIR-01-UD03-Q002
+    unit: UD03
+    title: Fallo de arranque tras instalación
+    competency: Diagnosticar una instalación que no arranca.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Tras instalar Linux, la VM entra de nuevo al instalador cada reinicio. Diagnostica causas probables y ordena las comprobaciones."
+    expected_answer: "Revisar medio ISO/orden de boot, disco instalado, modo firmware y bootloader; cambiar una variable cada vez y verificar."
+    tags: [boot, diagnosis]
+  - id: ASIR-01-UD04-Q001
+    unit: UD04
+    title: Montaje persistente
+    competency: Montar un sistema de archivos y hacerlo persistente.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 15
+    prompt: "Monta un segundo sistema de archivos en /srv/data y configúralo para que se monte tras reiniciar. Verifica sin reiniciar primero."
+    expected_answer: "Montaje correcto, entrada persistente válida, comprobación con mount/fstab test y sin bloquear el arranque."
+    critical_errors: ["Entrada persistente inválida que impida el arranque sin haber probado previamente"]
+    tags: [filesystem, mount]
+  - id: ASIR-01-UD04-Q002
+    unit: UD04
+    title: Espacio libre engañoso
+    competency: Diagnosticar problemas de espacio e inodos.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 12
+    prompt: "Una aplicación dice 'No space left on device' pero df muestra espacio libre. ¿Qué otra causa comprobarías y cómo?"
+    expected_answer: "Comprobar agotamiento de inodos con df -i y directorios problemáticos; explicar diferencia entre bloques e inodos."
+    tags: [filesystem, diagnosis]
+  - id: ASIR-01-UD05-Q001
+    unit: UD05
+    title: Navegación y búsqueda
+    competency: Usar terminal para localizar archivos y contenido.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 12
+    prompt: "Localiza archivos .conf modificados en las últimas 24 h dentro de un árbol de laboratorio y busca cuáles contienen una cadena dada."
+    expected_answer: "Procedimiento seguro y reproducible usando herramientas adecuadas, sin modificar archivos."
+    tags: [linux, shell]
+  - id: ASIR-01-UD05-Q002
+    unit: UD05
+    title: Pipeline de texto
+    competency: Construir un pipeline sencillo y verificable.
+    difficulty: D3
+    type: command_interpretation
+    estimated_time_minutes: 12
+    prompt: "A partir de un log, extrae las líneas ERROR, cuenta ocurrencias por servicio y ordena de mayor a menor. Explica cada etapa."
+    expected_answer: "Pipeline funcional equivalente con filtrado, extracción/normalización, conteo y ordenación; explicación coherente."
+    tags: [linux, text_processing]
+  - id: ASIR-01-UD06-Q001
+    unit: UD06
+    title: Permisos mínimos
+    competency: Configurar propietario, grupo y permisos según requisito.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Configura /srv/proyecto para que el propietario y el grupo de trabajo puedan colaborar y otros usuarios no tengan acceso. Verifica con dos cuentas."
+    expected_answer: "Propiedad/grupo correctos, permisos mínimos funcionales y prueba positiva/negativa con usuarios distintos."
+    critical_errors: ["Usar 777 como solución"]
+    tags: [permissions, least_privilege]
+  - id: ASIR-01-UD06-Q002
+    unit: UD06
+    title: ACL de excepción
+    competency: Resolver una excepción de acceso sin abrir permisos globales.
+    difficulty: D3
+    type: configuration
+    estimated_time_minutes: 15
+    prompt: "Un usuario externo al grupo necesita solo lectura sobre un archivo concreto. Resuélvelo sin modificar el acceso del resto del árbol."
+    expected_answer: "ACL o mecanismo equivalente limitado al recurso; verificación del acceso del usuario y de terceros."
+    tags: [acl, least_privilege]
+  - id: ASIR-01-UD07-Q001
+    unit: UD07
+    title: Servicio persistente
+    competency: Gestionar un servicio y verificar su estado funcional.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Instala o habilita un servicio de laboratorio, configúralo para arrancar con el sistema y verifica proceso, puerto y respuesta."
+    expected_answer: "Paquete/servicio correcto, habilitado, activo y comprobado funcionalmente, no solo 'running'."
+    tags: [services, systemd]
+  - id: ASIR-01-UD07-Q002
+    unit: UD07
+    title: Servicio que reinicia
+    competency: Diagnosticar un servicio que falla al iniciar.
+    difficulty: D3
+    type: log_analysis
+    estimated_time_minutes: 15
+    prompt: "Un servicio entra en bucle de reinicios. Usa estado y logs para localizar una configuración inválida y corrígela con mínima modificación."
+    expected_answer: "Recoge evidencia, identifica error concreto, corrige, reinicia y verifica salud funcional."
+    tags: [services, logs, diagnosis]
+  - id: ASIR-01-UD08-Q001
+    unit: UD08
+    title: PowerShell básico
+    competency: Consultar información del sistema con PowerShell.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 12
+    prompt: "Obtén con PowerShell versión del SO, memoria total y cinco procesos con mayor consumo de CPU. Presenta el resultado de forma legible."
+    expected_answer: "Cmdlets adecuados y salida coherente; se valora comprensión del pipeline de objetos."
+    tags: [windows, powershell]
+  - id: ASIR-01-UD08-Q002
+    unit: UD08
+    title: Servicio Windows detenido
+    competency: Diagnosticar y recuperar un servicio Windows.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Un servicio Windows necesario está detenido tras reinicio. Determina tipo de inicio, causa registrada y recupéralo sin deshabilitar controles de seguridad."
+    expected_answer: "Consulta servicio/eventos, corrige causa, ajusta inicio si procede y verifica funcionamiento."
+    tags: [windows, services, diagnosis]
+  - id: ASIR-01-UD09-Q001
+    unit: UD09
+    title: Backup y restore de archivo
+    competency: Crear y validar una copia recuperable.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 15
+    prompt: "Realiza una copia de un conjunto de archivos, elimina uno en el laboratorio, restáuralo y verifica integridad con hash."
+    expected_answer: "Backup creado, restore real y hash coincidente."
+    critical_errors: ["Dar por válido el backup sin probar restauración"]
+    tags: [backup, restore]
+  - id: ASIR-01-UD09-Q002
+    unit: UD09
+    title: Estrategia de copia
+    competency: Elegir una estrategia básica de copias ante un requisito.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Diseña una política simple para un servidor pequeño que no puede perder más de 24 h de datos y debe recuperarse en menos de 4 h. Justifica frecuencia y prueba de restore."
+    expected_answer: "Relaciona RPO/RTO con frecuencia, retención y pruebas; incluye copia separada del sistema origen."
+    tags: [backup, continuity]
+  - id: ASIR-01-UD10-Q001
+    unit: UD10
+    title: Método de troubleshooting
+    competency: Aplicar un proceso estructurado de diagnóstico.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Una VM no tiene acceso a Internet. Diseña y ejecuta un diagnóstico desde enlace/interfaz hasta DNS, anotando evidencia y descartes."
+    expected_answer: "Comprueba interfaz, dirección, ruta, gateway, conectividad IP, DNS y servicio externo en orden lógico."
+    tags: [troubleshooting, integrative]
+  - id: ASIR-01-UD10-Q002
+    unit: UD10
+    title: Incidente integrado alternativo
+    competency: Recuperar un sistema básico tras varios fallos relacionados.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 30
+    prompt: "Sistema de laboratorio con un servicio caído, permiso incorrecto y montaje no disponible. Recupera el servicio, documenta causa raíz y demuestra que persiste tras reinicio."
+    expected_answer: "Aísla fallos, corrige con mínimo impacto, valida servicio/archivo/montaje y persistencia; documenta causa raíz."
+    critical_errors: ["Usar permisos globalmente inseguros", "Modificar varias capas sin conservar evidencia"]
+    tags: [integrative, recovery]
