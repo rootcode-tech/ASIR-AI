@@ -1,0 +1,253 @@
+schema_version: 0.1.0
+subject: ASIR-13
+name: Ciberseguridad y Alta Disponibilidad
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_lab
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 3.5, reasoning: 2, verification: 2, security: 1.5, clarity: 1}
+items:
+  - id: ASIR-13-UD01-Q001
+    unit: UD01
+    title: Riesgo básico
+    competency: Relacionar activo, amenaza, vulnerabilidad e impacto.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Para un servidor con datos de clientes identifica activo, amenaza, vulnerabilidad, impacto y un control razonable."
+    expected_answer: "Cadena coherente y control proporcional al riesgo."
+    tags: [risk]
+  - id: ASIR-13-UD01-Q002
+    unit: UD01
+    title: Priorización de riesgos
+    competency: Priorizar por probabilidad, impacto y exposición.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Compara tres riesgos suministrados y prioriza mitigación justificando impacto, probabilidad y exposición real."
+    expected_answer: "Priorización razonada, no solo por severidad nominal."
+    tags: [risk, prioritization]
+  - id: ASIR-13-UD02-Q001
+    unit: UD02
+    title: Hardening de servidor
+    competency: Aplicar baseline de configuración segura.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Reduce superficie de un servidor de laboratorio: servicios innecesarios, permisos, actualizaciones y acceso remoto. Verifica servicio requerido."
+    expected_answer: "Cambios mínimos, justificados y comprobados; mantiene funcionalidad necesaria."
+    tags: [hardening]
+  - id: ASIR-13-UD02-Q002
+    unit: UD02
+    title: Hardening rompe servicio
+    competency: Diagnosticar un control mal aplicado.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Tras endurecer permisos un servicio deja de leer su configuración. Corrige sin revertir todo el hardening."
+    expected_answer: "Identifica identidad/ruta/permiso exacto y concede mínimo necesario."
+    tags: [hardening, diagnosis]
+  - id: ASIR-13-UD03-Q001
+    unit: UD03
+    title: MFA y secretos
+    competency: Elegir controles de identidad apropiados.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Diseña acceso administrativo que combine MFA, cuenta nominal y gestión segura de secretos."
+    expected_answer: "Identidad individual, segundo factor, mínimo privilegio, secreto no compartido y trazabilidad."
+    tags: [mfa, secrets]
+  - id: ASIR-13-UD03-Q002
+    unit: UD03
+    title: Certificado y confianza
+    competency: Analizar una cadena PKI.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Un certificado está dentro de fecha pero el cliente no confía. Diagnostica cadena, CA, hostname y revocación."
+    expected_answer: "Verifica cadena completa, trust store, SAN/hostname y estado; corrige causa."
+    tags: [pki, diagnosis]
+  - id: ASIR-13-UD04-Q001
+    unit: UD04
+    title: Segmentación y ACL
+    competency: Diseñar mínimo acceso entre redes.
+    difficulty: D2
+    type: architecture
+    estimated_time_minutes: 15
+    prompt: "Define reglas entre usuarios, servidores y administración permitiendo solo los flujos necesarios."
+    expected_answer: "Default deny razonable, flujos explícitos por servicio y administración restringida."
+    tags: [firewall, segmentation]
+  - id: ASIR-13-UD04-Q002
+    unit: UD04
+    title: Regla demasiado amplia
+    competency: Detectar sobreexposición en firewall.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Una regla allow any-any se añadió para resolver un fallo. Sustitúyela por reglas mínimas tras identificar tráfico requerido."
+    expected_answer: "Captura/logs/documentación para determinar origen, destino, protocolo/puerto y limitar regla."
+    critical_errors: ["Mantener allow any-any sin justificación"]
+    tags: [firewall, least_privilege]
+  - id: ASIR-13-UD05-Q001
+    unit: UD05
+    title: IDS alerta
+    competency: Interpretar una alerta sin confundirla con compromiso probado.
+    difficulty: D2
+    type: log_analysis
+    estimated_time_minutes: 12
+    prompt: "Una regla IDS dispara por patrón sospechoso. Explica qué evidencia adicional necesitas antes de declarar incidente confirmado."
+    expected_answer: "Contexto de red/host, logs, proceso, usuario, repetición y posible falso positivo."
+    tags: [ids, siem]
+  - id: ASIR-13-UD05-Q002
+    unit: UD05
+    title: Correlación SIEM
+    competency: Correlacionar múltiples señales.
+    difficulty: D3
+    type: log_analysis
+    estimated_time_minutes: 18
+    prompt: "Correlaciona login anómalo, proceso nuevo y conexión saliente en una línea temporal y formula hipótesis."
+    expected_answer: "Timeline coherente, separa hechos de hipótesis y define siguientes evidencias/contención."
+    tags: [siem, incident]
+  - id: ASIR-13-UD06-Q001
+    unit: UD06
+    title: Vulnerabilidad y contexto
+    competency: Priorizar parcheado por exposición/impacto.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 12
+    prompt: "Dos CVE tienen distinta severidad pero uno afecta un servicio público crítico. Prioriza con contexto."
+    expected_answer: "Usa CVSS como señal, añade exposición, explotabilidad, activo y mitigaciones."
+    tags: [vulnerability]
+  - id: ASIR-13-UD06-Q002
+    unit: UD06
+    title: Parche sin pruebas
+    competency: Diseñar parcheado seguro.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Un parche crítico debe aplicarse a producción. Diseña prueba, ventana, backup/rollback y validación."
+    expected_answer: "Evaluación, staging/canary si posible, respaldo, cambio controlado y health checks."
+    tags: [patching, change_management]
+  - id: ASIR-13-UD07-Q001
+    unit: UD07
+    title: Seguridad web básica
+    competency: Identificar riesgo y mitigación en servicio web.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Una app acepta input y muestra errores detallados con rutas internas. Identifica riesgos y controles."
+    expected_answer: "Validación/encoding según contexto, errores genéricos al cliente, logs internos protegidos."
+    tags: [web_security]
+  - id: ASIR-13-UD07-Q002
+    unit: UD07
+    title: Secreto en frontend
+    competency: Detectar exposición de credencial.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 10
+    prompt: "Una API key privada está embebida en JavaScript entregado al navegador. Explica por qué no puede ocultarse ahí y rediseña."
+    expected_answer: "Todo cliente recibe el secreto; mover operación sensible a backend/servicio con auth y rotar clave."
+    critical_errors: ["Considerar ofuscación del frontend como protección suficiente"]
+    tags: [web_security, secrets]
+  - id: ASIR-13-UD08-Q001
+    unit: UD08
+    title: 3-2-1 y RPO/RTO
+    competency: Diseñar continuidad de datos.
+    difficulty: D2
+    type: architecture
+    estimated_time_minutes: 15
+    prompt: "Diseña copias para RPO 8 h y RTO 4 h incorporando separación de copias y prueba de restore."
+    expected_answer: "Frecuencia compatible, copias separadas/offline o inmutables según riesgo y restore probado."
+    tags: [backup, continuity]
+  - id: ASIR-13-UD08-Q002
+    unit: UD08
+    title: Ransomware y backup conectado
+    competency: Analizar resiliencia frente a cifrado destructivo.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Todas las copias están montadas con escritura desde el servidor comprometido. Explica el riesgo y mejora la arquitectura."
+    expected_answer: "Ransomware puede cifrarlas; añadir aislamiento, inmutabilidad/offline, credenciales separadas y pruebas."
+    tags: [backup, ransomware]
+  - id: ASIR-13-UD09-Q001
+    unit: UD09
+    title: Health check y balanceo
+    competency: Explicar retirada de nodos defectuosos.
+    difficulty: D2
+    type: architecture
+    estimated_time_minutes: 12
+    prompt: "Diseña un health check para dos servidores detrás de balanceador y explica cuándo retirar/reincorporar un nodo."
+    expected_answer: "Check funcional relevante, umbrales, drenaje/reintentos y recuperación estable."
+    tags: [ha, load_balancing]
+  - id: ASIR-13-UD09-Q002
+    unit: UD09
+    title: SPOF oculto
+    competency: Detectar un único punto de fallo.
+    difficulty: D4
+    type: architecture
+    estimated_time_minutes: 15
+    prompt: "Hay dos servidores web pero un único switch, BD y almacenamiento. Identifica SPOF y prioriza mejoras."
+    expected_answer: "Reconoce dependencias compartidas y prioriza según impacto/coste/RTO, no solo duplicar frontend."
+    tags: [ha, spof]
+  - id: ASIR-13-UD10-Q001
+    unit: UD10
+    title: Triage y contención
+    competency: Aplicar fases iniciales de respuesta.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 18
+    prompt: "Un host muestra conexiones sospechosas. Define pasos de triage, preservación y contención sin destruir evidencia."
+    expected_answer: "Registrar tiempo/evidencia, aislar de forma proporcional, preservar logs/artefactos y evitar limpieza prematura."
+    tags: [incident_response]
+  - id: ASIR-13-UD10-Q002
+    unit: UD10
+    title: Evidencia básica
+    competency: Mantener integridad y trazabilidad de evidencia.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Explica cómo recoger un archivo/log relevante preservando original, hash, hora y cadena de custodia básica."
+    expected_answer: "Copia controlada, hash, registro de origen/tiempo/persona/acción y acceso limitado."
+    tags: [forensics, evidence]
+  - id: ASIR-13-UD11-Q001
+    unit: UD11
+    title: Política verificable
+    competency: Convertir un requisito de seguridad en control auditable.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Transforma 'las cuentas deben ser seguras' en tres controles concretos y evidencias auditables."
+    expected_answer: "Controles medibles como MFA, mínimo privilegio, revisión periódica, logs; evidencia clara."
+    tags: [compliance, audit]
+  - id: ASIR-13-UD11-Q002
+    unit: UD11
+    title: Privacidad y logs
+    competency: Equilibrar auditoría y minimización.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Un sistema registra cuerpos completos con datos sensibles para 'tener más información'. Rediseña logging útil y proporcional."
+    expected_answer: "Minimizar/redactar, IDs correlacionables, acceso/retención y evitar secretos/PII innecesaria."
+    tags: [privacy, logging]
+  - id: ASIR-13-UD12-Q001
+    unit: UD12
+    title: Laboratorio integral A
+    competency: Defender y recuperar un servicio ante incidente simulado.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 40
+    prompt: "Entorno con exposición excesiva, alerta SIEM y servicio degradado. Evalúa riesgo, contiene, corrige, restaura si procede y valida disponibilidad/seguridad."
+    expected_answer: "Proceso basado en evidencia, segmentación/hardening adecuados, recuperación validada y RCA."
+    critical_errors: ["Borrar evidencia", "Desactivar controles globalmente", "Afirmar restore sin validarlo"]
+    tags: [integrative, incident]
+  - id: ASIR-13-UD12-Q002
+    unit: UD12
+    title: Laboratorio integral B
+    competency: Diseñar resiliencia y responder a fallo compuesto.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 40
+    prompt: "Escenario alternativo: nodo cae, réplica/backup presentan dudas y firewall contiene una regla amplia. Recupera servicio seguro respetando RPO/RTO y documenta decisiones."
+    expected_answer: "Prioriza continuidad sin perder seguridad, verifica datos, elimina exposición excesiva y justifica trade-offs."
+    tags: [integrative, recovery]
