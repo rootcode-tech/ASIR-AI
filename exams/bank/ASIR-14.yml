@@ -1,0 +1,170 @@
+schema_version: 0.1.0
+subject: ASIR-14
+name: Inglés Profesional IT
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_docs
+  ai: {allowed: false}
+  rubric: {total_points: 10, comprehension: 3, accuracy: 2.5, technical_language: 2, clarity: 1.5, interaction: 1}
+items:
+  - id: ASIR-14-UD01-Q001
+    unit: UD01
+    title: Terminología de sistemas
+    competency: Comprender y usar vocabulario básico de sistemas/redes.
+    difficulty: D2
+    type: english
+    estimated_time_minutes: 10
+    prompt: "Explain in English the difference between RAM, storage, CPU and network interface in four or five sentences."
+    expected_answer: "Technically correct definitions using understandable professional English; minor grammar errors acceptable if meaning is clear."
+    tags: [english, terminology]
+  - id: ASIR-14-UD01-Q002
+    unit: UD01
+    title: Explicar un componente al usuario
+    competency: Adaptar terminología técnica a un interlocutor no especialista.
+    difficulty: D3
+    type: oral
+    estimated_time_minutes: 8
+    prompt: "Explain in English to a non-technical colleague why low disk space can affect a computer, avoiding unnecessary jargon."
+    expected_answer: "Clear explanation, correct concept, suitable vocabulary and intelligible speech."
+    tags: [english, communication]
+  - id: ASIR-14-UD02-Q001
+    unit: UD02
+    title: Leer documentación
+    competency: Extraer requisitos y pasos de documentación técnica en inglés.
+    difficulty: D2
+    type: english
+    estimated_time_minutes: 12
+    prompt: "Read the supplied documentation excerpt and identify prerequisites, the main command/action and the expected verification step."
+    expected_answer: "Accurate extraction of prerequisites, action and verification without translating every word."
+    tags: [documentation, reading]
+  - id: ASIR-14-UD02-Q002
+    unit: UD02
+    title: Changelog con impacto
+    competency: Interpretar cambios de versión y riesgo operativo.
+    difficulty: D3
+    type: english
+    estimated_time_minutes: 15
+    prompt: "Read a supplied changelog and summarize which changes could affect an administrator before upgrading."
+    expected_answer: "Identifies breaking/deprecated/security/configuration changes and states operational implications."
+    tags: [changelog, reading]
+  - id: ASIR-14-UD03-Q001
+    unit: UD03
+    title: Ticket inicial
+    competency: Redactar un ticket técnico claro.
+    difficulty: D2
+    type: english
+    estimated_time_minutes: 12
+    prompt: "Write a support ticket in English with title, impact, symptoms, evidence, actions already tried and current status."
+    expected_answer: "Structured, concise and fact-based ticket with enough information for another technician."
+    tags: [tickets, writing]
+  - id: ASIR-14-UD03-Q002
+    unit: UD03
+    title: Actualización de incidente
+    competency: Comunicar progreso e incertidumbre sin inventar causa.
+    difficulty: D3
+    type: english
+    estimated_time_minutes: 12
+    prompt: "Write an incident update: service is still degraded, one hypothesis was ruled out, investigation continues and there is no confirmed root cause yet."
+    expected_answer: "Clear distinction between facts, ruled-out hypothesis, remaining uncertainty and next step."
+    tags: [incident, writing]
+  - id: ASIR-14-UD04-Q001
+    unit: UD04
+    title: Email profesional
+    competency: Escribir un correo técnico orientado a acción.
+    difficulty: D2
+    type: english
+    estimated_time_minutes: 12
+    prompt: "Write an email asking a colleague to validate a planned maintenance change, including scope, time window, expected impact and rollback."
+    expected_answer: "Professional tone, actionable request and complete operational context."
+    tags: [email, writing]
+  - id: ASIR-14-UD04-Q002
+    unit: UD04
+    title: Informe breve
+    competency: Resumir una incidencia técnica para responsables.
+    difficulty: D3
+    type: english
+    estimated_time_minutes: 15
+    prompt: "Write a 120-150 word incident summary for a manager: what happened, impact, recovery, root cause if known and prevention."
+    expected_answer: "Accurate concise summary, separates technical detail from management relevance."
+    tags: [report, writing]
+  - id: ASIR-14-UD05-Q001
+    unit: UD05
+    title: Handover
+    competency: Entregar estado operativo verbalmente.
+    difficulty: D2
+    type: oral
+    estimated_time_minutes: 8
+    prompt: "Give a two-minute handover in English covering current service status, open issue, evidence, pending action and escalation point."
+    expected_answer: "Complete sequence, understandable pronunciation and precise technical terms."
+    tags: [handover, oral]
+  - id: ASIR-14-UD05-Q002
+    unit: UD05
+    title: Preguntas en reunión
+    competency: Interactuar y aclarar información técnica.
+    difficulty: D3
+    type: oral
+    estimated_time_minutes: 10
+    prompt: "During a simulated incident meeting, ask at least three relevant clarification questions and respond to follow-up questions about your system."
+    expected_answer: "Questions reduce ambiguity; answers are concise, truthful and technically coherent."
+    tags: [meeting, oral]
+  - id: ASIR-14-UD06-Q001
+    unit: UD06
+    title: CV técnico en inglés
+    competency: Presentar experiencia/evidencias sin exagerar.
+    difficulty: D2
+    type: english
+    estimated_time_minutes: 15
+    prompt: "Rewrite three supplied CV bullets in English using action, technology, result and verifiable evidence without inventing metrics."
+    expected_answer: "Specific, truthful and technically relevant bullets; no inflated claims."
+    tags: [cv, career]
+  - id: ASIR-14-UD06-Q002
+    unit: UD06
+    title: Entrevista técnica
+    competency: Explicar una experiencia técnica con estructura.
+    difficulty: D3
+    type: oral
+    estimated_time_minutes: 10
+    prompt: "Answer in English: 'Tell me about a technical problem you diagnosed and how you verified the fix.'"
+    expected_answer: "Situation/problem, evidence, action, verification and lesson; intelligibility valued over native accent."
+    tags: [interview, oral]
+  - id: ASIR-14-UD07-Q001
+    unit: UD07
+    title: Documentación cloud
+    competency: Comprender conceptos cloud/DevOps/security en inglés.
+    difficulty: D2
+    type: english
+    estimated_time_minutes: 12
+    prompt: "Read a supplied cloud/security documentation excerpt and explain the meaning of least privilege, region and availability zone in context."
+    expected_answer: "Contextually correct explanation using technical English."
+    tags: [cloud, security, reading]
+  - id: ASIR-14-UD07-Q002
+    unit: UD07
+    title: Warning de seguridad
+    competency: Interpretar una advertencia y convertirla en acción.
+    difficulty: D3
+    type: english
+    estimated_time_minutes: 12
+    prompt: "Read a security advisory excerpt and state affected component, risk, recommended action and how you would verify remediation."
+    expected_answer: "Extracts all four elements accurately and does not add unsupported claims."
+    tags: [security, advisory]
+  - id: ASIR-14-UD08-Q001
+    unit: UD08
+    title: Presentación técnica A
+    competency: Presentar una solución técnica en inglés.
+    difficulty: D4
+    type: oral
+    estimated_time_minutes: 12
+    prompt: "Give a 4-5 minute presentation in English about a small infrastructure: problem, architecture, security, verification and one trade-off."
+    expected_answer: "Logical structure, accurate terminology, intelligible delivery and ability to justify one decision."
+    tags: [integrative, presentation]
+  - id: ASIR-14-UD08-Q002
+    unit: UD08
+    title: Presentación técnica B
+    competency: Defender una decisión y responder preguntas.
+    difficulty: D4
+    type: oral
+    estimated_time_minutes: 12
+    prompt: "Present an alternative infrastructure scenario and answer three follow-up questions about failure, cost and security."
+    expected_answer: "Coherent defense, admits uncertainty where appropriate and communicates clearly under interaction."
+    tags: [integrative, recovery]
