@@ -1,0 +1,79 @@
+id: ASIR-XX-UDYY-QZZZ
+version: 0.1.0
+status: draft
+
+subject: ASIR-XX
+unit: UDYY
+
+title: ""
+
+competency:
+  id: ""
+  description: ""
+
+objectives:
+  - ""
+
+difficulty: D1
+
+type: short_answer
+
+modality: closed_book
+
+estimated_time_minutes: 10
+
+resources_allowed: []
+
+ai:
+  allowed: false
+  mode: none
+  purpose: none
+
+prompt: |
+  TODO
+
+visible_materials: []
+
+expected_answer:
+  mode: rubric
+  summary: |
+    TODO
+
+checks: []
+
+rubric:
+  total_points: 10
+  criteria:
+    - id: result
+      description: "Resultado correcto"
+      points: 4
+    - id: reasoning
+      description: "Procedimiento o razonamiento"
+      points: 3
+    - id: verification
+      description: "Verificación"
+      points: 2
+    - id: clarity
+      description: "Claridad técnica"
+      points: 1
+
+critical_errors: []
+
+prerequisites: []
+
+tags: []
+
+freshness:
+  type: stable
+  review_after: null
+  notes: ""
+
+editorial:
+  author: ""
+  reviewer: ""
+  created_at: null
+  reviewed_at: null
+  approved_at: null
+
+notes_private: |
+  TODO
