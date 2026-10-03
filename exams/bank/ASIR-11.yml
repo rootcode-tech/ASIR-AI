@@ -1,0 +1,214 @@
+schema_version: 0.1.0
+subject: ASIR-11
+name: Web e Infraestructura — Implantación de Aplicaciones Web
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_lab
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 3.5, reasoning: 2, verification: 2, security: 1.5, clarity: 1}
+items:
+  - id: ASIR-11-UD01-Q001
+    unit: UD01
+    title: Arquitectura web
+    competency: Identificar cliente, servidor, runtime y datos.
+    difficulty: D2
+    type: architecture
+    estimated_time_minutes: 10
+    prompt: "Dibuja o describe el recorrido de una petición desde navegador hasta una aplicación que consulta una base de datos y devuelve HTML/JSON."
+    expected_answer: "Cliente, DNS/red, web/reverse proxy, runtime/app, BD y respuesta; separa responsabilidades."
+    tags: [architecture, http]
+  - id: ASIR-11-UD01-Q002
+    unit: UD01
+    title: Error 500
+    competency: Aislar un fallo entre web, aplicación y datos.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Una URL devuelve 500 tras desplegar. Diseña una secuencia para separar configuración web, runtime, variables y base de datos."
+    expected_answer: "Logs web/app, health backend, config/env, conectividad BD y reproducción controlada; no tocar varias capas a la vez."
+    tags: [architecture, diagnosis]
+  - id: ASIR-11-UD02-Q001
+    unit: UD02
+    title: Virtual host y runtime
+    competency: Publicar una aplicación con servidor web y runtime.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Publica una aplicación de laboratorio bajo un nombre virtual, conecta el servidor web con su runtime y verifica respuesta."
+    expected_answer: "Virtual host correcto, runtime activo, permisos adecuados, respuesta funcional y logs."
+    tags: [web_server, runtime]
+  - id: ASIR-11-UD02-Q002
+    unit: UD02
+    title: Permiso de runtime
+    competency: Diagnosticar un fallo por identidad/permisos.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "La aplicación funciona ejecutada manualmente como administrador pero falla desde el servidor web. Aísla usuario de servicio, permisos y entorno."
+    expected_answer: "Identifica identidad real, filesystem/socket/env y corrige mínimo privilegio; no ejecutar web como root/admin."
+    critical_errors: ["Ejecutar el servicio web como root/Administrador para evitar permisos"]
+    tags: [runtime, permissions]
+  - id: ASIR-11-UD03-Q001
+    unit: UD03
+    title: Aplicación con BD
+    competency: Desplegar una app con persistencia externa.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Despliega una aplicación suministrada, configura su conexión a BD mediante variables/secretos y demuestra una operación persistente."
+    expected_answer: "App y BD conectan, secreto no está hardcodeado, escritura/lectura persiste y health check pasa."
+    tags: [deployment, database]
+  - id: ASIR-11-UD03-Q002
+    unit: UD03
+    title: Migración incompleta
+    competency: Diagnosticar incompatibilidad de esquema.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "La app arranca pero falla al acceder a una tabla/columna inexistente tras nueva versión. Identifica el problema y diseña recuperación segura."
+    expected_answer: "Detecta migración pendiente/incompatible, revisa versión/esquema, aplica migración probada o rollback con backup."
+    tags: [database, migration, diagnosis]
+  - id: ASIR-11-UD04-Q001
+    unit: UD04
+    title: CMS mantenible
+    competency: Instalar y actualizar un CMS con criterios operativos.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Instala un CMS de laboratorio, configura usuario no trivial, actualiza un componente y verifica sitio y panel."
+    expected_answer: "Instalación funcional, credenciales seguras, actualización controlada y validación posterior."
+    tags: [cms]
+  - id: ASIR-11-UD04-Q002
+    unit: UD04
+    title: Plugin vulnerable
+    competency: Responder a riesgo de componente de terceros.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Un plugin del CMS tiene vulnerabilidad conocida y no hay parche inmediato. Propón mitigación, evidencia y criterio para retirar/aislar."
+    expected_answer: "Evaluar exposición, deshabilitar si posible, restricciones/WAF/backup, monitorizar y sustituir/actualizar; no ignorar por funcionar."
+    tags: [cms, security]
+  - id: ASIR-11-UD05-Q001
+    unit: UD05
+    title: Contenerizar aplicación
+    competency: Empaquetar app con imagen reproducible.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Construye una imagen para una app suministrada usando base apropiada, usuario no root si viable y health check o prueba funcional."
+    expected_answer: "Build reproducible, dependencias definidas, app arranca y no incluye secretos en imagen."
+    critical_errors: ["Incluir secretos reales en Dockerfile o imagen"]
+    tags: [containers, docker]
+  - id: ASIR-11-UD05-Q002
+    unit: UD05
+    title: Persistencia perdida
+    competency: Diagnosticar datos escritos dentro de contenedor efímero.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Al recrear el contenedor desaparecen archivos subidos. Explica causa y diseña persistencia adecuada."
+    expected_answer: "Filesystem de contenedor es efímero; usar volumen/bind/object storage según requisito y probar recreación."
+    tags: [containers, persistence]
+  - id: ASIR-11-UD06-Q001
+    unit: UD06
+    title: Reverse proxy con TLS
+    competency: Publicar una app detrás de proxy seguro.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Publica una app interna mediante reverse proxy HTTPS, manteniendo backend no expuesto directamente."
+    expected_answer: "TLS válido en proxy, upstream interno, headers necesarios y backend sin exposición pública."
+    tags: [reverse_proxy, tls]
+  - id: ASIR-11-UD06-Q002
+    unit: UD06
+    title: Redirección infinita HTTPS
+    competency: Diagnosticar confianza de proxy/protocolo.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Una app detrás de proxy entra en bucle HTTP↔HTTPS. Analiza forwarded headers/trust proxy y configuración de redirección."
+    expected_answer: "Alinea X-Forwarded-Proto/trust proxy y responsabilidad de redirección; verifica una única redirección."
+    tags: [reverse_proxy, diagnosis]
+  - id: ASIR-11-UD07-Q001
+    unit: UD07
+    title: Configuración y secretos
+    competency: Separar configuración del código.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 15
+    prompt: "Mueve URL de BD y credencial fuera del código a un mecanismo de configuración/secretos apropiado y evita exposición en logs."
+    expected_answer: "Variables/secret store/archivo protegido según entorno, .gitignore y no imprimir secreto."
+    tags: [secrets, configuration]
+  - id: ASIR-11-UD07-Q002
+    unit: UD07
+    title: Secreto filtrado en Git
+    competency: Responder correctamente a exposición de credenciales.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Una clave real se ha subido a Git y luego se elimina en un commit. Explica por qué no basta y qué pasos seguir."
+    expected_answer: "Revocar/rotar inmediatamente, revisar uso, limpiar historial si procede y prevenir; asumir compromiso."
+    critical_errors: ["Considerar segura la clave solo porque el archivo actual ya no la contiene"]
+    tags: [secrets, incident]
+  - id: ASIR-11-UD08-Q001
+    unit: UD08
+    title: Pipeline básico
+    competency: Diseñar CI/CD introductorio con quality gates.
+    difficulty: D2
+    type: architecture
+    estimated_time_minutes: 15
+    prompt: "Diseña pipeline: checkout, dependencias, tests, build y despliegue controlado. Indica qué fallo debe bloquear cada fase."
+    expected_answer: "Stages ordenados, artefacto reproducible, gates y despliegue solo tras validaciones."
+    tags: [cicd]
+  - id: ASIR-11-UD08-Q002
+    unit: UD08
+    title: Deploy roto con pipeline verde
+    competency: Analizar cobertura insuficiente de CI/CD.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "El pipeline pasa tests pero el servicio desplegado no responde. Explica qué validación falta y cómo añadir smoke/health check y rollback."
+    expected_answer: "Prueba post-deploy funcional, timeout, rollback/stop promotion y observabilidad."
+    tags: [cicd, diagnosis]
+  - id: ASIR-11-UD09-Q001
+    unit: UD09
+    title: Backup de aplicación completa
+    competency: Identificar qué debe respaldarse para recuperar una app.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Para una app con BD y archivos subidos, define qué respaldar y qué no basta con copiar."
+    expected_answer: "BD consistente, archivos/volúmenes, configuración no secreta/secretos recuperables de forma segura y versiones; probar restore."
+    tags: [backup, security]
+  - id: ASIR-11-UD09-Q002
+    unit: UD09
+    title: Actualización con rollback
+    competency: Planificar mantenimiento seguro.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 18
+    prompt: "Diseña actualización de una app crítica con backup, ventana/canary si aplica, migración y criterio de rollback."
+    expected_answer: "Prechecks, backup validado, despliegue controlado, health checks, compatibilidad de datos y rollback claro."
+    tags: [maintenance, rollback]
+  - id: ASIR-11-UD10-Q001
+    unit: UD10
+    title: Observabilidad web
+    competency: Definir señales mínimas de una aplicación.
+    difficulty: D3
+    type: architecture
+    estimated_time_minutes: 15
+    prompt: "Define logs, métricas y health checks mínimos para distinguir caída total, latencia y error de backend."
+    expected_answer: "Disponibilidad, tasa de errores, latencia, recursos/dependencias y logs correlacionables."
+    tags: [observability]
+  - id: ASIR-11-UD10-Q002
+    unit: UD10
+    title: Despliegue integral alternativo
+    competency: Recuperar una aplicación web completa.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 35
+    prompt: "Stack con proxy, app y BD presenta 502 tras un cambio. Diagnostica, recupera, verifica persistencia/TLS y documenta RCA."
+    expected_answer: "Aísla proxy→app→BD, usa logs/health, corrige mínimo cambio, comprueba datos, TLS y acceso final."
+    critical_errors: ["Exponer BD públicamente", "Desactivar TLS como solución", "Perder datos sin rollback"]
+    tags: [integrative, recovery]
