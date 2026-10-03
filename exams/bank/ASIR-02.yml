@@ -1,0 +1,211 @@
+schema_version: 0.1.0
+subject: ASIR-02
+name: Redes I — Planificación y Administración de Redes
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_lab
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 4, reasoning: 2.5, verification: 2, security: 1, clarity: 0.5}
+items:
+  - id: ASIR-02-UD01-Q001
+    unit: UD01
+    title: Encapsulación por capas
+    competency: Relacionar OSI/TCP-IP con protocolos y unidades de datos.
+    difficulty: D1
+    type: short_answer
+    estimated_time_minutes: 8
+    prompt: "Describe qué ocurre con una petición HTTP al bajar desde aplicación hasta enlace, indicando al menos IP, TCP y Ethernet."
+    expected_answer: "Explica encapsulación de datos en segmento TCP, paquete IP y trama Ethernet con direcciones/puertos pertinentes."
+    tags: [osi, tcpip]
+  - id: ASIR-02-UD01-Q002
+    unit: UD01
+    title: Diagnóstico por capas
+    competency: Usar un modelo por capas para aislar un fallo.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 12
+    prompt: "Un host tiene enlace físico y dirección IP, puede hacer ping al gateway pero no resolver nombres. ¿En qué capa/servicio centrarías el diagnóstico y por qué?"
+    expected_answer: "Conectividad L2/L3 básica funciona; investigar DNS/configuración de resolvers/puerto 53 y distinguir IP reachability de resolución."
+    tags: [diagnosis, dns]
+  - id: ASIR-02-UD02-Q001
+    unit: UD02
+    title: MAC y dominio de broadcast
+    competency: Explicar funcionamiento Ethernet básico.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Explica cómo un switch aprende direcciones MAC y qué hace cuando recibe una trama con destino desconocido."
+    expected_answer: "Aprende MAC origen por puerto y hace flooding dentro de la VLAN para destino desconocido, salvo puerto de entrada."
+    tags: [ethernet, switching]
+  - id: ASIR-02-UD02-Q002
+    unit: UD02
+    title: Colisión lógica de diseño
+    competency: Analizar topología y dominios de broadcast.
+    difficulty: D3
+    type: architecture
+    estimated_time_minutes: 12
+    prompt: "Una red plana de 400 hosts genera mucho broadcast. Explica por qué un segundo switch no reduce el dominio de broadcast y qué cambio lógico sí lo haría."
+    expected_answer: "Más switches L2 no separan broadcast; VLANs/subredes con routing segmentan dominios."
+    tags: [ethernet, segmentation]
+  - id: ASIR-02-UD03-Q001
+    unit: UD03
+    title: Subnetting /26
+    competency: Calcular red, broadcast y rango útil.
+    difficulty: D2
+    type: calculation
+    estimated_time_minutes: 10
+    prompt: "Para 192.168.10.130/26 calcula dirección de red, broadcast y rango de hosts."
+    expected_answer: "Red 192.168.10.128, broadcast .191, hosts .129-.190."
+    tags: [ipv4, subnetting]
+  - id: ASIR-02-UD03-Q002
+    unit: UD03
+    title: VLSM para tres LAN
+    competency: Diseñar direccionamiento eficiente con VLSM.
+    difficulty: D4
+    type: calculation
+    estimated_time_minutes: 18
+    prompt: "Desde 10.10.0.0/24 asigna subredes para 100, 50 y 20 hosts minimizando desperdicio. Documenta red, prefijo y rango."
+    expected_answer: "Asignación válida equivalente: /25, /26, /27 sin solapes, con rangos y broadcasts correctos."
+    tags: [ipv4, vlsm]
+  - id: ASIR-02-UD04-Q001
+    unit: UD04
+    title: IPv6 tipos de dirección
+    competency: Distinguir global, link-local y loopback.
+    difficulty: D1
+    type: short_answer
+    estimated_time_minutes: 8
+    prompt: "Explica para qué sirven una dirección global unicast, una link-local y ::1."
+    expected_answer: "Global enrutable, link-local alcance del enlace y loopback local al host."
+    tags: [ipv6]
+  - id: ASIR-02-UD04-Q002
+    unit: UD04
+    title: SLAAC sin salida exterior
+    competency: Diagnosticar configuración IPv6 básica.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Un host obtiene IPv6 global por SLAAC y llega al router por link-local, pero no a Internet IPv6. Ordena las comprobaciones."
+    expected_answer: "Prefijo/ruta por defecto, RA, forwarding/ruta upstream, firewall y conectividad externa; DNS después si IP directa funciona."
+    tags: [ipv6, diagnosis]
+  - id: ASIR-02-UD05-Q001
+    unit: UD05
+    title: STP y bucles
+    competency: Explicar por qué STP es necesario.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Explica qué problema evita STP en una topología Ethernet redundante y qué síntoma puede producir un bucle L2."
+    expected_answer: "Evita loops; síntomas broadcast storm, MAC flapping, alta carga y pérdida de conectividad."
+    tags: [stp, switching]
+  - id: ASIR-02-UD05-Q002
+    unit: UD05
+    title: Puerto bloqueado esperado
+    competency: Interpretar estado STP en una topología redundante.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Dos switches tienen dos enlaces redundantes y uno aparece bloqueado por STP. ¿Es necesariamente un fallo? Justifica y explica qué ocurriría si cae el enlace activo."
+    expected_answer: "No; bloqueo evita bucle. Ante caída, STP reconverge y puede habilitar camino alternativo."
+    tags: [stp, redundancy]
+  - id: ASIR-02-UD06-Q001
+    unit: UD06
+    title: VLAN y trunk
+    competency: Configurar segmentación básica y etiquetado.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 15
+    prompt: "Crea VLAN 10 y 20, asigna puertos de acceso y configura un trunk entre dos switches para transportar ambas. Verifica aislamiento y continuidad por VLAN."
+    expected_answer: "VLANs presentes, access ports correctos, trunk transporta ambas y hosts solo comunican dentro de su VLAN sin routing."
+    tags: [vlan, trunk]
+  - id: ASIR-02-UD06-Q002
+    unit: UD06
+    title: VLAN permitida ausente
+    competency: Diagnosticar una VLAN que no cruza un trunk.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "VLAN 10 funciona entre switches y VLAN 20 no. Los puertos de acceso son correctos. Identifica qué revisarías en el trunk y cómo confirmarías la causa."
+    expected_answer: "Allowed VLAN list/native mismatch/tagging; verificar configuración/estado y prueba de conectividad por VLAN."
+    tags: [vlan, diagnosis]
+  - id: ASIR-02-UD07-Q001
+    unit: UD07
+    title: Ruta estática
+    competency: Configurar una ruta estática con next-hop correcto.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 12
+    prompt: "Configura una ruta hacia 10.20.0.0/16 mediante el next-hop indicado por el escenario y verifica tabla y conectividad."
+    expected_answer: "Ruta correcta, tabla la refleja y prueba de conectividad/ruta demuestra uso."
+    tags: [routing]
+  - id: ASIR-02-UD07-Q002
+    unit: UD07
+    title: Ruta de retorno ausente
+    competency: Diagnosticar conectividad unidireccional por routing.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Un router A llega a la LAN detrás de B, pero los hosts de esa LAN no responden a la LAN de A. Explica por qué una ruta de retorno puede ser la causa y cómo demostrarlo."
+    expected_answer: "El tráfico de vuelta necesita ruta; revisar tablas/traceroute/captura y añadir ruta correcta en B/upstream."
+    tags: [routing, diagnosis]
+  - id: ASIR-02-UD08-Q001
+    unit: UD08
+    title: DHCP y DNS diferenciados
+    competency: Distinguir funciones de DHCP, DNS y NAT.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 8
+    prompt: "Explica qué resuelve DHCP, qué resuelve DNS y qué problema aborda NAT/PAT."
+    expected_answer: "DHCP asigna configuración IP, DNS nombres↔direcciones, NAT/PAT traduce direcciones/puertos entre dominios."
+    tags: [dhcp, dns, nat]
+  - id: ASIR-02-UD08-Q002
+    unit: UD08
+    title: Dirección APIPA/169.254
+    competency: Diagnosticar fallo de DHCP.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Un cliente IPv4 recibe 169.254.x.x. Diseña un diagnóstico desde cliente hasta servidor DHCP."
+    expected_answer: "Renovación, enlace/VLAN, relay si cruza router, scope disponible, servicio y firewall; evidencia en cada salto."
+    tags: [dhcp, diagnosis]
+  - id: ASIR-02-UD09-Q001
+    unit: UD09
+    title: Seguridad Wi-Fi
+    competency: Elegir configuración Wi-Fi segura básica.
+    difficulty: D2
+    type: comparison
+    estimated_time_minutes: 10
+    prompt: "Compara red abierta, WPA2-Personal y WPA3-Personal para una oficina pequeña y justifica una elección."
+    expected_answer: "Evita abierta; WPA3 preferible si compatible, WPA2-AES aceptable; contraseña fuerte y considerar compatibilidad."
+    tags: [wifi, security]
+  - id: ASIR-02-UD09-Q002
+    unit: UD09
+    title: Cobertura versus capacidad
+    competency: Analizar un problema inalámbrico real.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Los usuarios tienen señal fuerte pero rendimiento pobre en una sala muy concurrida. Explica por qué no basta medir RSSI y qué datos adicionales recogerías."
+    expected_answer: "Interferencia, canal, airtime, número de clientes, ancho de canal, retries y congestión; señal fuerte no implica capacidad."
+    tags: [wifi, diagnosis]
+  - id: ASIR-02-UD10-Q001
+    unit: UD10
+    title: Captura DNS
+    competency: Interpretar una captura sencilla de red.
+    difficulty: D3
+    type: log_analysis
+    estimated_time_minutes: 15
+    prompt: "En una captura se ve consulta DNS repetida sin respuesta. Explica qué hipótesis plantea y qué comprobarías después."
+    expected_answer: "Servidor inaccesible/puerto filtrado/servicio caído; comprobar IP del resolver, ruta, UDP/TCP 53, servicio y firewall."
+    tags: [capture, dns, integrative]
+  - id: ASIR-02-UD10-Q002
+    unit: UD10
+    title: Diseño integral alternativo
+    competency: Diseñar y justificar una red pequeña segmentada.
+    difficulty: D4
+    type: architecture
+    estimated_time_minutes: 30
+    prompt: "Diseña una red para administración, usuarios e invitados con VLANs, direccionamiento, gateway, DHCP, DNS y acceso a Internet. Incluye un plan mínimo de verificación."
+    expected_answer: "Segmentación coherente, subredes sin solape, routing/control de acceso razonado, servicios ubicados y pruebas de conectividad/resolución/aislamiento."
+    critical_errors: ["Diseño con subredes solapadas", "Invitados con acceso injustificado a red interna"]
+    tags: [integrative, design, recovery]
