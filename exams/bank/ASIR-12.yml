@@ -1,0 +1,213 @@
+schema_version: 0.1.0
+subject: ASIR-12
+name: Bases de Datos II — Administración de SGBD
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_lab
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 3.5, reasoning: 2, verification: 2, security: 1.5, clarity: 1}
+items:
+  - id: ASIR-12-UD01-Q001
+    unit: UD01
+    title: Arquitectura de instancia
+    competency: Identificar procesos, memoria, almacenamiento y catálogo de un SGBD.
+    difficulty: D2
+    type: short_answer
+    estimated_time_minutes: 10
+    prompt: "Describe los componentes principales de una instancia PostgreSQL y qué ocurre desde que entra una conexión hasta que se accede a datos."
+    expected_answer: "Proceso servidor/conexión, buffers, planner/executor, WAL/archivos de datos y catálogo; puede variar nomenclatura pero debe ser coherente."
+    tags: [architecture, postgres]
+  - id: ASIR-12-UD01-Q002
+    unit: UD01
+    title: Reinicio versus sesión
+    competency: Distinguir parámetros dinámicos y de arranque.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Un cambio de configuración no surte efecto en sesiones existentes. Explica cómo determinar si requiere reload, restart o nueva sesión."
+    expected_answer: "Consultar alcance/contexto del parámetro, estado actual y documentación; aplicar cambio mínimo y verificar."
+    tags: [configuration, diagnosis]
+  - id: ASIR-12-UD02-Q001
+    unit: UD02
+    title: Instalación reproducible
+    competency: Instalar y parametrizar una instancia controlada.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Instala/configura una instancia de laboratorio en puerto y directorio definidos, habilita logs y demuestra conexión local."
+    expected_answer: "Instancia arranca con parámetros correctos, logs accesibles y conexión validada."
+    tags: [installation, instance]
+  - id: ASIR-12-UD02-Q002
+    unit: UD02
+    title: Puerto en uso
+    competency: Diagnosticar una instancia que no arranca.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "La instancia falla al arrancar por bind del puerto. Identifica proceso ocupante y resuelve sin matar servicios indiscriminadamente."
+    expected_answer: "Confirma puerto/proceso, decide cambio de puerto o parada controlada y verifica instancia."
+    tags: [instance, diagnosis]
+  - id: ASIR-12-UD03-Q001
+    unit: UD03
+    title: Roles y mínimo privilegio
+    competency: Diseñar roles de lectura y escritura separados.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 18
+    prompt: "Crea roles read_only y app_rw sobre un esquema y demuestra permisos permitidos/denegados."
+    expected_answer: "GRANTs limitados, herencia/uso coherente y pruebas positivas/negativas."
+    tags: [roles, security]
+  - id: ASIR-12-UD03-Q002
+    unit: UD03
+    title: Privilegio heredado inesperado
+    competency: Diagnosticar acceso excesivo.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Un usuario tiene permisos que no aparecen otorgados directamente. Investiga membresías de roles y privilegios heredados."
+    expected_answer: "Revisa roles/membresías/ownership/public y retira solo la fuente excesiva."
+    tags: [roles, diagnosis]
+  - id: ASIR-12-UD04-Q001
+    unit: UD04
+    title: Índice útil
+    competency: Crear un índice justificado por patrón de consulta.
+    difficulty: D2
+    type: sql
+    estimated_time_minutes: 15
+    prompt: "Dado un workload y tabla suministrados, propone un índice para una consulta frecuente y mide plan antes/después."
+    expected_answer: "Índice alineado con filtros/orden, EXPLAIN comparativo y reconoce coste de mantenimiento."
+    tags: [index, performance]
+  - id: ASIR-12-UD04-Q002
+    unit: UD04
+    title: Exceso de índices
+    competency: Analizar trade-off entre lectura y escritura.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Una tabla tiene índices sobre casi todas las columnas y las escrituras se degradan. Explica por qué y cómo decidir cuáles retirar."
+    expected_answer: "Cada índice consume espacio/mantenimiento; usar estadísticas/uso/workload, no borrar a ciegas."
+    tags: [index, performance]
+  - id: ASIR-12-UD05-Q001
+    unit: UD05
+    title: Bloqueo concurrente
+    competency: Observar y explicar locks entre sesiones.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 18
+    prompt: "Reproduce en dos sesiones un bloqueo de fila, identifica bloqueador/bloqueado y libera de forma controlada."
+    expected_answer: "Transacciones correctas, observación de locks y resolución mediante commit/rollback apropiado."
+    tags: [transactions, locks]
+  - id: ASIR-12-UD05-Q002
+    unit: UD05
+    title: Deadlock
+    competency: Analizar un interbloqueo y prevenirlo.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Dos transacciones actualizan recursos en orden opuesto y aparece deadlock. Explica causa y estrategia preventiva."
+    expected_answer: "Orden consistente de adquisición, transacciones cortas/reintento controlado y evidencia en logs."
+    tags: [transactions, deadlock]
+  - id: ASIR-12-UD06-Q001
+    unit: UD06
+    title: EXPLAIN ANALYZE
+    competency: Interpretar un plan de ejecución básico.
+    difficulty: D2
+    type: sql
+    estimated_time_minutes: 15
+    prompt: "Interpreta un plan suministrado identificando scan, join, filas estimadas/reales y principal coste."
+    expected_answer: "Lectura correcta del plan y cuello de botella respaldado por tiempos/filas."
+    tags: [performance, explain]
+  - id: ASIR-12-UD06-Q002
+    unit: UD06
+    title: Optimización con evidencia
+    competency: Mejorar una consulta sin adivinar.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 25
+    prompt: "Mide una consulta lenta, formula hipótesis, aplica un cambio y compara antes/después. Documenta si la mejora compensa su coste."
+    expected_answer: "Baseline, plan, cambio justificado, nueva medición y conclusión; no vale solo 'parece más rápido'."
+    tags: [performance, tuning]
+  - id: ASIR-12-UD07-Q001
+    unit: UD07
+    title: Backup lógico y restore
+    competency: Ejecutar y validar una copia lógica.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Genera backup lógico de una BD, restaura en otra instancia/base y compara conteos/esquema/objetos relevantes."
+    expected_answer: "Backup y restore completados, validación de datos y objetos; evidencia reproducible."
+    tags: [backup, restore]
+  - id: ASIR-12-UD07-Q002
+    unit: UD07
+    title: PITR
+    competency: Recuperar hasta un punto temporal.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 30
+    prompt: "En entorno preparado, recupera la BD a un instante anterior a un borrado accidental y demuestra que preserva cambios previos pero no el borrado."
+    expected_answer: "Base backup/WAL disponibles, target correcto, recuperación validada y timeline/estado entendido."
+    critical_errors: ["Sobrescribir la única copia recuperable"]
+    tags: [pitr, recovery]
+  - id: ASIR-12-UD08-Q001
+    unit: UD08
+    title: Replicación
+    competency: Configurar o interpretar una réplica de lectura.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Verifica una réplica suministrada: estado, lag, lectura y comportamiento ante nueva escritura en primario."
+    expected_answer: "Comprueba streaming/lag y propagación; reconoce réplica como disponibilidad/lectura, no backup histórico."
+    tags: [replication, ha]
+  - id: ASIR-12-UD08-Q002
+    unit: UD08
+    title: Failover y consistencia
+    competency: Analizar riesgos de conmutación.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 18
+    prompt: "El primario cae con réplica ligeramente retrasada. Explica trade-off de promoverla respecto a RPO y cómo validarías antes de reabrir servicio."
+    expected_answer: "Reconoce posible pérdida según lag, evita split-brain y verifica rol/datos/conexiones."
+    tags: [ha, failover]
+  - id: ASIR-12-UD09-Q001
+    unit: UD09
+    title: Auditoría de acceso
+    competency: Configurar/interpretar trazabilidad de acciones sensibles.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 15
+    prompt: "Define qué eventos auditarías para cambios de roles, DDL y acceso a tabla sensible sin registrar secretos."
+    expected_answer: "Eventos relevantes, identidad/tiempo/objeto/acción, retención y cuidado con datos sensibles."
+    tags: [audit, security]
+  - id: ASIR-12-UD09-Q002
+    unit: UD09
+    title: Hardening de SGBD
+    competency: Reducir superficie y privilegios.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Endurece una instancia de laboratorio limitando escucha/red, autenticación y roles, sin romper el cliente autorizado."
+    expected_answer: "Exposición mínima, auth segura, privilegios limitados y pruebas permitida/denegada."
+    critical_errors: ["Abrir acceso global para resolver conectividad"]
+    tags: [hardening, security]
+  - id: ASIR-12-UD10-Q001
+    unit: UD10
+    title: Monitorización de SGBD
+    competency: Seleccionar métricas operativas útiles.
+    difficulty: D3
+    type: architecture
+    estimated_time_minutes: 15
+    prompt: "Define señales para detectar saturación de conexiones, queries lentas, locks y crecimiento de almacenamiento."
+    expected_answer: "Métricas/consultas/logs con umbrales/contexto y relación con acción."
+    tags: [monitoring]
+  - id: ASIR-12-UD10-Q002
+    unit: UD10
+    title: Incidente integral de BD
+    competency: Diagnosticar rendimiento y recuperar servicio con seguridad.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 35
+    prompt: "Una aplicación sufre timeouts; la BD muestra locks y una consulta lenta. Aísla bloqueador, recupera servicio, mejora la consulta si procede y verifica datos."
+    expected_answer: "Evidencia de sesiones/locks/plan, acción controlada, verificación funcional e integridad, RCA."
+    critical_errors: ["Matar procesos indiscriminadamente", "Modificar datos sin backup/rollback cuando sea necesario"]
+    tags: [integrative, recovery]
