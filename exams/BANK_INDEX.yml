@@ -1,0 +1,36 @@
+schema_version: 0.1.0
+status: approved
+summary:
+  subjects: 18
+  units_covered: 172
+  approved_items: 346
+  coverage_rule: "minimum two approved items per UD, with additional integrative variants where defined"
+subjects:
+  ASIR-00: {units: 10, items: 21}
+  ASIR-01: {units: 10, items: 20}
+  ASIR-02: {units: 10, items: 20}
+  ASIR-03: {units: 9, items: 18}
+  ASIR-04: {units: 10, items: 20}
+  ASIR-05: {units: 9, items: 19}
+  ASIR-06: {units: 8, items: 16}
+  ASIR-07: {units: 8, items: 16}
+  ASIR-08: {units: 8, items: 16}
+  ASIR-09: {units: 11, items: 22}
+  ASIR-10: {units: 11, items: 22}
+  ASIR-11: {units: 10, items: 20}
+  ASIR-12: {units: 10, items: 20}
+  ASIR-13: {units: 12, items: 24}
+  ASIR-14: {units: 8, items: 16}
+  ASIR-15: {units: 8, items: 16}
+  ASIR-16: {units: 10, items: 20}
+  ASIR-17: {units: 10, items: 20}
+validation:
+  all_subjects_present: true
+  all_units_have_items: true
+  minimum_two_items_per_unit: true
+  ids_stable_and_versioned: true
+  runtime_llm_generation_required: false
+notes:
+  - "The bank is a minimum operational v0.1 baseline, not a permanent ceiling."
+  - "Concrete exam forms must still be assembled from approved IDs according to each subject blueprint."
+  - "Future CI should validate YAML schema, duplicate IDs, coverage, D1-D4 distribution and freshness metadata."
