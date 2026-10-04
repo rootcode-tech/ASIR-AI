@@ -1,0 +1,214 @@
+schema_version: 0.1.0
+subject: ASIR-17
+name: Proyecto ASIR-AI
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_lab
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 3, reasoning: 2, verification: 2, security: 1, recovery: 1, clarity: 1}
+items:
+  - id: ASIR-17-UD01-Q001
+    unit: UD01
+    title: Requisitos verificables
+    competency: Convertir una necesidad en requisitos y criterios de aceptación.
+    difficulty: D2
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "A partir de una necesidad ambigua de infraestructura, redacta requisitos funcionales/no funcionales y al menos cinco criterios de aceptación verificables."
+    expected_answer: "Requisitos concretos, medibles y trazables; criterios prueban disponibilidad, acceso, seguridad, rendimiento o recuperación según caso."
+    tags: [requirements]
+  - id: ASIR-17-UD01-Q002
+    unit: UD01
+    title: Alcance y exclusiones
+    competency: Definir límites para evitar crecimiento descontrolado.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Un proyecto pide 'montar toda la infraestructura moderna'. Define alcance, fuera de alcance, riesgos y criterio de cambio."
+    expected_answer: "MVP/alcance justificable, exclusiones explícitas, dependencias y control de cambios."
+    tags: [scope, decision]
+  - id: ASIR-17-UD02-Q001
+    unit: UD02
+    title: Arquitectura y ADR
+    competency: Documentar una decisión arquitectónica con alternativas.
+    difficulty: D3
+    type: architecture
+    estimated_time_minutes: 20
+    prompt: "Redacta un ADR para elegir entre dos alternativas de identidad o despliegue suministradas, incluyendo contexto, decisión, consecuencias y alternativa descartada."
+    expected_answer: "Decisión trazable a requisitos, trade-offs explícitos y consecuencias operativas."
+    tags: [architecture, adr]
+  - id: ASIR-17-UD02-Q002
+    unit: UD02
+    title: Diseño de red y servicios
+    competency: Integrar segmentación, direccionamiento y dependencias.
+    difficulty: D4
+    type: architecture
+    estimated_time_minutes: 25
+    prompt: "Diseña red para usuarios, administración, servidores y publicación externa; incluye VLAN/subredes, routing, DNS y flujos permitidos."
+    expected_answer: "Subredes coherentes, segmentación, dependencias y mínimo acceso; documentación suficiente para implementar."
+    tags: [architecture, network]
+  - id: ASIR-17-UD03-Q001
+    unit: UD03
+    title: Repositorio e IaC
+    competency: Estructurar un proyecto reproducible y auditable.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Organiza un repo con documentación, IaC, automatización y configuración de ejemplo; añade README de despliegue y .gitignore apropiado."
+    expected_answer: "Estructura clara, comandos reproducibles, secretos excluidos y separación de responsabilidades."
+    tags: [git, iac, documentation]
+  - id: ASIR-17-UD03-Q002
+    unit: UD03
+    title: Reconstrucción desde repo
+    competency: Demostrar reproducibilidad real.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 30
+    prompt: "Desde un entorno limpio y usando solo repo + secretos autorizados, reconstruye un componente del proyecto y demuestra equivalencia funcional."
+    expected_answer: "Proceso documentado, sin pasos ocultos, configuración versionada y verificación funcional."
+    tags: [reproducibility, iac]
+  - id: ASIR-17-UD04-Q001
+    unit: UD04
+    title: Plataforma base
+    competency: Integrar red, SO, identidad y almacenamiento.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 30
+    prompt: "Despliega o valida un nodo base con red correcta, usuario/rol administrativo limitado, almacenamiento y sincronización temporal."
+    expected_answer: "Todos los componentes operativos y verificables, con mínimo privilegio y documentación."
+    tags: [systems, identity, storage]
+  - id: ASIR-17-UD04-Q002
+    unit: UD04
+    title: Dependencia de identidad caída
+    competency: Diagnosticar acceso cuando falla un servicio base.
+    difficulty: D4
+    type: troubleshooting
+    estimated_time_minutes: 25
+    prompt: "Usuarios no pueden acceder a recursos; red IP funciona pero identidad central falla. Aísla DNS, tiempo, directorio/autenticación y autorización."
+    expected_answer: "Diagnóstico ordenado de dependencias, evita abrir permisos globalmente y valida recuperación."
+    tags: [identity, diagnosis]
+  - id: ASIR-17-UD05-Q001
+    unit: UD05
+    title: Servicios de infraestructura
+    competency: Publicar servicios con dependencias verificadas.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 30
+    prompt: "Configura/valida DNS, HTTPS/reverse proxy y acceso administrativo para un servicio del proyecto, incluyendo logs y health check."
+    expected_answer: "Resolución, TLS, proxy/backend, acceso y observabilidad funcionales."
+    tags: [services, publication]
+  - id: ASIR-17-UD05-Q002
+    unit: UD05
+    title: Publicación rota
+    competency: Diagnosticar cadena DNS-TLS-proxy-backend.
+    difficulty: D4
+    type: troubleshooting
+    estimated_time_minutes: 30
+    prompt: "Tras un cambio, el dominio resuelve pero el servicio devuelve error TLS o 502. Identifica la capa exacta y recupera."
+    expected_answer: "Pruebas explícitas de DNS, handshake, proxy y backend; corrección mínima y validación desde cliente."
+    tags: [services, diagnosis]
+  - id: ASIR-17-UD06-Q001
+    unit: UD06
+    title: Datos y persistencia
+    competency: Integrar aplicación y almacenamiento persistente.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 30
+    prompt: "Despliega/valida una app con base de datos y volumen/almacenamiento persistente; recrea componente efímero y demuestra conservación de datos."
+    expected_answer: "Persistencia separada del proceso, secretos protegidos y prueba real de recreación."
+    tags: [data, persistence]
+  - id: ASIR-17-UD06-Q002
+    unit: UD06
+    title: Migración de datos
+    competency: Planificar cambio de esquema con rollback.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 20
+    prompt: "Una nueva versión requiere migración incompatible. Diseña backup, orden de despliegue, compatibilidad y rollback."
+    expected_answer: "Backup probado, migración ensayada, ventana/compatibilidad y criterio claro de rollback/forward fix."
+    tags: [data, migration]
+  - id: ASIR-17-UD07-Q001
+    unit: UD07
+    title: Defensa en profundidad
+    competency: Revisar seguridad y continuidad del proyecto.
+    difficulty: D3
+    type: architecture
+    estimated_time_minutes: 20
+    prompt: "Audita una arquitectura suministrada e identifica controles de identidad, red, secretos, backup y monitorización que faltan."
+    expected_answer: "Hallazgos priorizados por riesgo y controles proporcionales; no lista genérica."
+    tags: [security, continuity]
+  - id: ASIR-17-UD07-Q002
+    unit: UD07
+    title: Fallo de nodo y recuperación
+    competency: Mantener servicio o recuperar dentro de objetivos.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 35
+    prompt: "Simula pérdida de un nodo/componente, ejecuta failover o restore según diseño y demuestra integridad/servicio dentro del objetivo dado."
+    expected_answer: "Procedimiento seguro, RPO/RTO medidos, datos/servicio verificados y ausencia de split-brain si aplica."
+    critical_errors: ["Confundir réplica con backup", "Declarar recuperación sin verificar"]
+    tags: [ha, recovery]
+  - id: ASIR-17-UD08-Q001
+    unit: UD08
+    title: Automatización completa
+    competency: Desplegar cambios mediante pipeline/IaC sin pasos manuales ocultos.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 30
+    prompt: "Realiza un cambio de infraestructura/aplicación mediante Git, pipeline y automatización; evidencia plan/tests/deploy y estado final."
+    expected_answer: "Cambio versionado, gates, automatización reproducible y verificación post-deploy."
+    tags: [automation, cicd]
+  - id: ASIR-17-UD08-Q002
+    unit: UD08
+    title: Pipeline con cambio destructivo
+    competency: Detener automatización insegura y recuperar proceso.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 20
+    prompt: "Un pipeline propone destruir un recurso con datos. Explica por qué debe bloquearse, qué revisar y cómo rediseñar el gate."
+    expected_answer: "No aplicar, analizar plan/datos/estado, backup y aprobación/gate para cambios destructivos."
+    critical_errors: ["Autorizar destrucción sin protección ni revisión"]
+    tags: [cicd, iac, safety]
+  - id: ASIR-17-UD09-Q001
+    unit: UD09
+    title: Observabilidad del proyecto
+    competency: Demostrar salud con logs, métricas y pruebas.
+    difficulty: D3
+    type: practical_lab
+    estimated_time_minutes: 25
+    prompt: "Configura o presenta señales que permitan detectar disponibilidad, errores, latencia y uso de recursos de un servicio crítico."
+    expected_answer: "Señales accionables, dashboard/consulta reproducible y health checks; correlación con logs."
+    tags: [observability]
+  - id: ASIR-17-UD09-Q002
+    unit: UD09
+    title: Disaster recovery drill
+    competency: Ejecutar y medir una recuperación integral.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 40
+    prompt: "Partiendo de fallo inducido, recupera datos/servicio desde procedimiento documentado, mide RPO/RTO y registra desviaciones."
+    expected_answer: "Restore real, integridad, disponibilidad, tiempos medidos y mejoras al runbook."
+    critical_errors: ["No preservar la única copia válida", "Omitir validación de integridad"]
+    tags: [backup, disaster_recovery]
+  - id: ASIR-17-UD10-Q001
+    unit: UD10
+    title: Defensa técnica A
+    competency: Defender arquitectura, evidencia y trade-offs.
+    difficulty: D4
+    type: oral
+    estimated_time_minutes: 20
+    prompt: "Defiende el proyecto: requisito clave, arquitectura, decisión difícil, seguridad, verificación y cómo recuperas un fallo crítico. Responde preguntas."
+    expected_answer: "Dominio propio del sistema, evidencia concreta, trade-offs y límites reconocidos; no memoriza una presentación."
+    tags: [integrative, defense]
+  - id: ASIR-17-UD10-Q002
+    unit: UD10
+    title: Incidente final alternativo
+    competency: Diagnosticar, recuperar y explicar bajo presión controlada.
+    difficulty: D4
+    type: practical_lab
+    estimated_time_minutes: 45
+    prompt: "Se introduce un fallo desconocido en una copia del entorno. Recoge evidencia, formula hipótesis, corrige con mínimo impacto, valida y presenta RCA/prevención."
+    expected_answer: "Método estructurado, evidencia, seguridad/rollback, recuperación verificable y explicación técnica."
+    critical_errors: ["Borrar evidencia", "Desactivar seguridad indiscriminadamente", "Ejecutar cambios destructivos sin rollback"]
+    tags: [integrative, recovery, final]
