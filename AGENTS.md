@@ -6,9 +6,33 @@ Este repositorio contiene el currículo y los materiales de **ASIR-AI** de RootC
 
 ## Regla principal
 
-No comenzar a redactar clases completas ni a estudiar UDs hasta que el **Currículo Maestro v1.0** haya definido las 18 asignaturas y todas sus unidades didácticas.
+El curso se desarrolla e imparte **por asignaturas cerradas secuencialmente**.
 
-Una vez iniciado el estudio, aplicar obligatoriamente `docs/LEARNING_MODEL.md`: enseñar desde cero, no asumir conocimientos no demostrados y permitir tantas explicaciones, repeticiones y preguntas como sean necesarias.
+No es necesario esperar a que las 18 asignaturas estén desarrolladas a nivel de lección para comenzar a estudiar. Sí es obligatorio que la asignatura que vaya a impartirse esté preparada antes de comenzar su estudio.
+
+Secuencia pedagógica:
+
+```text
+cerrar asignatura N
+   ↓
+estudiar teoría
+   ↓
+ejercicios
+   ↓
+prácticas/laboratorios
+   ↓
+repaso + simulacro
+   ↓
+examen solo a petición del alumno
+   ↓
+corrección y recuperación si hace falta
+   ↓
+si está aprobada, desarrollar asignatura N+1
+```
+
+ASIR-00 es la primera asignatura que se prepara e imparte con este modelo. ASIR-01 no se inicia como siguiente bloque de aprendizaje hasta que ASIR-00 esté aprobado.
+
+Durante el estudio aplicar obligatoriamente `docs/LEARNING_MODEL.md`: enseñar desde cero, no asumir conocimientos no demostrados y permitir tantas explicaciones, repeticiones y preguntas como sean necesarias.
 
 ## Fuente de verdad
 
@@ -45,3 +69,4 @@ Cada `UDxx.md` debe incluir:
 - No existe penalización pedagógica por retrasar un examen o repetir contenidos.
 - Antes de avanzar, priorizar comprensión sobre velocidad o calendario.
 - Los ejemplos técnicos deben ser actuales, documentados y reproducibles.
+- La experiencia real de una asignatura puede utilizarse para mejorar el diseño de la siguiente sin reducir el nivel final.
