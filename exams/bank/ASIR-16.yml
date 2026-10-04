@@ -1,0 +1,215 @@
+schema_version: 0.1.0
+subject: ASIR-16
+name: Especialización — DevOps, Cloud e IA para Sistemas
+defaults:
+  version: 0.1.0
+  status: approved
+  modality: open_lab
+  ai: {allowed: false}
+  rubric: {total_points: 10, result: 3.5, reasoning: 2, verification: 2, security: 1.5, clarity: 1}
+items:
+  - id: ASIR-16-UD01-Q001
+    unit: UD01
+    title: Flujo Git profesional
+    competency: Trabajar con rama, commit y revisión sin reescribir historia compartida.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 18
+    prompt: "Crea una rama de feature, realiza dos commits enfocados, integra cambios de main de forma segura y deja la rama lista para PR."
+    expected_answer: "Historial comprensible, sin secretos, conflictos resueltos conscientemente y estado limpio."
+    tags: [git, workflow]
+  - id: ASIR-16-UD01-Q002
+    unit: UD01
+    title: Release y SemVer
+    competency: Elegir incremento de versión y documentar release.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 12
+    prompt: "Dadas tres modificaciones —bug compatible, nueva función compatible y cambio incompatible— asigna versión SemVer y justifica."
+    expected_answer: "PATCH, MINOR y MAJOR respectivamente, con matices de 0.x si se documentan."
+    tags: [git, semver]
+  - id: ASIR-16-UD02-Q001
+    unit: UD02
+    title: Automatización Linux reproducible
+    competency: Crear una utilidad CLI segura y verificable.
+    difficulty: D2
+    type: script
+    estimated_time_minutes: 20
+    prompt: "Escribe una utilidad Bash o Python que compruebe espacio libre, acepte umbral por argumento, produzca salida clara y exit code útil."
+    expected_answer: "Argumentos, validación, exit codes, error handling y ejecución reproducible."
+    tags: [linux, automation, python]
+  - id: ASIR-16-UD02-Q002
+    unit: UD02
+    title: Script no reproducible
+    competency: Diagnosticar dependencias implícitas.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "Un script funciona solo en el ordenador del autor por rutas absolutas y paquetes globales. Refactoriza estrategia para hacerlo portable."
+    expected_answer: "Configuración externa, paths relativos/descubrimiento, dependencias declaradas y entorno reproducible."
+    tags: [automation, reproducibility]
+  - id: ASIR-16-UD03-Q001
+    unit: UD03
+    title: Imagen Docker
+    competency: Construir imagen pequeña, reproducible y segura.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 20
+    prompt: "Optimiza un Dockerfile suministrado: pin razonable, caché, usuario no root cuando proceda y exclusión de archivos innecesarios."
+    expected_answer: "Build funcional, capas coherentes, contexto reducido y sin secretos."
+    tags: [docker, image]
+  - id: ASIR-16-UD03-Q002
+    unit: UD03
+    title: Contenedor unhealthy
+    competency: Diagnosticar estado de contenedor usando logs e inspect.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Un contenedor está running pero unhealthy. Determina si falla health check, proceso, dependencia o configuración."
+    expected_answer: "Inspecciona health output/logs/env/network y corrige causa; running no equivale a healthy."
+    tags: [docker, diagnosis]
+  - id: ASIR-16-UD04-Q001
+    unit: UD04
+    title: Stack Compose
+    competency: Definir app, BD, red y volumen con dependencias explícitas.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 25
+    prompt: "Construye un Compose para app+BD con red privada, volumen persistente, health checks y configuración externa."
+    expected_answer: "Servicios arrancan, persistencia sobrevive recreación, DB no expuesta innecesariamente y health checks funcionales."
+    tags: [docker, compose]
+  - id: ASIR-16-UD04-Q002
+    unit: UD04
+    title: Depends_on no garantiza readiness
+    competency: Analizar dependencia temporal entre servicios.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 15
+    prompt: "La app falla al arrancar porque la BD aún no acepta conexiones aunque el contenedor exista. Explica y corrige con health/retry apropiado."
+    expected_answer: "Distingue start order de readiness; health condition/retry/backoff y manejo de errores."
+    tags: [compose, resilience]
+  - id: ASIR-16-UD05-Q001
+    unit: UD05
+    title: Pipeline CI/CD
+    competency: Crear pipeline con tests, build y artefacto.
+    difficulty: D2
+    type: configuration
+    estimated_time_minutes: 20
+    prompt: "Diseña un pipeline que ejecute lint/tests, construya imagen, la etiquete inmutablemente y solo publique si pasan gates."
+    expected_answer: "Stages/gates claros, tag por commit/release y fallo bloquea promoción."
+    tags: [cicd]
+  - id: ASIR-16-UD05-Q002
+    unit: UD05
+    title: Secretos en pipeline
+    competency: Gestionar credenciales de CI sin filtrarlas.
+    difficulty: D3
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "Un pipeline imprime un token en logs por set -x/debug. Diseña respuesta inmediata y prevención."
+    expected_answer: "Revocar/rotar, limpiar exposición si posible, usar secret store/masking y evitar echo/debug."
+    critical_errors: ["Reutilizar el token expuesto"]
+    tags: [cicd, secrets]
+  - id: ASIR-16-UD06-Q001
+    unit: UD06
+    title: Playbook idempotente
+    competency: Gestionar estado con Ansible sin cambios innecesarios.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 25
+    prompt: "Crea un playbook que instale/configure un servicio, use handler y en segunda ejecución no reporte cambios si nada varió."
+    expected_answer: "Módulos declarativos, handler condicionado, segunda pasada changed=0 salvo excepción justificada."
+    tags: [ansible, idempotence]
+  - id: ASIR-16-UD06-Q002
+    unit: UD06
+    title: Shell siempre changed
+    competency: Refactorizar automatización no idempotente.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 18
+    prompt: "Un playbook usa shell para crear usuario, copiar config y reiniciar servicio siempre. Refactoriza con módulos adecuados."
+    expected_answer: "user/template/copy/service u otros módulos declarativos, handlers y condiciones."
+    tags: [ansible, diagnosis]
+  - id: ASIR-16-UD07-Q001
+    unit: UD07
+    title: Terraform plan
+    competency: Crear infraestructura declarativa y revisar plan antes de aplicar.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 25
+    prompt: "Define una red y una instancia/recurso equivalente en Terraform de laboratorio, ejecuta fmt/validate/plan y explica cambios previstos."
+    expected_answer: "Configuración válida, plan comprendido y ninguna credencial hardcodeada."
+    tags: [terraform, iac]
+  - id: ASIR-16-UD07-Q002
+    unit: UD07
+    title: Destrucción inesperada
+    competency: Detectar cambio destructivo en plan IaC.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 18
+    prompt: "Un terraform plan propone reemplazar un recurso con datos. Decide si aplicar, qué investigar y cómo proteger datos/estado."
+    expected_answer: "No aplicar a ciegas; entender atributo ForceNew/cambio, backup, lifecycle/import/migración y plan revisado."
+    critical_errors: ["Aplicar destrucción de datos sin protección ni revisión"]
+    tags: [terraform, safety]
+  - id: ASIR-16-UD08-Q001
+    unit: UD08
+    title: Diseño cloud básico
+    competency: Combinar IAM, red, compute y storage.
+    difficulty: D2
+    type: architecture
+    estimated_time_minutes: 18
+    prompt: "Diseña una app pequeña cloud con frontend público, backend privado, storage y rol IAM mínimo."
+    expected_answer: "Separación de subred/exposición, identidad mínima, storage protegido y conectividad necesaria."
+    tags: [cloud, iam]
+  - id: ASIR-16-UD08-Q002
+    unit: UD08
+    title: Coste cloud inesperado
+    competency: Analizar coste sin comprometer fiabilidad.
+    difficulty: D4
+    type: case_study
+    estimated_time_minutes: 15
+    prompt: "La factura cloud se duplica. Diseña investigación por recursos, tráfico, almacenamiento y etiquetado antes de apagar servicios."
+    expected_answer: "Cost explorer/metrics/tags, cambios recientes y unit economics; optimiza con evidencia."
+    tags: [cloud, cost]
+  - id: ASIR-16-UD09-Q001
+    unit: UD09
+    title: Kubernetes básico
+    competency: Desplegar workload y Service en clúster de laboratorio.
+    difficulty: D2
+    type: practical_lab
+    estimated_time_minutes: 25
+    prompt: "Despliega una aplicación con Deployment y Service, verifica pods ready y acceso interno/externo según escenario."
+    expected_answer: "Objetos válidos, réplicas ready, selectors correctos y conectividad comprobada."
+    tags: [kubernetes]
+  - id: ASIR-16-UD09-Q002
+    unit: UD09
+    title: CrashLoopBackOff
+    competency: Diagnosticar un pod que reinicia.
+    difficulty: D3
+    type: troubleshooting
+    estimated_time_minutes: 20
+    prompt: "Un pod entra en CrashLoopBackOff. Usa describe/logs/config para localizar causa sin recrear todo el clúster."
+    expected_answer: "Eventos, logs previos, env/config/command/probes y corrección mínima."
+    tags: [kubernetes, diagnosis]
+  - id: ASIR-16-UD10-Q001
+    unit: UD10
+    title: SLI SLO y observabilidad
+    competency: Definir indicadores de fiabilidad útiles.
+    difficulty: D3
+    type: architecture
+    estimated_time_minutes: 18
+    prompt: "Para una API define dos SLI, un SLO y señales de logs/métricas que permitan diagnosticar incumplimiento."
+    expected_answer: "SLI medibles como disponibilidad/latencia, SLO temporal y observabilidad accionable."
+    tags: [sre, observability]
+  - id: ASIR-16-UD10-Q002
+    unit: UD10
+    title: IA asistida verificada
+    competency: Usar IA para diagnóstico sin delegar validación.
+    difficulty: D4
+    type: case_study
+    modality: controlled_ai
+    estimated_time_minutes: 25
+    ai: {allowed: true, mode: controlled, purpose: verification}
+    prompt: "Usa una IA para proponer causas de un fallo DevOps suministrado. Selecciona hipótesis, contrástalas con logs/documentación, descarta errores y ejecuta solo una corrección verificada."
+    expected_answer: "Prompt útil, crítica de salida, evidencia independiente, cambio seguro y validación real; la IA no decide la nota."
+    critical_errors: ["Ejecutar comando destructivo sugerido por IA sin revisión", "Exponer secretos a la IA"]
+    tags: [integrative, ai, sre, recovery]
