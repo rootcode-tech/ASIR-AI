@@ -22,7 +22,22 @@ Auditoría v0.3 completada sobre estructura, dependencias, progresión transvers
 
 ## Fase 4 — Diseño de evaluación ⏳
 
-Marco común de evaluación ✅. Pendiente: blueprints de las 18 asignaturas, bancos de preguntas, cobertura, dificultad y exámenes finales.
+Completado:
+
+- marco común de evaluación ✅;
+- blueprints de las 18 asignaturas ✅;
+- arquitectura del banco de preguntas ✅;
+- formato agrupado del banco ✅;
+- banco mínimo v0.1 de las 18 asignaturas ✅;
+- cobertura de las 172 UDs ✅;
+- 346 ítems aprobados ✅;
+- índice de cobertura ✅.
+
+Pendiente para cerrar completamente la fase:
+
+- ensamblar formularios concretos de examen ordinario y recuperación a partir de IDs aprobados;
+- validar automáticamente cobertura, IDs, esquema y distribución D1-D4 mediante CI;
+- realizar calibración posterior con uso real para ampliar variantes y ajustar dificultad/tiempo.
 
 ## Fase 5 — Laboratorios y ejercicios
 
@@ -41,11 +56,14 @@ Auditoría final de cobertura, secuencia, carga, solapamientos y coherencia. Sol
 - auditoría estructural/pedagógica v0.3 ✅
 - 18 asignaturas / 172 UDs verificadas ✅
 - alineación oficial a nivel de módulos ✅
+- blueprints de evaluación 18/18 ✅
+- banco mínimo v0.1 18/18 ✅
+- cobertura de UDs 172/172 ✅
 
 ### Gates todavía pendientes
 
 - matriz detallada RA/CE oficial → UDs;
-- evaluación completa;
+- formularios concretos de examen y validación automática del banco;
 - carga/temporalización;
 - laboratorios/ejercicios;
 - proyecto integrador por hitos;
