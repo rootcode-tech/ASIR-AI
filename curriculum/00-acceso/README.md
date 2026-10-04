@@ -1,6 +1,6 @@
 # ASIR-00 · Preparación de acceso a Grado Superior
 
-**Estado:** especificación curricular completada  
+**Estado:** listo para impartir de forma incremental  
 **UDs:** 10  
 **Finalidad:** preparar el acceso a Grado Superior y construir una base académica directamente útil para ASIR.
 
@@ -8,26 +8,36 @@
 
 La estructura se alinea con las competencias publicadas por la Junta de Andalucía para la preparación del acceso a Grado Superior: Lengua Castellana, Matemáticas, competencia digital, Inglés y competencia de opción. Para un itinerario hacia ASIR se prioriza tecnología e ingeniería cuando corresponda.
 
-> La convocatoria de la prueba puede variar anualmente. Antes de comenzar la preparación específica se verificará la convocatoria vigente y se ajustará el entrenamiento de examen. Véase `OFFICIAL_ALIGNMENT.md`.
+> La convocatoria de la prueba puede variar anualmente. Antes de una preparación específica para convocatoria oficial se verificará la normativa vigente y se ajustará el entrenamiento de examen. Véase `docs/OFFICIAL_ALIGNMENT.md`.
 
 ## Secuencia
 
 | UD | Título | Estado |
 |---|---|---|
-| UD01 | Diagnóstico, método de estudio y razonamiento técnico | Especificada |
-| UD02 | Aritmética, proporcionalidad, porcentajes y notación científica | Especificada |
-| UD03 | Álgebra: expresiones, ecuaciones, sistemas e inecuaciones | Especificada |
-| UD04 | Funciones, gráficas y modelización | Especificada |
-| UD05 | Geometría, trigonometría y medida | Especificada |
-| UD06 | Estadística, probabilidad e interpretación de datos | Especificada |
-| UD07 | Fundamentos científico-tecnológicos aplicados | Especificada |
-| UD08 | Lengua: comprensión, síntesis y expresión escrita | Especificada |
-| UD09 | Inglés funcional y competencia digital | Especificada |
-| UD10 | Estrategia de examen y simulacros integrales | Especificada |
+| UD01 | Diagnóstico, método de estudio y razonamiento técnico | Lista para impartir |
+| UD02 | Aritmética, proporcionalidad, porcentajes y notación científica | Lista para impartir |
+| UD03 | Álgebra: expresiones, ecuaciones, sistemas e inecuaciones | Lista para impartir |
+| UD04 | Funciones, gráficas y modelización | Lista para impartir |
+| UD05 | Geometría, trigonometría y medida | Lista para impartir |
+| UD06 | Estadística, probabilidad e interpretación de datos | Lista para impartir |
+| UD07 | Fundamentos científico-tecnológicos aplicados | Lista para impartir |
+| UD08 | Lengua: comprensión, síntesis y expresión escrita | Lista para impartir |
+| UD09 | Inglés funcional y competencia digital | Lista para impartir |
+| UD10 | Estrategia de examen y simulacros integrales | Lista para impartir |
+
+## Material de impartición
+
+- `COURSE_READY.md` — guía docente desarrollada de las 10 UDs;
+- `EXERCISE_BANK.md` — banco de ejercicios formativos;
+- `LABS.md` — prácticas y laboratorios;
+- `REVIEW_AND_EXAM_FLOW.md` — repaso, simulacro, examen y recuperación;
+- `UD01.md` ... `UD10.md` — especificaciones curriculares fuente;
+- `../../exams/ASIR-00-BLUEPRINT.md` — contrato de evaluación;
+- `../../exams/bank/ASIR-00.yml` — banco aprobado de ítems calificables.
 
 ## Diseño pedagógico
 
-ASIR-00 no se impartirá como una colección desconectada de materias. Siempre que sea razonable, los ejercicios se contextualizarán en informática, redes, hardware, datos y documentación.
+ASIR-00 no se imparte como una colección desconectada de materias. Siempre que sea razonable, los ejercicios se contextualizan en informática, redes, hardware, datos y documentación.
 
 La secuencia es deliberada:
 
@@ -49,16 +59,34 @@ inglés + digital
 simulacros integrales
 ```
 
+## Flujo real de estudio
+
+```text
+teoría UD01 → UD10
+        ↓
+ejercicios con ayuda
+        ↓
+ejercicios autónomos
+        ↓
+prácticas
+        ↓
+repaso integral
+        ↓
+simulacro
+        ↓
+examen solo a petición expresa
+        ↓
+corrección + recuperación si procede
+        ↓
+ASIR-01 cuando ASIR-00 esté aprobado
+```
+
 ## Evaluación
 
-Solo puntúan los exámenes. Ejercicios, prácticas, laboratorios, diagnósticos y simulacros de entrenamiento son formativos, salvo el examen final de asignatura definido en UD10.
+Solo puntúan los exámenes. Ejercicios, prácticas, laboratorios, diagnósticos y simulacros son formativos.
 
-## Estado de cierre
+No existe penalización por repetir teoría, ejercicios, prácticas o simulacros. El examen solo empieza cuando el alumno lo solicita explícitamente.
 
-La asignatura puede considerarse **curricularmente especificada**, pero aún falta:
+## Gate de salida
 
-1. diseñar bancos de ejercicios;
-2. diseñar laboratorios completos;
-3. construir blueprints y exámenes;
-4. verificar la convocatoria vigente antes de impartirla;
-5. desarrollar las lecciones cuando el Currículo Maestro v1.0 quede cerrado.
+ASIR-00 se considera superado cuando se cumple la política de evaluación definida en su blueprint. Hasta entonces no se abre ASIR-01 como siguiente bloque de estudio.
