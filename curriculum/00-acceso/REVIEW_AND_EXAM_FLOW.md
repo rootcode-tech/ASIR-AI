@@ -1,182 +1,106 @@
 # ASIR-00 · Repaso, simulacro, examen y recuperación
 
-**Versión:** 0.1.0  
-**Estado:** listo para usar
+**Versión:** 0.2.0  
+**Estado:** listo para enseñanza; examen final condicionado a cobertura del banco
 
-## 1. Repaso integral
+## 1. Cuándo empieza el repaso
 
-El repaso empieza solo después de terminar teoría, ejercicios y prácticas esenciales.
+Solo después de:
+- terminar toda la teoría UD01–UD10;
+- completar ejercicios esenciales;
+- realizar prácticas representativas;
+- registrar errores recurrentes.
 
-Se hace por bloques:
+## 2. Repaso por competencia
 
-1. método y razonamiento;
-2. aritmética y álgebra;
-3. funciones, geometría y estadística;
-4. ciencia y tecnología;
-5. lengua;
-6. inglés y competencia digital;
-7. estrategia de examen.
+El repaso final se organiza según la estructura real que se quiere superar:
 
-Para cada bloque se revisan:
+```text
+Lengua: EO / CO / EE / CE
+Matemáticas: NC / FM / GE
+Digital: IAD / CC / CCD / SEG / PRO
+Inglés
+Tecnología e Ingeniería
+```
 
-- conceptos que el alumno puede explicar sin ayuda;
-- ejercicios que resuelve con seguridad;
-- errores recurrentes;
-- conceptos que todavía confunde;
-- procedimientos de verificación.
+UD01 y UD10 son transversales: método, diagnóstico, tiempo y estrategia.
 
-## 2. Checklist de dominio
+## 3. Simulacros
 
-Antes de plantearse el examen, el alumno debería poder responder afirmativamente a la mayoría de estas preguntas:
+Los simulacros:
+- no puntúan;
+- pueden repetirse;
+- usan casos diferentes;
+- registran acierto, tiempo y tipo de error;
+- pueden hacerse por dominio, competencia o conjunto.
 
-- ¿Puedo explicar con mis palabras lo que estoy haciendo?
-- ¿Puedo resolver un caso nuevo y no solo repetir un ejemplo?
-- ¿Compruebo signos, unidades y orden de magnitud?
-- ¿Sé detectar al menos algunos resultados imposibles?
-- ¿Puedo justificar por qué uso una fórmula o procedimiento?
-- ¿Puedo resumir un texto sin copiarlo?
-- ¿Puedo interpretar instrucciones técnicas básicas en inglés?
-- ¿Sé describir exactamente dónde me bloqueo cuando necesito ayuda?
-- ¿Gestiono razonablemente el tiempo en un simulacro?
+Tras cada simulacro se mantiene una matriz:
 
-## 3. Simulacro
-
-El simulacro no puntúa.
-
-Puede repetirse tantas veces como sea necesario y se utilizarán variantes del banco de preguntas que no comprometan un examen activo.
-
-Después del simulacro se crea una matriz:
-
-| Error | UD | Tipo | Impacto | Causa | Acción |
-|---|---|---|---|---|---|
-| ejemplo | UD02 | cálculo | medio | conversión bit/byte | repetir 5 ejercicios |
-
-El objetivo del simulacro es decidir qué estudiar después, no producir una nota académica.
+| Error | Dominio | Tipo | Causa | Acción |
+|---|---|---|---|---|
+| ejemplo | GE | conceptual | confunde P(A\|B) y P(B\|A) | Bayes + 5 casos nuevos |
 
 ## 4. Activación del examen
 
-El examen calificable solo comienza cuando el alumno dice explícitamente algo equivalente a:
+Solo una petición explícita equivalente a:
 
 > Quiero hacer el examen de ASIR-00.
 
-Preguntar si está preparado, terminar una UD o realizar un simulacro no activa el examen.
+activa una evaluación calificable.
 
-## 5. Evaluación
+Terminar teoría, completar prácticas o preguntar si se está preparado no activa nada.
+
+## 5. Examen final
 
 Se aplica `exams/ASIR-00-BLUEPRINT.md`.
 
-La nota interna utiliza:
+El examen:
+- cubre todos los dominios básicos;
+- incluye Inglés;
+- incluye Tecnología e Ingeniería;
+- puede dividirse en sesiones por la duración total;
+- mantiene condiciones controladas;
+- no permite IA.
 
-- exámenes de UD: 60%;
-- examen final integrador: 40%;
-- mínimo final: 5,0;
-- mínimo total: 5,0.
+No se inicia mientras el banco no tenga cobertura suficiente para examen ordinario + recuperación equivalente.
 
-La evaluación debe explicar tanto el resultado como las causas de los errores.
+## 6. Lectura del resultado
 
-## 6. Después del examen
-
-La corrección produce:
-
-- nota;
-- desglose por competencia;
+Se genera:
+- calificación por dominio;
+- calificación por competencia;
+- gate oficial-modelado de la parte general;
+- gate interno ASIR-00;
 - errores concretos;
-- clasificación de errores;
-- explicación pedagógica;
-- UDs que deben repasarse;
-- ejercicios recomendados;
-- criterio de preparación para recuperación.
+- causa probable;
+- UDs a repasar;
+- práctica recomendada.
 
-## 7. Si no está aprobado
+## 7. Si no se supera
 
-No se crea ASIR-01 todavía.
-
-Se sigue este ciclo:
+No se abre ASIR-01.
 
 ```text
-error del examen
-   ↓
-causa
-   ↓
-reexplicación
-   ↓
-ejercicio guiado
-   ↓
-práctica autónoma
-   ↓
-mini-simulacro
-   ↓
-el alumno decide cuándo recuperar
+fallo
+→ localizar dominio
+→ localizar concepto/procedimiento
+→ reenseñar
+→ practicar
+→ verificar
+→ simulacro
+→ recuperación a petición
 ```
 
-La recuperación:
+## 8. Preparación administrativa real
 
-- usa un conjunto equivalente pero distinto de preguntas aprobadas;
-- no tiene penalización;
-- sustituye la nota de ASIR-00 según el marco vigente;
-- puede repetirse pedagógicamente sin límite.
+Antes de presentarse a una convocatoria real se comprobarán en la web oficial:
+- requisitos;
+- fechas;
+- inscripción;
+- sedes;
+- estructura;
+- materiales;
+- exenciones/convalidaciones;
+- prioridad de la opción para Informática y Comunicaciones.
 
-## 8. Gate para ASIR-01
-
-ASIR-01 solo se empieza a desarrollar como siguiente asignatura cuando ASIR-00 esté aprobado.
-
-Este gate es pedagógico: evita construir el siguiente bloque ignorando dificultades observadas durante ASIR-00 y permite ajustar ASIR-01 a la experiencia real de aprendizaje.
-
-
-## 9. Simulación oficial 2025/2026
-
-Antes del examen interno final se entrenará específicamente el formato oficial documentado en `OFFICIAL_EXAM_2026_ALIGNMENT.md`.
-
-### Bloques de 20 minutos
-
-- lengua: expresión oral;
-- lengua: comprensión oral;
-- lengua: expresión escrita;
-- lengua: comprensión escrita;
-- matemáticas: números y cálculo;
-- matemáticas: formas y medidas;
-- matemáticas: gráficos y estadística;
-- digital: información y alfabetización;
-- digital: comunicación y colaboración;
-- digital: creación de contenidos;
-- digital: seguridad;
-- digital: resolución de problemas.
-
-### Bloques de 40 minutos
-
-- Inglés;
-- Tecnología e Ingeniería para el itinerario tecnológico de ASIR.
-
-### Regla de test de la convocatoria modelada
-
-Las respuestas incorrectas no penalizan. Por ello, en los simulacros de esta convocatoria se entrena:
-
-1. primera vuelta de respuestas seguras;
-2. segunda vuelta de preguntas dudosas;
-3. descarte de distractores;
-4. contestar todas las preguntas;
-5. revisión final de errores de lectura.
-
-Esta estrategia se revisará si cambia la convocatoria.
-
-### Escalado de dificultad
-
-Si una competencia nueva presenta demasiados errores, se permite temporalmente practicar con ejercicios de nivel Grado Medio del mismo dominio y después regresar a Grado Superior.
-
-El objetivo final no cambia: superar el nivel GS.
-
-## 10. Informe de preparación para acceso
-
-Antes de recomendar presentarse a la prueba oficial se generará un informe por dominio con:
-
-- acierto sin tiempo;
-- acierto cronometrado;
-- errores de conocimiento;
-- errores de lectura;
-- errores de cálculo;
-- tiempo medio por pregunta;
-- dominios por debajo de 5;
-- dominios vulnerables a caer por debajo de 3;
-- recomendación de repaso.
-
-Esto permite preparar la estrategia teniendo en cuenta que la convocatoria 2025/2026 exige resultados mínimos no solo en la media de cada competencia, sino también por dominios.
+ASIR-AI prepara académicamente; no sustituye una inscripción oficial ni un curso preparatorio autorizado.
