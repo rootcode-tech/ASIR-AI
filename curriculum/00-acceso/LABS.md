@@ -1,6 +1,6 @@
 # ASIR-00 · Prácticas y laboratorios
 
-**Versión:** 0.1.0  
+**Versión:** 0.2.0  
 **Estado:** listo para impartir  
 **Regla:** las prácticas no generan nota académica. Sirven para consolidar, verificar y diagnosticar.
 
@@ -174,3 +174,107 @@ Antes del repaso final se espera que el alumno haya completado al menos una prá
 - cómo verificó el resultado;
 - qué error cometió o podría cometer;
 - cómo lo detectaría.
+
+
+## LAB-00-11 · Formas, escalas y representación
+
+### Escenario
+Plano sencillo de una sala/instalación con varias figuras y un cuerpo tridimensional.
+
+### Tareas
+- descomponer una figura compleja;
+- calcular perímetros, áreas y volumen;
+- trabajar con escala;
+- obtener una medida real desde plano;
+- justificar redondeo y unidades;
+- verificar con una segunda estrategia.
+
+### Validación
+El alumno identifica la figura antes de elegir fórmula y no mezcla unidades lineales, cuadradas y cúbicas.
+
+## LAB-00-12 · Estadística bivariante y Bayes
+
+### Escenario
+Datos de alertas de seguridad y una prueba con falsos positivos.
+
+### Tareas
+- construir tabla de contingencia;
+- calcular medias y dispersión;
+- interpretar un diagrama de dispersión;
+- razonar covarianza/correlación;
+- interpretar una recta de regresión suministrada;
+- resolver una probabilidad condicionada;
+- aplicar Bayes a una tasa base.
+
+### Validación
+No confunde correlación con causalidad ni P(A|B) con P(B|A).
+
+## LAB-00-13 · Lengua: oral + listening + escritura
+
+### Escenario
+Bloque equivalente a los cuatro dominios.
+
+### Tareas
+- responder preguntas orales;
+- describir una imagen;
+- escuchar un audio con máximo de dos reproducciones;
+- responder comprensión;
+- redactar 150–200 palabras;
+- analizar un texto escrito.
+
+### Validación
+Se corrige por dominio y se registra tiempo y tipo de error.
+
+## LAB-00-14 · Caso digital de cinco dominios
+
+### Escenario
+Un equipo debe investigar, compartir, editar y proteger documentación de un proyecto.
+
+### Tareas
+- diseñar búsqueda avanzada y contrastar fuentes;
+- evaluar una respuesta de IA;
+- definir permisos de colaboración;
+- transformar datos en hoja de cálculo/BD básica;
+- aplicar licencias;
+- configurar medidas de seguridad/privacidad;
+- diagnosticar una incidencia de conectividad;
+- justificar sostenibilidad y ciclo de vida.
+
+### Validación
+Cada decisión se asocia a IAD, CC, CCD, SEG o PRO y se comprueba el resultado.
+
+## LAB-00-15 · Inglés funcional y mediación
+
+### Escenario
+Documentación breve, correo profesional e incidencia técnica.
+
+### Tareas
+- reading;
+- listening;
+- responder/solicitar aclaración;
+- comparar dos opciones;
+- resumir/parafrasear;
+- explicar en español información operativa de un texto inglés;
+- producir un texto corto sin traductor.
+
+### Validación
+Se conserva el significado y se usa registro adecuado; no se exige traducción literal.
+
+## LAB-00-16 · Mini proyecto Tecnología e Ingeniería N4
+
+### Escenario
+Diseño conceptual de un pequeño sistema técnico.
+
+### Tareas
+- necesidad y memoria breve;
+- presupuesto básico;
+- mecanismo o transmisión;
+- selección razonada de material;
+- circuito eléctrico/lógico sencillo;
+- sensor/actuador;
+- esquema neumático básico;
+- balance térmico/refrigeración conceptual;
+- croquis, vistas, escala y acotación.
+
+### Validación
+El entregable toca TI4.1–TI4.5 y permite explicar qué se ha calculado, representado y verificado.
