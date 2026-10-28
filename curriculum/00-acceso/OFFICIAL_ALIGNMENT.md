@@ -87,3 +87,40 @@ Antes de:
 se revalida la convocatoria y se registra la fecha de revisión.
 
 Los cambios administrativos no deben modificar silenciosamente el contenido histórico de una convocatoria anterior.
+
+
+## 9. Discrepancia de etiquetas A/B/C detectada
+
+La auditoría encontró una discrepancia entre documentos oficiales de 2025:
+
+- el Anexo XXII de la Resolución de 13 de junio de 2025 publicado inicialmente presenta Ciencias como B y Tecnología e Ingeniería como C;
+- la **Resolución anual de 20 de noviembre de 2025**, que convoca la prueba 2025/2026 y reproduce su propio Anexo I, establece:
+  - A Emprendedora;
+  - **B Tecnología e Ingeniería**;
+  - C Ciencias;
+  - e incluye **Informática y comunicaciones** bajo Tecnología e Ingeniería.
+
+Para la convocatoria 2025/2026 prevalece la resolución anual de convocatoria.
+
+Consecuencia: ASIR-AI debe anclar la preparación a la **competencia Tecnología e Ingeniería**, no a una letra fija. La letra de opción se vuelve a verificar en cada convocatoria.
+
+## 10. Exenciones, conservación y mejora de nota
+
+La convocatoria 2025/2026 contempla mecanismos que deben revisarse administrativamente antes de inscribirse:
+
+- exenciones de competencias/dominios ya demostrados en cursos o procedimientos compatibles;
+- exención total en determinados supuestos, entre ellos Grado C de nivel 3 o acreditación profesional suficiente, según la convocatoria;
+- determinadas convalidaciones por enseñanzas regladas;
+- posibilidad de volver a presentarse para mejorar calificación;
+- conservación de la mayor calificación previa compatible con el marco aplicable.
+
+ASIR-AI no decide automáticamente si una persona concreta tiene derecho a exención o convalidación: se verifica con su documentación y con la convocatoria vigente.
+
+## 11. Realización
+
+En la convocatoria de referencia:
+- las pruebas se realizan presencialmente en centros sede;
+- los ejercicios se desarrollan mediante ordenador/entorno online del centro;
+- las fechas concretas por dominio se asignan dentro del periodo oficial.
+
+La preparación debe incluir familiaridad con test en pantalla, gestión del tiempo y lectura sin depender del papel.
