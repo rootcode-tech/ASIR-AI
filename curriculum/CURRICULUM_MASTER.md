@@ -1,6 +1,6 @@
 # Currículo Maestro ASIR-AI
 
-**Versión:** 0.3.0-draft  
+**Versión:** 0.3.1-draft  
 **Estado:** 172 UDs especificadas; auditoría estructural y pedagógica v0.3 completada  
 **Marca:** RootCode Technologies
 
@@ -25,20 +25,26 @@ Cada unidad se desarrollará con: **objetivos → conocimientos previos → cont
 
 ### ASIR-00 · Preparación de acceso a Grado Superior
 
-**Propósito:** Preparar la prueba de acceso con un enfoque aplicado a informática, construyendo la base matemática, lingüística, científica, inglesa y digital necesaria para afrontar ASIR.
+**Propósito:** Preparar la prueba de acceso GS con el Nivel 4 andaluz: Lengua, Matemáticas, Digital, Inglés y Tecnología e Ingeniería para el itinerario de Informática y Comunicaciones, con fundamentos transversales útiles para ASIR.
 
 **Prerrequisitos:** Ninguno; diagnóstico inicial obligatorio.
 
 - **UD01 — Diagnóstico, método de estudio y razonamiento técnico**
-- **UD02 — Aritmética, proporcionalidad, porcentajes y notación científica**
+- **UD02 — Números y cálculo: aritmética, proporcionalidad, porcentajes y matemática financiera**
 - **UD03 — Álgebra: expresiones, ecuaciones, sistemas e inecuaciones**
 - **UD04 — Funciones, gráficas y modelización**
-- **UD05 — Geometría, trigonometría y medida**
-- **UD06 — Estadística, probabilidad e interpretación de datos**
+- **UD05 — Formas y medidas: geometría, escala y representación espacial**
+- **UD06 — Gráficos, estadística y probabilidad**
 - **UD07 — Fundamentos científico-tecnológicos aplicados**
-- **UD08 — Lengua: comprensión, síntesis y expresión escrita**
-- **UD09 — Inglés funcional y competencia digital**
-- **UD10 — Estrategia de examen y simulacros integrales**
+- **UD08 — Competencia comunicativa en Lengua Castellana N4**
+- **UD09 — Inglés N4 y Competencia Digital N4**
+- **UD10 — Estrategia de prueba, simulación y preparación final**
+
+### Estado operativo ASIR-00
+
+ASIR-00 está listo para impartirse de forma secuencial. Su examen calificable permanece bloqueado hasta completar el banco por dominios definido en `exams/ASIR-00-BANK-COVERAGE.md`.
+
+La preparación de ASIR-01 como siguiente asignatura se realizará únicamente después de superar ASIR-00.
 
 ### ASIR-01 · Sistemas I — Implantación de Sistemas Operativos
 
