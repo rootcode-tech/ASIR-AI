@@ -6,7 +6,18 @@ Currículo maestro abierto para una formación completa en Administración de Si
 
 ## Estado
 
-El proyecto está en **fase de diseño curricular**. Antes de comenzar a estudiar se cerrará el currículo maestro completo de las 18 asignaturas y su secuencia de unidades didácticas.
+El proyecto aplica **desarrollo e impartición secuencial por asignaturas**. El mapa global de 18 asignaturas existe, pero solo se desarrolla a nivel de impartición la asignatura activa. **ASIR-00 está listo para empezar a estudiar**; ASIR-01 se desarrollará como siguiente bloque cuando ASIR-00 esté superado.
+
+## Estado de ASIR-00
+
+Auditoría de 28/10/2026:
+- currículo N4 sincronizado;
+- materiales oficiales integrados;
+- ejercicios y laboratorios listos;
+- flujo de simulación/examen actualizado;
+- banco calificable final pendiente de ampliación por dominios antes del examen real.
+
+Véase `docs/ASIR00_AUDIT_2026-10-28.md`.
 
 ## Principios
 
