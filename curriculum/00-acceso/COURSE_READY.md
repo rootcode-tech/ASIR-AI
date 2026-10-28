@@ -254,31 +254,23 @@ Debes interpretar datos y explicar qué medida representa mejor una situación, 
 
 ### Qué vas a aprender
 
-- magnitudes y unidades;
-- velocidad, tiempo, distancia;
-- trabajo, energía y potencia a nivel funcional;
-- electricidad básica: tensión, corriente, resistencia y potencia;
-- ley de Ohm;
-- consumo energético;
-- rendimiento y pérdidas;
-- temperatura y transferencia de calor a nivel conceptual;
-- método científico;
-- hipótesis, medición, comparación y conclusión.
+Además de magnitudes, energía, potencia, rendimiento y método científico, UD07 cubre íntegramente Tecnología e Ingeniería N4:
+
+- **TI4.1:** proyecto tecnológico, documentación, mecanismos, transmisión, materiales y fabricación;
+- **TI4.2:** electricidad CC/CA, circuitos, lógica digital, sensores, actuadores y automática;
+- **TI4.3:** motores térmicos, refrigeración, bomba de calor y neumática;
+- **TI4.4:** geometría técnica, tangencias, enlaces, cónicas, homología y afinidad;
+- **TI4.5:** diédrico, axonometría, sistema cónico, escalas, vistas, cortes, secciones, acotación y normalización.
 
 ### Contexto ASIR
 
-Se aplicará a fuentes de alimentación, UPS, consumo de equipos, refrigeración, autonomía y capacidad de infraestructura.
+Se aplicará a fuentes de alimentación, UPS, consumo de equipos, refrigeración, señales digitales, sensores, automatización, lectura de planos y resolución de problemas técnicos.
 
-Fórmulas clave se introducirán con significado:
-
-- `v = d / t`;
-- `P = V · I`;
-- `V = I · R`;
-- energía = potencia × tiempo.
+La geometría matemática necesaria se introduce previamente en UD05 y se reutiliza aquí como lenguaje técnico.
 
 ### Criterio de dominio
 
-Debes saber seleccionar la relación física correcta, mantener unidades coherentes y comprobar si el resultado tiene sentido.
+Debes poder interpretar y resolver problemas básicos de TI4.1–TI4.5, justificar la respuesta, mantener unidades y simbología coherentes y detectar resultados técnicamente imposibles.
 
 ## 10. UD08 — Lengua: comprensión, síntesis y expresión escrita
 
@@ -438,6 +430,16 @@ El alumno realizará primero esquemas, bocetos y trazados sin presión. Después
 
 Los materiales CCTI4_B1 mencionan 20 preguntas / 60 minutos en sus simulaciones. Para ASIR-00, el entrenamiento oficial final seguirá el modelo GS 2025/2026 aportado: Tecnología e Ingeniería se simulará con el formato vigente de 16 preguntas / 40 minutos mientras no exista una convocatoria posterior que lo sustituya.
 
-### Cobertura pendiente
+### Cobertura oficial completa
 
-No se dará la competencia CCTI por completamente cerrada con B1. Deben contrastarse bloques posteriores para materiales, neumática, electrónica/relés, refrigeración y demás contenidos que ya aparecen en el modelo oficial.
+La concreción curricular oficial de Nivel 4 ya permite cerrar el alcance obligatorio de Tecnología e Ingeniería aunque no se hayan recopilado todos los bloques CREA.
+
+UD07 debe cubrir íntegramente:
+
+- **TI4.1:** proyectos, mecánica y materiales;
+- **TI4.2:** electricidad, electrónica y automática;
+- **TI4.3:** sistemas térmicos y neumáticos;
+- **TI4.4:** geometría plana y transformaciones;
+- **TI4.5:** sistemas de representación y normalización.
+
+Los materiales CREA se utilizan para metodología y práctica; la concreción curricular oficial determina qué contenidos son obligatorios.
