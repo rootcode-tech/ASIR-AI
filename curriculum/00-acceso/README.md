@@ -34,6 +34,7 @@ La estructura se alinea con las competencias publicadas por la Junta de Andaluc�
 - `CBM4_B1_MATH_ALIGNMENT.md` — desarrollo del dominio Números y Cálculo a partir de los materiales CBM4_B1 aportados;
 - `CCCS4_B1_SCIENCE_ALIGNMENT.md` — fundamentos científicos transversales a partir de los materiales CCCS4_B1 aportados;
 - `CCEMP4_B1_ENTREPRENEUR_ALIGNMENT.md` — fundamentos económicos y emprendedores a partir de los materiales CCEMP4_B1 aportados;
+- `CCPL4_B1_ENGLISH_ALIGNMENT.md` — desarrollo de Inglés N4 a partir de los materiales CCPL4_B1 aportados;
 - `EXERCISE_BANK.md` — banco de ejercicios formativos;
 - `LABS.md` — prácticas y laboratorios;
 - `REVIEW_AND_EXAM_FLOW.md` — repaso, simulacro, examen y recuperación;
@@ -198,3 +199,20 @@ escasez y decisiones
 ```
 
 Se reutilizarán posteriormente en ASIR-06 y ASIR-15. La preparación completa de la opción Emprendedora solo se activará si se decide presentar también esa opción.
+
+
+## Desarrollo de Inglés CCPL4
+
+UD09 incorpora ya el Bloque 1 de Competencia Clave Plurilingüe N4:
+
+```text
+información personal y rutinas
+→ descripción de lugares y cantidades
+→ preguntas, comparaciones y opinión
+→ argumentación y conectores
+→ narración del pasado
+→ reading/listening
+→ producción y mediación
+```
+
+Los materiales oficiales confirman una metodología funcional: gramática con propósito comunicativo, tareas de reading/listening, respuesta abierta, redacción, cuestionarios de consolidación y trabajo autónomo sin traductor/IA cuando se pretende comprobar dominio real.
