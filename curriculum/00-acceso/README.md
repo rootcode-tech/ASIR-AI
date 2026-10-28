@@ -233,6 +233,6 @@ proyecto tecnológico y documentación
 → test tipo acceso
 ```
 
-Este Bloque 1 no cubre todavía toda la competencia tecnológica observada en el modelo oficial 2025/2026. Permanecen pendientes de localizar en bloques posteriores contenidos como materiales, neumática, relés/electrónica y refrigeración.
+El Bloque 1 de CREA aporta metodología y práctica, pero el alcance obligatorio ya se ha cerrado mediante la concreción curricular oficial de Nivel 4. UD07 cubre **TI4.1–TI4.5 completos**: proyectos/mecánica/materiales, electricidad/electrónica/automática, térmica/neumática, geometría/transformaciones y sistemas de representación/normalización.
 
 Los tiempos y número de preguntas de los materiales CCTI4 no sustituyen el formato oficial vigente; los simulacros se ajustan al modelo oficial 2025/2026.
