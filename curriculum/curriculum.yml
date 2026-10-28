@@ -7,15 +7,16 @@ course:
   language: es
 
 assessment:
-  graded_component: exams
+  graded_component: final_subject_exam
   scale: "0.0-10.0"
   pass_mark: 5.0
-  ud_exams_weight: 0.60
-  final_exam_weight: 0.40
-  final_exam_minimum: 5.0
-  recovery_replaces_subject_grade: true
+  activation: explicit_student_request
+  ud_checks_graded: false
   exercises_graded: false
   labs_graded: false
+  simulations_graded: false
+  recovery_replaces_subject_grade: true
+  blueprint_can_define_stricter_domain_gates: true
   framework: "docs/EVALUATION_FRAMEWORK.md"
 
 unit_contract:
@@ -44,7 +45,7 @@ subjects:
         title: "Diagnóstico, método de estudio y razonamiento técnico"
         status: specified
       - id: UD02
-        title: "Aritmética, proporcionalidad, porcentajes y notación científica"
+        title: "Números y cálculo: aritmética, proporcionalidad, porcentajes y matemática financiera"
         status: specified
       - id: UD03
         title: "Álgebra: expresiones, ecuaciones, sistemas e inecuaciones"
@@ -53,22 +54,22 @@ subjects:
         title: "Funciones, gráficas y modelización"
         status: specified
       - id: UD05
-        title: "Geometría, trigonometría y medida"
+        title: "Formas y medidas: geometría, escala y representación espacial"
         status: specified
       - id: UD06
-        title: "Estadística, probabilidad e interpretación de datos"
+        title: "Gráficos, estadística y probabilidad"
         status: specified
       - id: UD07
         title: "Fundamentos científico-tecnológicos aplicados"
         status: specified
       - id: UD08
-        title: "Lengua: comprensión, síntesis y expresión escrita"
+        title: "Competencia comunicativa en Lengua Castellana N4"
         status: specified
       - id: UD09
-        title: "Inglés funcional y competencia digital"
+        title: "Inglés N4 y Competencia Digital N4"
         status: specified
       - id: UD10
-        title: "Estrategia de examen y simulacros integrales"
+        title: "Estrategia de prueba, simulación y preparación final"
         status: specified
   - id: ASIR-01
     slug: 01-sistemas-i
