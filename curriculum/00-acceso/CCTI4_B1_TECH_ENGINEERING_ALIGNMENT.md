@@ -517,3 +517,118 @@ El alumno debe poder:
 - distinguir homología y afinidad a nivel funcional;
 - realizar bocetos o trazados auxiliares;
 - responder preguntas tipo test justificando por qué descarta los distractores.
+
+
+## 11. Alcance oficial completo de Tecnología e Ingeniería N4
+
+La concreción curricular oficial andaluza de nivel 4 confirma que la competencia completa no se limita al Bloque 1 de CREA.
+
+### TI4.1 · Proyectos, mecánica y materiales
+
+- fases del proyecto;
+- memorias, pliegos, presupuestos y planos;
+- mecanismos de transmisión y transformación;
+- engranajes, poleas/correas, cadenas, cigüeñal, caja de cambios;
+- acoplamientos rígidos y flexibles;
+- junta Cardan;
+- cálculo básico de transmisión;
+- propiedades físicas, químicas y mecánicas de materiales;
+- técnicas de mejora de propiedades;
+- sostenibilidad de materiales;
+- fabricación industrial;
+- moldeado;
+- conformado por deformación;
+- forja;
+- estampación;
+- extrusión;
+- mecanizado;
+- tratamientos térmicos;
+- tratamientos superficiales.
+
+### TI4.2 · Electricidad, electrónica y automática
+
+- corriente continua;
+- representación e interpretación de circuitos;
+- resistencias en serie, paralelo y mixto;
+- corriente alterna;
+- ley de Ohm en CA;
+- impedancia;
+- factor de potencia;
+- electrónica digital combinacional;
+- álgebra de Boole;
+- tablas de verdad;
+- mapas de Karnaugh;
+- puertas NOT, AND y OR;
+- sistemas de lazo abierto y cerrado;
+- diagramas de bloques;
+- sensores;
+- actuadores.
+
+### TI4.3 · Sistemas térmicos y neumáticos
+
+- motores térmicos;
+- rendimiento;
+- trabajo;
+- flujos de calor;
+- potencia;
+- par;
+- máquina frigorífica;
+- bomba de calor;
+- eficiencia;
+- neumática;
+- acondicionamiento;
+- distribución;
+- actuadores;
+- interpretación de diagramas;
+- fuerzas, volúmenes y caudales;
+- cilindros de simple y doble efecto.
+
+### TI4.4 · Geometría plana y transformaciones
+
+- trazados elementales;
+- operaciones con segmentos y ángulos;
+- paralelismo y perpendicularidad;
+- lugares geométricos;
+- arco capaz;
+- mediatriz;
+- bisectriz;
+- redes modulares;
+- triángulos;
+- cuadriláteros;
+- polígonos regulares;
+- tangencias y enlaces;
+- homología;
+- afinidad;
+- elipse;
+- hipérbola;
+- parábola.
+
+### TI4.5 · Sistemas de representación y normalización
+
+- sistema diédrico;
+- punto, recta y plano;
+- intersecciones;
+- paralelismo;
+- perpendicularidad;
+- distancias;
+- verdaderas magnitudes;
+- secciones;
+- superficies y sólidos;
+- axonometría ortogonal y oblicua;
+- coeficientes de reducción;
+- sistema cónico;
+- perspectiva frontal y oblicua;
+- escalas numéricas y gráficas;
+- vistas principales;
+- croquis y planos de taller;
+- cortes, secciones y roturas;
+- acotación;
+- perspectivas normalizadas;
+- simbología industrial y arquitectónica;
+- documentación gráfica de un proyecto básico.
+
+## 12. Consecuencia para ASIR-00
+
+La preparación específica de Tecnología e Ingeniería debe cubrir TI4.1 a TI4.5 completos, aunque algunos materiales CREA todavía estén distribuidos en bloques no recopilados localmente.
+
+El marco curricular oficial prevalece para decidir **qué entra**. Los materiales CREA se utilizarán para decidir **cómo enseñarlo y practicarlo**.
