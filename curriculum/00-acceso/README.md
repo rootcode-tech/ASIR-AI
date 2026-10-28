@@ -29,6 +29,7 @@ La estructura se alinea con las competencias publicadas por la Junta de Andaluc�
 
 - `COURSE_READY.md` — guía docente desarrollada de las 10 UDs;
 - `OFFICIAL_EXAM_2026_ALIGNMENT.md` — adaptación al formato y competencias del modelo oficial GS 2025/2026;
+- `CBCL4_B1_LANGUAGE_ALIGNMENT.md` — desarrollo del bloque de Lengua a partir de los materiales CBCL4_B1 aportados;
 - `EXERCISE_BANK.md` — banco de ejercicios formativos;
 - `LABS.md` — prácticas y laboratorios;
 - `REVIEW_AND_EXAM_FLOW.md` — repaso, simulacro, examen y recuperación;
@@ -111,3 +112,19 @@ Para Grado Superior se entrenarán explícitamente:
 - estrategia de test sin penalización por respuesta incorrecta mientras esa regla siga vigente.
 
 El modelo de Grado Medio se utilizará únicamente como escalón didáctico cuando sea útil para introducir una competencia antes de volver al nivel GS.
+
+
+## Desarrollo de Lengua CBCL4
+
+UD08 ya no se tratará como un único bloque genérico. Los materiales CBCL4_B1 aportados se han integrado como secuencia interna:
+
+```text
+comunicación eficaz
+→ comunicación no verbal y contexto
+→ variedades y registros
+→ propiedades textuales
+→ tipología textual
+→ práctica de expresión/comprensión oral y escrita
+```
+
+Las tareas de los materiales fuente sirven también como referencia de diseño: teoría, actividad abierta, test autocorregible, retroalimentación, reintento y entrenamiento temporal.
