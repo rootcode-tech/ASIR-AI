@@ -33,6 +33,7 @@ La estructura se alinea con las competencias publicadas por la Junta de Andaluc�
 - `CBD4_B1_DIGITAL_ALIGNMENT.md` — desarrollo de Competencia Digital a partir de los materiales CBD4_B1 aportados;
 - `CBM4_B1_MATH_ALIGNMENT.md` — desarrollo del dominio Números y Cálculo a partir de los materiales CBM4_B1 aportados;
 - `CCCS4_B1_SCIENCE_ALIGNMENT.md` — fundamentos científicos transversales a partir de los materiales CCCS4_B1 aportados;
+- `CCEMP4_B1_ENTREPRENEUR_ALIGNMENT.md` — fundamentos económicos y emprendedores a partir de los materiales CCEMP4_B1 aportados;
 - `EXERCISE_BANK.md` — banco de ejercicios formativos;
 - `LABS.md` — prácticas y laboratorios;
 - `REVIEW_AND_EXAM_FLOW.md` — repaso, simulacro, examen y recuperación;
@@ -182,3 +183,18 @@ sistemas e interacciones
 ```
 
 La parte específica de Ciencias no se convierte en una segunda preparación completa mientras el itinerario de acceso esté orientado a Tecnología e Ingeniería. Los contenidos de geología, biología y ecología no necesarios para las competencias transversales quedan como ampliación opcional.
+
+
+## Fundamentos emprendedores CCEMP4
+
+Los materiales CCEMP4_B1 se conservan como complemento, no como itinerario específico principal:
+
+```text
+escasez y decisiones
+→ coste de oportunidad
+→ mercado y oferta/demanda
+→ fallos de mercado y sector público
+→ PIB, inflación, desempleo, tipos de interés y balanza comercial
+```
+
+Se reutilizarán posteriormente en ASIR-06 y ASIR-15. La preparación completa de la opción Emprendedora solo se activará si se decide presentar también esa opción.
