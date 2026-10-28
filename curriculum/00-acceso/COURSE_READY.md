@@ -405,3 +405,39 @@ simulacro oficial
 ```
 
 Cuando resulte útil, una destreza nueva puede introducirse con ejercicios de nivel Grado Medio antes de exigir el nivel final de Grado Superior.
+
+
+## 15. Tecnología e Ingeniería N4 · Integración CCTI4 Bloque 1
+
+La impartición de UD07 debe aplicar también `CCTI4_B1_TECH_ENGINEERING_ALIGNMENT.md`.
+
+### Integración CCTI4 Bloque 1
+
+La secuencia específica será:
+
+```text
+proyecto y documentación
+→ mecanismos
+→ transmisión / transformación
+→ relación de transmisión
+→ acoplamientos
+→ geometría fundamental
+→ polígonos
+→ tangencias
+→ cónicas
+→ homología / afinidad
+→ dibujo aplicado
+→ test tipo acceso
+```
+
+UD05 enseñará la base geométrica; UD07 la reutilizará como lenguaje de tecnología y dibujo técnico.
+
+El alumno realizará primero esquemas, bocetos y trazados sin presión. Después pasará a preguntas tipo test equivalentes a las del acceso.
+
+### Formato vigente
+
+Los materiales CCTI4_B1 mencionan 20 preguntas / 60 minutos en sus simulaciones. Para ASIR-00, el entrenamiento oficial final seguirá el modelo GS 2025/2026 aportado: Tecnología e Ingeniería se simulará con el formato vigente de 16 preguntas / 40 minutos mientras no exista una convocatoria posterior que lo sustituya.
+
+### Cobertura pendiente
+
+No se dará la competencia CCTI por completamente cerrada con B1. Deben contrastarse bloques posteriores para materiales, neumática, electrónica/relés, refrigeración y demás contenidos que ya aparecen en el modelo oficial.
