@@ -1,6 +1,6 @@
 # ASIR-00 · Preparación de acceso a Grado Superior
 
-**Estado:** listo para impartir de forma incremental · alineado con modelo oficial GS 2025/2026  
+**Estado:** listo para impartir · alineado con Nivel 4 y modelo GS 2025/2026 · banco final en expansión  
 **UDs:** 10  
 **Finalidad:** preparar el acceso a Grado Superior y construir una base académica directamente útil para ASIR.
 
@@ -41,6 +41,7 @@ La estructura se alinea con las competencias publicadas por la Junta de Andaluc�
 - `REVIEW_AND_EXAM_FLOW.md` — repaso, simulacro, examen y recuperación;
 - `UD01.md` ... `UD10.md` — especificaciones curriculares fuente;
 - `../../exams/ASIR-00-BLUEPRINT.md` — contrato de evaluación;
+- `../../exams/ASIR-00-BANK-COVERAGE.md` — gate de cobertura antes del examen final;
 - `../../exams/bank/ASIR-00.yml` — banco aprobado de ítems calificables.
 
 ## Diseño pedagógico
@@ -236,3 +237,20 @@ proyecto tecnológico y documentación
 El Bloque 1 de CREA aporta metodología y práctica, pero el alcance obligatorio ya se ha cerrado mediante la concreción curricular oficial de Nivel 4. UD07 cubre **TI4.1–TI4.5 completos**: proyectos/mecánica/materiales, electricidad/electrónica/automática, térmica/neumática, geometría/transformaciones y sistemas de representación/normalización.
 
 Los tiempos y número de preguntas de los materiales CCTI4 no sustituyen el formato oficial vigente; los simulacros se ajustan al modelo oficial 2025/2026.
+
+
+## Estado tras auditoría 2026-10-28
+
+La teoría operativa ya está sincronizada con el Nivel 4 oficial:
+
+- NC4, FM4 y GE4;
+- EO4, CO4, EE4 y CE4;
+- PL4;
+- IAD4, CC4, CCD4, SEG4 y PRO4;
+- TI4.1–TI4.5.
+
+**Listo ahora:** enseñanza, ejercicios, labs, repaso y simulacros.
+
+**Gate previo al examen final:** ampliar el banco calificable por dominios y preparar activos de comprensión/expresión oral (audios, imágenes y rúbricas).
+
+La auditoría completa está en `../../docs/ASIR00_AUDIT_2026-10-28.md`.
