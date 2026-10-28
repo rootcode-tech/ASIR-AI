@@ -121,3 +121,62 @@ La recuperación:
 ASIR-01 solo se empieza a desarrollar como siguiente asignatura cuando ASIR-00 esté aprobado.
 
 Este gate es pedagógico: evita construir el siguiente bloque ignorando dificultades observadas durante ASIR-00 y permite ajustar ASIR-01 a la experiencia real de aprendizaje.
+
+
+## 9. Simulación oficial 2025/2026
+
+Antes del examen interno final se entrenará específicamente el formato oficial documentado en `OFFICIAL_EXAM_2026_ALIGNMENT.md`.
+
+### Bloques de 20 minutos
+
+- lengua: expresión oral;
+- lengua: comprensión oral;
+- lengua: expresión escrita;
+- lengua: comprensión escrita;
+- matemáticas: números y cálculo;
+- matemáticas: formas y medidas;
+- matemáticas: gráficos y estadística;
+- digital: información y alfabetización;
+- digital: comunicación y colaboración;
+- digital: creación de contenidos;
+- digital: seguridad;
+- digital: resolución de problemas.
+
+### Bloques de 40 minutos
+
+- Inglés;
+- Tecnología e Ingeniería para el itinerario tecnológico de ASIR.
+
+### Regla de test de la convocatoria modelada
+
+Las respuestas incorrectas no penalizan. Por ello, en los simulacros de esta convocatoria se entrena:
+
+1. primera vuelta de respuestas seguras;
+2. segunda vuelta de preguntas dudosas;
+3. descarte de distractores;
+4. contestar todas las preguntas;
+5. revisión final de errores de lectura.
+
+Esta estrategia se revisará si cambia la convocatoria.
+
+### Escalado de dificultad
+
+Si una competencia nueva presenta demasiados errores, se permite temporalmente practicar con ejercicios de nivel Grado Medio del mismo dominio y después regresar a Grado Superior.
+
+El objetivo final no cambia: superar el nivel GS.
+
+## 10. Informe de preparación para acceso
+
+Antes de recomendar presentarse a la prueba oficial se generará un informe por dominio con:
+
+- acierto sin tiempo;
+- acierto cronometrado;
+- errores de conocimiento;
+- errores de lectura;
+- errores de cálculo;
+- tiempo medio por pregunta;
+- dominios por debajo de 5;
+- dominios vulnerables a caer por debajo de 3;
+- recomendación de repaso.
+
+Esto permite preparar la estrategia teniendo en cuenta que la convocatoria 2025/2026 exige resultados mínimos no solo en la media de cada competencia, sino también por dominios.
