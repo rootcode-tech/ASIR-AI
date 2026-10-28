@@ -32,6 +32,7 @@ La estructura se alinea con las competencias publicadas por la Junta de Andaluc�
 - `CBCL4_B1_LANGUAGE_ALIGNMENT.md` — desarrollo del bloque de Lengua a partir de los materiales CBCL4_B1 aportados;
 - `CBD4_B1_DIGITAL_ALIGNMENT.md` — desarrollo de Competencia Digital a partir de los materiales CBD4_B1 aportados;
 - `CBM4_B1_MATH_ALIGNMENT.md` — desarrollo del dominio Números y Cálculo a partir de los materiales CBM4_B1 aportados;
+- `CCCS4_B1_SCIENCE_ALIGNMENT.md` — fundamentos científicos transversales a partir de los materiales CCCS4_B1 aportados;
 - `EXERCISE_BANK.md` — banco de ejercicios formativos;
 - `LABS.md` — prácticas y laboratorios;
 - `REVIEW_AND_EXAM_FLOW.md` — repaso, simulacro, examen y recuperación;
@@ -165,3 +166,19 @@ números y álgebra
 ```
 
 Los cuestionarios de práctica seguirán también la lógica observada en los materiales oficiales: datos variables entre intentos, cuatro opciones, una respuesta correcta, retroalimentación y repetición formativa.
+
+
+## Fundamentos científicos CCCS4
+
+Los materiales CCCS4_B1 se incorporan de forma selectiva al itinerario principal:
+
+```text
+sistemas e interacciones
+→ variables e hipótesis
+→ datos y estadística
+→ energía, pérdidas y eficiencia
+→ sostenibilidad
+→ razonamiento científico
+```
+
+La parte específica de Ciencias no se convierte en una segunda preparación completa mientras el itinerario de acceso esté orientado a Tecnología e Ingeniería. Los contenidos de geología, biología y ecología no necesarios para las competencias transversales quedan como ampliación opcional.
