@@ -1,6 +1,6 @@
 # ASIR-00 · Preparación de acceso a Grado Superior
 
-**Estado:** listo para impartir de forma incremental  
+**Estado:** listo para impartir de forma incremental · alineado con modelo oficial GS 2025/2026  
 **UDs:** 10  
 **Finalidad:** preparar el acceso a Grado Superior y construir una base académica directamente útil para ASIR.
 
@@ -28,6 +28,7 @@ La estructura se alinea con las competencias publicadas por la Junta de Andaluc�
 ## Material de impartición
 
 - `COURSE_READY.md` — guía docente desarrollada de las 10 UDs;
+- `OFFICIAL_EXAM_2026_ALIGNMENT.md` — adaptación al formato y competencias del modelo oficial GS 2025/2026;
 - `EXERCISE_BANK.md` — banco de ejercicios formativos;
 - `LABS.md` — prácticas y laboratorios;
 - `REVIEW_AND_EXAM_FLOW.md` — repaso, simulacro, examen y recuperación;
@@ -90,3 +91,23 @@ No existe penalización por repetir teoría, ejercicios, prácticas o simulacros
 ## Gate de salida
 
 ASIR-00 se considera superado cuando se cumple la política de evaluación definida en su blueprint. Hasta entonces no se abre ASIR-01 como siguiente bloque de estudio.
+
+
+## Perfil oficial 2025/2026
+
+ASIR-00 ha sido contrastado con los modelos oficiales aportados de Grado Superior y Grado Medio de la Junta de Andalucía.
+
+Para Grado Superior se entrenarán explícitamente:
+
+- los 4 dominios de Lengua Castellana;
+- los 3 dominios de Matemáticas;
+- los 5 dominios de Competencia Digital;
+- Inglés;
+- Tecnología e Ingeniería como preparación prioritaria del itinerario ASIR;
+- bloques cronometrados de 20 y 40 minutos;
+- preguntas de elección entre cuatro respuestas con una correcta;
+- expresión escrita de 150-200 palabras;
+- comprensión oral con máximo de dos reproducciones en simulación oficial;
+- estrategia de test sin penalización por respuesta incorrecta mientras esa regla siga vigente.
+
+El modelo de Grado Medio se utilizará únicamente como escalón didáctico cuando sea útil para introducir una competencia antes de volver al nivel GS.
