@@ -1,6 +1,6 @@
 # ASIR-00 · Banco de ejercicios formativos
 
-**Versión:** 0.1.0  
+**Versión:** 0.2.0  
 **Estado:** listo para práctica guiada y autónoma  
 **Regla:** estos ejercicios no puntúan. Pueden repetirse, adaptarse o ampliarse sin límite.
 
@@ -337,3 +337,64 @@ Después de dominar cada bloque:
 - Tecnología e Ingeniería: 16 preguntas en 40 minutos.
 
 Los tests de entrenamiento seguirán la regla de la convocatoria modelada: el fallo no resta. Antes de la prueba real se verificará que esa regla siga vigente.
+
+
+## Suplemento N4 de auditoría 2026-10-28
+
+Este suplemento cubre criterios del Anexo XXI que no estaban suficientemente representados en la primera versión del banco formativo.
+
+### FM4
+
+1. Descompón una figura compuesta en tres formas simples y calcula su área total.
+2. Calcula área lateral y volumen de un cilindro y de un cono.
+3. Interpreta un mapa a escala y obtiene una distancia real.
+4. Reconoce un patrón de simetría/mosaico y explica la regularidad.
+
+### GE4
+
+1. Calcula varianza y desviación típica de un conjunto pequeño.
+2. Construye una tabla de contingencia 2×2.
+3. Interpreta covarianza y correlación de dos variables.
+4. Usa una recta de regresión dada y explica por qué extrapolar puede ser peligroso.
+5. Resuelve unión/intersección/complementario.
+6. Aplica probabilidad total y Bayes.
+7. Explica un falso positivo teniendo en cuenta la tasa base.
+
+### Lengua N4
+
+1. Prepara una exposición oral con introducción, desarrollo y conclusión.
+2. Describe una imagen separando observación e interpretación.
+3. Detecta intención implícita, tono y sesgo en un audio/texto.
+4. Integra dos fuentes en un texto sin copiar y citando/parafraseando.
+5. Detecta titular engañoso, omisión o cita fuera de contexto.
+
+### Inglés PL4
+
+1. Redacta una predicción y un plan futuro usando formas funcionales apropiadas.
+2. Resume un mensaje y reformúlalo para un destinatario distinto.
+3. Media entre dos personas explicando en inglés sencillo la información esencial.
+4. Compara dos soluciones y expresa desacuerdo profesional.
+5. Identifica cognados/falsos amigos y corrige una transferencia incorrecta del español.
+
+### Digital N4
+
+1. Crea una tabla relacional sencilla con dos entidades y explica la relación.
+2. Diseña una consulta básica sobre esos datos.
+3. Compara licencias CC, GNU, copyright y dominio público.
+4. Explica CIA (confidencialidad, integridad, disponibilidad) en un caso.
+5. Diseña una copia de seguridad y una recuperación básica.
+6. Diagnostica IP/DNS/gateway a nivel funcional.
+7. Evalúa IA/IoT/5G desde utilidad, seguridad y sostenibilidad.
+
+### TI4.1–TI4.5
+
+1. Relaciona propiedades mecánicas con selección de material.
+2. Distingue forja, estampación, extrusión y mecanizado.
+3. Resuelve resistencias serie/paralelo y ley de Ohm.
+4. Construye tabla de verdad y simplifica una función básica.
+5. Distingue lazo abierto/cerrado y sensor/actuador.
+6. Calcula rendimiento térmico sencillo.
+7. Interpreta FRL, válvula y cilindro en un circuito neumático.
+8. Realiza un trazado de tangencia.
+9. Reconoce diédrico/axonometría/cónico.
+10. Interpreta vistas, corte, escala y acotación de una pieza sencilla.
