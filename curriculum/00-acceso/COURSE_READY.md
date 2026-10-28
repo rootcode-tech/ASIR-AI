@@ -1,7 +1,7 @@
 # ASIR-00 · Preparación de acceso a Grado Superior — Curso listo para impartir
 
-**Versión:** 0.1.0  
-**Estado:** listo para impartir de forma incremental  
+**Versión:** 0.2.0  
+**Estado:** listo para impartir · examen final bloqueado hasta completar cobertura del banco  
 **Asignatura:** ASIR-00 · Preparación de acceso a Grado Superior
 
 ## 1. Regla de impartición
@@ -99,38 +99,22 @@ Antes de resolver un problema, escribir:
 
 La UD está dominada cuando puedes explicar tu método de estudio, clasificar tus propios errores y descomponer un problema en pasos verificables.
 
-## 4. UD02 — Aritmética, proporcionalidad, porcentajes y notación científica
+## 4. UD02 — Números y cálculo
 
-### Qué vas a aprender
+### Cobertura operativa
 
-- enteros, fracciones y decimales;
-- prioridad de operaciones;
-- razones y proporciones;
-- regla de tres directa e inversa;
-- porcentajes e incrementos sucesivos;
-- potencias y raíces;
-- notación científica;
-- conversiones de unidades;
-- bits/bytes y prefijos decimales/binarios;
-- estimación y orden de magnitud.
+UD02 aplica NC4 completo:
+- operaciones y notación científica;
+- proporcionalidad directa/inversa/compuesta;
+- repartos;
+- mezclas y concentraciones;
+- tasas de trabajo simultáneo;
+- porcentajes y variaciones sucesivas;
+- interés simple/compuesto;
+- interpretación financiera funcional;
+- bits/bytes y unidades informáticas.
 
-### Ideas clave
-
-Una fracción es una división. Un porcentaje es una fracción de 100. Una proporción compara dos razones. La proporcionalidad directa mantiene constante el cociente; la inversa mantiene constante el producto.
-
-Ejemplo ASIR: si un disco de 1 TB tiene ocupados 650 GB, el porcentaje de ocupación es aproximadamente 65% si usamos unidades decimales coherentes.
-
-En informática hay que distinguir:
-
-- 1 byte = 8 bits;
-- kB, MB, GB suelen seguir potencias de 1000;
-- KiB, MiB, GiB siguen potencias de 1024.
-
-No se aceptará un número sin unidad cuando la magnitud la requiera.
-
-### Criterio de dominio
-
-Debes resolver problemas mixtos con al menos 85% de acierto y detectar resultados absurdos antes de darlos por buenos.
+La práctica termina en bloques de 8 preguntas / 20 min.
 
 ## 5. UD03 — Álgebra: expresiones, ecuaciones, sistemas e inecuaciones
 
@@ -195,60 +179,39 @@ La pendiente mide cuánto cambia `y` cuando cambia `x`.
 
 Debes interpretar una gráfica sin limitarte a “leer puntos”: explicar tendencia, pendiente, cortes, intervalos y significado físico.
 
-## 7. UD05 — Geometría, trigonometría y medida
+## 7. UD05 — Formas y medidas
 
-### Qué vas a aprender
+### Cobertura operativa
 
-- perímetro, área y volumen;
-- semejanza y escalas;
-- teorema de Pitágoras;
-- grados y radianes a nivel introductorio;
-- seno, coseno y tangente en triángulos rectángulos;
-- conversión de unidades;
-- error de medida;
-- problemas de cableado, racks, distancias y espacio físico.
+UD05 aplica FM4:
+- figuras planas y cuerpos 3D;
+- composición/descomposición;
+- congruencia y semejanza;
+- Pitágoras y trigonometría funcional;
+- perímetros, áreas, áreas laterales y volúmenes;
+- poliedros y cuerpos de revolución;
+- mapas, croquis, planos y escalas;
+- patrones y simetrías.
 
-### Idea central
+La práctica termina en bloques de 8 preguntas / 20 min.
 
-La geometría convierte espacio físico en cantidades calculables.
+## 8. UD06 — Gráficos, estadística y probabilidad
 
-Ejemplos ASIR:
+### Cobertura operativa
 
-- longitud de canalizaciones;
-- espacio útil de una sala;
-- altura y anchura en racks;
-- rutas de cableado;
-- inclinación o distancia indirecta.
+UD06 aplica GE4:
+- estadística univariante;
+- varianza y desviación;
+- datos bivariantes;
+- tablas de contingencia;
+- covarianza, correlación y regresión;
+- sucesos y álgebra básica de sucesos;
+- probabilidad condicionada e independencia;
+- árboles;
+- probabilidad total;
+- Bayes y tasas base.
 
-### Criterio de dominio
-
-Debes elegir la fórmula adecuada porque entiendes la figura, no por reconocer una palabra suelta en el enunciado.
-
-## 8. UD06 — Estadística, probabilidad e interpretación de datos
-
-### Qué vas a aprender
-
-- población y muestra;
-- variables cualitativas y cuantitativas;
-- tablas de frecuencia;
-- media, mediana y moda;
-- rango y dispersión;
-- percentiles a nivel introductorio;
-- gráficos estadísticos;
-- probabilidad simple;
-- probabilidad complementaria;
-- independencia básica;
-- lectura crítica de métricas.
-
-### Idea central
-
-Un promedio sin contexto puede engañar.
-
-Ejemplo: una latencia media de 30 ms no cuenta si hay picos de 500 ms que hacen inutilizable una aplicación interactiva. Por eso aprenderemos a mirar distribución y extremos.
-
-### Criterio de dominio
-
-Debes interpretar datos y explicar qué medida representa mejor una situación, además de detectar gráficos o conclusiones engañosas.
+La práctica termina en bloques de 8 preguntas / 20 min.
 
 ## 9. UD07 — Fundamentos científico-tecnológicos aplicados
 
@@ -272,88 +235,52 @@ La geometría matemática necesaria se introduce previamente en UD05 y se reutil
 
 Debes poder interpretar y resolver problemas básicos de TI4.1–TI4.5, justificar la respuesta, mantener unidades y simbología coherentes y detectar resultados técnicamente imposibles.
 
-## 10. UD08 — Lengua: comprensión, síntesis y expresión escrita
+## 10. UD08 — Lengua Castellana N4
 
-### Qué vas a aprender
+### Cobertura operativa
 
-- identificar tema, tesis e ideas principales;
-- distinguir hechos, opiniones e inferencias;
-- resumir sin copiar;
-- estructurar párrafos;
-- escribir respuestas directas y argumentadas;
-- conectar ideas con coherencia;
-- evitar ambigüedad;
-- revisar ortografía y puntuación;
-- adaptar el registro a contexto académico y técnico.
+Se entrenan por separado:
+- EO4: expresión oral, entrevista y descripción de imagen;
+- CO4: comprensión oral;
+- EE4: expresión escrita, incluida práctica 150–200 palabras cuando corresponda;
+- CE4: comprensión escrita.
 
-### Idea central
+Además: intención, registros, no verbal, coherencia/cohesión/adecuación, tipologías, fuentes, sesgo, hechos/opiniones/inferencias.
 
-En sistemas, saber hacer algo y no saber explicarlo es una limitación profesional.
+## 11. UD09 — Inglés N4 y Competencia Digital N4
 
-La respuesta técnica eficaz suele seguir:
+### Inglés PL4
+- comprensión escrita/oral;
+- presente, pasado y futuro funcional;
+- comparación, opinión y argumentación;
+- interacción, reformulación y mediación;
+- reading/listening;
+- registro formal/informal.
 
-```text
-situación → evidencia → razonamiento → conclusión
-```
+### Digital
+Se trabajan los cinco dominios completos:
+- IAD;
+- CC;
+- CCD;
+- SEG;
+- PRO.
 
-### Criterio de dominio
+Incluye búsqueda avanzada, IA/prompts/verificación, colaboración, creación de contenidos, BD/hojas de cálculo, licencias, privacidad, seguridad, redes básicas, troubleshooting y sostenibilidad.
 
-Debes poder leer un texto, localizar lo esencial, resumirlo con tus palabras y redactar una respuesta clara y verificable.
+## 12. UD10 — Estrategia y simulación oficial
 
-## 11. UD09 — Inglés funcional y competencia digital
+Se entrena el perfil oficial 2025/2026:
+- dominios básicos de 20 minutos;
+- 8 preguntas en CE/Matemáticas/Digital;
+- CO con 5 preguntas;
+- EO entrevista + imagen;
+- EE desarrollo;
+- Inglés 16 / 40 min;
+- Tecnología e Ingeniería 16 / 40 min;
+- audio máximo dos reproducciones;
+- regla de no penalización mientras siga vigente.
 
-### Qué vas a aprender
-
-- vocabulario básico IT;
-- instrucciones frecuentes en documentación;
-- mensajes de error sencillos;
-- lectura de interfaces y manuales;
-- verbos habituales: install, run, stop, enable, disable, check, fail, retry, update;
-- búsqueda eficaz de información;
-- evaluar fuentes;
-- archivos, carpetas, extensiones y formatos;
-- navegación segura;
-- contraseñas y MFA a nivel de usuario;
-- nociones de Markdown y documentación digital.
-
-### Idea central
-
-No buscamos traducir palabra por palabra, sino obtener significado operativo.
-
-Ejemplo: `service failed to start` debe llevarte a entender que un servicio no logró arrancar y que hay que buscar causa y logs.
-
-### Criterio de dominio
-
-Debes comprender instrucciones técnicas básicas y realizar tareas digitales elementales sin depender de memorizar botones concretos.
-
-## 12. UD10 — Estrategia de examen y simulacros integrales
-
-### Qué vas a aprender
-
-- leer un examen completo antes de empezar;
-- estimar tiempo por bloque;
-- priorizar;
-- marcar dudas sin quedarte bloqueado;
-- revisar resultados;
-- usar estimaciones para detectar errores;
-- gestionar calculadora y borradores;
-- responder con procedimiento suficiente;
-- hacer simulacros cronometrados;
-- analizar errores después del simulacro.
-
-### Estrategia base
-
-1. lectura global;
-2. clasificación por dificultad;
-3. primera vuelta segura;
-4. segunda vuelta de problemas largos;
-5. revisión de unidades/signos;
-6. revisión de respuestas escritas;
-7. comprobación de que todo lo pedido está contestado.
-
-### Criterio de dominio
-
-Debes completar simulacros con estrategia estable y poder explicar por qué dejaste o priorizaste cada bloque.
+Antes de una convocatoria real se revalida todo el perfil.
 
 ## 13. Cierre de ASIR-00
 
@@ -365,9 +292,10 @@ Antes del examen calificable se exige:
 - errores recurrentes identificados;
 - checklist de dominio revisado;
 - al menos un simulacro integral corregido;
-- decisión explícita del alumno de presentarse.
+- decisión explícita del alumno de presentarse;
+- cobertura del banco final validada conforme a `exams/ASIR-00-BANK-COVERAGE.md`.
 
-El examen nunca se inicia automáticamente.
+El examen nunca se inicia automáticamente. La enseñanza sí puede comenzar aunque el banco final aún esté en expansión.
 
 
 ## 14. Alineación obligatoria con la prueba oficial 2025/2026
