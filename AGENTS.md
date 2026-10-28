@@ -64,7 +64,8 @@ Cada `UDxx.md` debe incluir:
 - Priorizar procedimientos reproducibles y verificables.
 - Distinguir contenido oficial ASIR de ampliaciones ASIR-AI.
 - Mantener nomenclatura estable: `ASIR-XX`, `UDXX`, `LAB-XX`, `EX-XX`.
-- Las prácticas no puntúan; los exámenes sí.
+- Las prácticas, ejercicios, comprobaciones de UD y simulacros no puntúan.
+- Por defecto, cada asignatura culmina en un examen final calificable; los apartados «Examen» de las UDs describen cobertura/preparación, no activan notas independientes.
 - Los exámenes son siempre voluntarios y bajo demanda: solo comienzan cuando el alumno pide explícitamente presentarse.
 - No existe penalización pedagógica por retrasar un examen o repetir contenidos.
 - Antes de avanzar, priorizar comprensión sobre velocidad o calendario.
