@@ -376,3 +376,32 @@ Antes del examen calificable se exige:
 - decisión explícita del alumno de presentarse.
 
 El examen nunca se inicia automáticamente.
+
+
+## 14. Alineación obligatoria con la prueba oficial 2025/2026
+
+La impartición de ASIR-00 debe aplicar también `OFFICIAL_EXAM_2026_ALIGNMENT.md`.
+
+A partir del análisis del modelo oficial de Grado Superior 2025/2026:
+
+- UD02 refuerza mezclas, concentraciones, reparto proporcional, tasas simultáneas y porcentajes encadenados;
+- UD05 refuerza escalas, semejanza, poliedros, circunferencia, conos y problemas velocidad-tiempo-distancia;
+- UD06 incorpora probabilidad condicionada, Bayes, tasas base, falsos positivos, correlación y covarianza;
+- UD07 incorpora el bloque de Tecnología e Ingeniería: mecanismos, materiales, neumática, electrónica básica, refrigeración/bomba de calor, dibujo técnico y documentación de proyectos;
+- UD08 entrena por separado expresión oral, comprensión oral, expresión escrita de 150-200 palabras y comprensión escrita;
+- UD09 amplía Inglés y los cinco dominios de competencia digital;
+- UD10 incorpora simulacros oficiales por dominios de 20 minutos y bloques específicos de 40 minutos.
+
+La progresión será siempre:
+
+```text
+comprensión sin tiempo
+        ↓
+práctica equivalente
+        ↓
+bloque cronometrado
+        ↓
+simulacro oficial
+```
+
+Cuando resulte útil, una destreza nueva puede introducirse con ejercicios de nivel Grado Medio antes de exigir el nivel final de Grado Superior.
