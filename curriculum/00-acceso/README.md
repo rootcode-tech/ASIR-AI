@@ -31,6 +31,7 @@ La estructura se alinea con las competencias publicadas por la Junta de Andaluc�
 - `OFFICIAL_EXAM_2026_ALIGNMENT.md` — adaptación al formato y competencias del modelo oficial GS 2025/2026;
 - `CBCL4_B1_LANGUAGE_ALIGNMENT.md` — desarrollo del bloque de Lengua a partir de los materiales CBCL4_B1 aportados;
 - `CBD4_B1_DIGITAL_ALIGNMENT.md` — desarrollo de Competencia Digital a partir de los materiales CBD4_B1 aportados;
+- `CBM4_B1_MATH_ALIGNMENT.md` — desarrollo del dominio Números y Cálculo a partir de los materiales CBM4_B1 aportados;
 - `EXERCISE_BANK.md` — banco de ejercicios formativos;
 - `LABS.md` — prácticas y laboratorios;
 - `REVIEW_AND_EXAM_FLOW.md` — repaso, simulacro, examen y recuperación;
@@ -148,3 +149,19 @@ búsqueda y verificación
 ```
 
 La metodología oficial observada también se conserva: actividades abiertas, ejercicios autocorregibles, tests de 20 preguntas, reintentos formativos y entrenamiento con cuatro opciones y una respuesta correcta.
+
+
+## Desarrollo de Matemáticas CBM4
+
+UD02 y UD03 incorporan ya el Bloque 1 de Competencia Matemática N4:
+
+```text
+números y álgebra
+→ proporcionalidad
+→ porcentajes
+→ matemática financiera
+→ problemas combinados
+→ comunicación matemática
+```
+
+Los cuestionarios de práctica seguirán también la lógica observada en los materiales oficiales: datos variables entre intentos, cuatro opciones, una respuesta correcta, retroalimentación y repetición formativa.
