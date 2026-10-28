@@ -34,3 +34,11 @@ notes:
   - "The bank is a minimum operational v0.1 baseline, not a permanent ceiling."
   - "Concrete exam forms must still be assembled from approved IDs according to each subject blueprint."
   - "Future CI should validate YAML schema, duplicate IDs, coverage, D1-D4 distribution and freshness metadata."
+
+readiness:
+  asir_00_readiness:
+    teaching_ready: true
+    formative_practice_ready: true
+    final_graded_exam_ready: false
+    reason: "The v0.1 bank covers pedagogical UDs but not enough official domains/variants for a full ordinary exam plus equivalent recovery."
+    coverage_contract: "exams/ASIR-00-BANK-COVERAGE.md"
