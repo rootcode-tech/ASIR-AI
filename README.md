@@ -41,3 +41,12 @@ docs/         Normas, metodología y documentación del curso
 ## Marca
 
 Proyecto desarrollado bajo **RootCode Technologies**.
+
+
+## Benchmark profesional externo
+
+ASIR-AI incorpora como referencia profesional el proceso selectivo de la Junta de Andalucía **C1.2003 Ayudantes Técnicos — Opción Informática**.
+
+- `docs/C1_2003_PROFESSIONAL_BENCHMARK.md` — compara el alcance técnico de ASIR-AI con el temario oficial y con preguntas/supuestos reales publicados por la Junta.
+
+Este benchmark no forma parte de ASIR-00 ni sustituye el currículo oficial de ASIR. Se utiliza como referencia de madurez técnica y empleabilidad al final del itinerario.
